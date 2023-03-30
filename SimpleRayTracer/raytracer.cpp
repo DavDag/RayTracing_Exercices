@@ -1,33 +1,120 @@
 #include "raytracer.hpp"
 
-static std::ostream& operator <<(std::ostream& out, const Scene& scene) {
-	out << "[Scene]:\n"
-		<< "Scene file: " << scene.sceneFile << "\n";
-	return out;
+#include "rnd.hpp"
+#include <limits>
+
+Scene parseScene(const std::string& scenefile) {
+	std::cout << "\n[Parsing]\n";
+
+	std::ifstream in(scenefile);
+	if (!in.is_open()) {
+		std::cerr << "Unable to parse scene file\n";
+		exit(EXIT_FAILURE);
+	}
+
+	// 1. Camera
+	Vec3f cameraPos(0);
+	int cameraVW = 0, cameraVH = 0;
+	in >> cameraPos.x >> cameraPos.y >> cameraPos.z;
+	in >> cameraVW >> cameraVH;
+
+	// 2. Materials
+	int materialCount = 0;
+	std::vector<Material*> materials;
+	in >> materialCount;
+	for (int i = 0; i < materialCount; ++i) {
+		Vec3f albedo;
+		in >> albedo.x >> albedo.y >> albedo.z;
+		materials.push_back(new Lambertian(albedo));
+	}
+	in >> materialCount;
+	for (int i = 0; i < materialCount; ++i) {
+		Vec3f albedo;
+		Scalar blurr;
+		in >> albedo.x >> albedo.y >> albedo.z >> blurr;
+		materials.push_back(new Metal(albedo, blurr));
+	}
+	in >> materialCount;
+	for (int i = 0; i < materialCount; ++i) {
+		Scalar refractionRatio;
+		in >> refractionRatio;
+		materials.push_back(new Dielectric(refractionRatio));
+	}
+
+	// 3. Spheres
+	int sphereCount = 0;
+	in >> sphereCount;
+	std::vector<Sphere*> spheres;
+	for (int i = 0; i < sphereCount; ++i) {
+		Vec3f cen;
+		Scalar rad;
+		int materialIndex;
+		in >> cen.x >> cen.y >> cen.z >> rad >> materialIndex;
+		spheres.push_back(new Sphere(cen, rad, materials[materialIndex]));
+	}
+
+	//
+	return Scene{
+		.sceneFile = scenefile,
+		.camera = Camera(cameraPos, cameraVW, cameraVH),
+		.spheres = spheres,
+	};
 }
 
-Pixel* process(const std::string& scene, int w, int h) {
+Vec3f* process(const Scene& scene, int w, int h) {
 	std::cout << "\n[Processing]\n";
-	Pixel* pixels = new Pixel[w * h];
-	memset(pixels, 0, sizeof(Pixel) * w * h);
+
+	Vec3f* pixels = new Vec3f[(size_t) w * h];
+	memset(pixels, 0, sizeof(Vec3f) * w * h);
 	for (int y = 0; y < h; ++y)
 		for (int x = 0; x < w; ++x) {
-			Pixel& p = pixels[y * w + x];
-			p.r = (y / (float)h);
-			p.g = (x / (float)w);
+			Vec3f& p = pixels[y * w + x];
+			p = processPixel(scene, x, y);
+			p = gamma(p, 2.0);
 		}
+
 	return pixels;
 }
 
-uint8_t* convertToRawPixels(const Pixel* pixels, int w, int h) {
-	std::cout << "\n[Converting]\n";
-	uint8_t* raw = new uint8_t[3 * w * h];
-	for (int y = 0; y < h; ++y)
-		for (int x = 0; x < w; ++x) {
-			const Pixel& p = pixels[y * w + x];
-			raw[(y * w + x) * 3 + 0] = int(p.r * 255) & 0xff;
-			raw[(y * w + x) * 3 + 1] = int(p.g * 255) & 0xff;
-			raw[(y * w + x) * 3 + 2] = int(p.b * 255) & 0xff;
+Vec3f processPixel(const Scene& scene, int px, int py) {
+	constexpr int samples = 16;
+	constexpr int depthMax = 4;
+	Vec3f out;
+	for (int i = 0; i < samples; ++i) {
+		Ray ray = scene.camera.getRayFor(px + rndFloat(), py + rndFloat());
+		out += traceRay(scene, ray, depthMax);
+	}
+	return out / samples;
+}
+
+Vec3f traceRay(const Scene& scene, const Ray& ray, int depth) {
+	if (depth == 0)
+		return Vec3f(0.0f);
+
+	RayHit hit;
+	hit.tmin = 0.001;
+	hit.tmax = std::numeric_limits<Scalar>::max();
+
+	for (const auto& sphere : scene.spheres)
+		if (sphere->hit(ray, hit))
+			hit.tmax = hit.t;
+
+	if (hit.mat != nullptr) {
+		Ray scattered{};
+		Vec3f attenuation(0.0f);
+		if (hit.mat->scatter(ray, hit, attenuation, scattered)) {
+			Vec3f res = traceRay(scene, scattered, depth - 1);
+			return Vec3f(res.x * attenuation.x, res.y * attenuation.y, res.z * attenuation.z);
 		}
-	return raw;
+		else {
+			return Vec3f(0.0f);
+		}
+	}
+	else {
+		// Sky (athmosphere)
+		static Vec3f SkyColorA = Vec3f(1.0f, 1.0f, 1.0f);
+		static Vec3f SkyColorB = Vec3f(0.5f, 0.7f, 1.0f);
+		Scalar t = ray.dir.normalized().y / 2.0f + 0.5f;
+		return lerp(SkyColorA, SkyColorB, t);
+	}
 }

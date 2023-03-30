@@ -39,7 +39,8 @@ int main(int argc, char* argv[]) {
 	Options options = parseArgs(argc, argv);
 	std::cout << options;
 	///////////////////////////////
-	Pixel* pixels = process(options.sceneFile, options.outw, options.outh);
+	Scene scene = parseScene(options.sceneFile);
+	Vec3f* pixels = process(scene, options.outw, options.outh);
 	uint8_t* rawPixels = convertToRawPixels(pixels, options.outw, options.outh);
 	writeTGA(options.outFile, options.outw, options.outh, rawPixels);
 	///////////////////////////////

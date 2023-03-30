@@ -5,12 +5,26 @@
 #include <sstream>
 #include <iostream>
 
-////////////////////////////////////////////////////////////////////////////////////
+#include "raytracer.hpp"
 
+uint8_t* convertToRawPixels(const Vec3f* pixels, int w, int h);
 void writeTGA(const std::string& filename, int w, int h, uint8_t* pixels);
 void openFileInPaint(const std::string& filename, bool showcmd = false);
 
-////////////////////////////////////////////////////////////////////////////////////
+uint8_t* convertToRawPixels(const Vec3f* pixels, int w, int h) {
+	std::cout << "\n[Converting]\n";
+	uint8_t* raw = new uint8_t[(size_t)3 * w * h];
+	for (int y = 0; y < h; ++y)
+		for (int x = 0; x < w; ++x) {
+			const Vec3f& p = pixels[y * w + x];
+			// TGA must always be little-endian
+			// BGR is little-endian for RGB
+			raw[(y * w + x) * 3 + 2] = int(p.x * 255.999f) & 0xff;
+			raw[(y * w + x) * 3 + 1] = int(p.y * 255.999f) & 0xff;
+			raw[(y * w + x) * 3 + 0] = int(p.z * 255.999f) & 0xff;
+		}
+	return raw;
+}
 
 void writeTGA(const std::string& filename, int w, int h, uint8_t* pixels) {
 	// Write output as TGA image format
