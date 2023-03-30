@@ -23,7 +23,7 @@ static std::ostream& operator <<(std::ostream& out, const Scene& scene) {
 	return out;
 }
 
-Scene parseScene(const std::string& scenefile);
-Vec3f* process(const Scene& scene, int w, int h);
-Vec3f processPixel(const Scene& scene, int px, int py);
+Scene parseScene(const std::string& scenefile, int w, int h);
+Vec3f* process(const Scene& scene, int w, int h, int samples, int depthMax);
+Vec3f processPixel(const Scene& scene, int px, int py, int samples, int depthMax);
 Vec3f traceRay(const Scene& scene, const Ray& ray, int depth);

@@ -2,12 +2,11 @@
 
 #include "rnd.hpp"
 #include <limits>
+#include <iomanip>
 
 #include <ppl.h>
 
-Scene parseScene(const std::string& scenefile) {
-	std::cout << "\n[Parsing]\n";
-
+Scene parseScene(const std::string& scenefile, int w, int h) {
 	std::ifstream in(scenefile);
 	if (!in.is_open()) {
 		std::cerr << "Unable to parse scene file\n";
@@ -15,32 +14,36 @@ Scene parseScene(const std::string& scenefile) {
 	}
 
 	// 1. Camera
-	Vec3f cameraPos(0);
-	int cameraVW = 0, cameraVH = 0;
+	Vec3f cameraPos(0), cameraTarget(0);
+	float cameraFovY = 0;
 	in >> cameraPos.x >> cameraPos.y >> cameraPos.z;
-	in >> cameraVW >> cameraVH;
+	in >> cameraTarget.x >> cameraTarget.y >> cameraTarget.z;
+	in >> cameraFovY;
 
 	// 2. Materials
 	int materialCount = 0;
 	std::vector<Material*> materials;
 	in >> materialCount;
 	for (int i = 0; i < materialCount; ++i) {
+		std::string name;
 		Vec3f albedo;
-		in >> albedo.x >> albedo.y >> albedo.z;
-		materials.push_back(new Lambertian(albedo));
+		in >> name >> albedo.x >> albedo.y >> albedo.z;
+		materials.push_back(new Lambertian(name, albedo));
 	}
 	in >> materialCount;
 	for (int i = 0; i < materialCount; ++i) {
+		std::string name;
 		Vec3f albedo;
 		Scalar blurr;
-		in >> albedo.x >> albedo.y >> albedo.z >> blurr;
-		materials.push_back(new Metal(albedo, blurr));
+		in >> name >> albedo.x >> albedo.y >> albedo.z >> blurr;
+		materials.push_back(new Metal(name, albedo, blurr));
 	}
 	in >> materialCount;
 	for (int i = 0; i < materialCount; ++i) {
+		std::string name;
 		Scalar refractionRatio;
-		in >> refractionRatio;
-		materials.push_back(new Dielectric(refractionRatio));
+		in >> name >> refractionRatio;
+		materials.push_back(new Dielectric(name, refractionRatio));
 	}
 
 	// 3. Spheres
@@ -48,43 +51,47 @@ Scene parseScene(const std::string& scenefile) {
 	in >> sphereCount;
 	std::vector<Sphere*> spheres;
 	for (int i = 0; i < sphereCount; ++i) {
+		std::string name;
 		Vec3f cen;
 		Scalar rad;
 		int materialIndex;
-		in >> cen.x >> cen.y >> cen.z >> rad >> materialIndex;
-		spheres.push_back(new Sphere(cen, rad, materials[materialIndex]));
+		in >> name >> cen.x >> cen.y >> cen.z >> rad >> materialIndex;
+		spheres.push_back(new Sphere(name, cen, rad, materials[materialIndex]));
 	}
 
 	//
 	return Scene{
 		.sceneFile = scenefile,
-		.camera = Camera(cameraPos, cameraVW, cameraVH),
+		.camera = Camera(cameraPos, cameraTarget, w, h, cameraFovY),
 		.spheres = spheres,
+		.materials = materials,
 	};
 }
 
-Vec3f* process(const Scene& scene, int w, int h) {
-	std::cout << "\n[Processing]\n";
+Vec3f* process(const Scene& scene, int w, int h, int samples, int depthMax) {
 
 	Vec3f* pixels = new Vec3f[(size_t) w * h];
 	memset(pixels, 0, sizeof(Vec3f) * w * h);
+	std::atomic_int completition = 0;
 
-	auto part = concurrency::affinity_partitioner();
-	concurrency::parallel_for(0, w, [&scene, &w, &h, &pixels](size_t x) {
+	std::cout << "[" << std::string(w / 32 + 1, '-') << "]\n>";
+	concurrency::parallel_for(0, w, [&](size_t x) {
 		for (int y = 0; y < h; ++y) {
 			Vec3f& p = pixels[y * w + x];
-			p = processPixel(scene, x, y);
+			p = processPixel(scene, x, y, samples, depthMax);
 			p = gamma(p, 2.0);
 		}
-	}, part);
+		++completition;
+		if (x % 32 == 0)
+			std::cout << "#";
+	});
+	std::cout << "<\n";
 
 	return pixels;
 }
 
-Vec3f processPixel(const Scene& scene, int px, int py) {
-	constexpr int samples = 128;
-	constexpr int depthMax = 64;
-	Vec3f out;
+Vec3f processPixel(const Scene& scene, int px, int py, int samples, int depthMax) {
+	Vec3f out(0.0f);
 	for (int i = 0; i < samples; ++i) {
 		Ray ray = scene.camera.getRayFor(px + rndFloat(), py + rndFloat());
 		out += traceRay(scene, ray, depthMax);
@@ -94,6 +101,7 @@ Vec3f processPixel(const Scene& scene, int px, int py) {
 
 Vec3f traceRay(const Scene& scene, const Ray& ray, int depth) {
 	if (depth == 0)
+		// no light intersected
 		return Vec3f(0.0f);
 
 	RayHit hit;
@@ -112,7 +120,7 @@ Vec3f traceRay(const Scene& scene, const Ray& ray, int depth) {
 			return Vec3f(res.x * attenuation.x, res.y * attenuation.y, res.z * attenuation.z);
 		}
 		else {
-			return Vec3f(0.0f);
+			return Vec3f(1.0f);
 		}
 	}
 	else {

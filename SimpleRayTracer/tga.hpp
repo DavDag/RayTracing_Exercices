@@ -12,7 +12,6 @@ void writeTGA(const std::string& filename, int w, int h, uint8_t* pixels);
 void openFileInPaint(const std::string& filename, bool showcmd = false);
 
 uint8_t* convertToRawPixels(const Vec3f* pixels, int w, int h) {
-	std::cout << "\n[Converting]\n";
 	uint8_t* raw = new uint8_t[(size_t)3 * w * h];
 	for (int y = 0; y < h; ++y)
 		for (int x = 0; x < w; ++x) {
@@ -27,6 +26,7 @@ uint8_t* convertToRawPixels(const Vec3f* pixels, int w, int h) {
 }
 
 void writeTGA(const std::string& filename, int w, int h, uint8_t* pixels) {
+
 	// Write output as TGA image format
 	// https://en.wikipedia.org/wiki/Truevision_TGA
 	// https://stackoverflow.com/questions/16636311/what-is-the-simplest-rgb-image-format

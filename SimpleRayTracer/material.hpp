@@ -6,12 +6,17 @@
 
 class Material {
 public:
+	Material(const std::string& name): name(name) { }
+
 	virtual bool scatter(const Ray& ray, RayHit& hit, Vec3f& attenuation, Ray& out) const = 0;
+
+public:
+	std::string name;
 };
 
 class Lambertian : public Material {
 public:
-	Lambertian(const Vec3f& albedo) : Material(), albedo(albedo) { }
+	Lambertian(const std::string& name, const Vec3f& albedo) : Material(name), albedo(albedo) { }
 
 	bool scatter(const Ray& ray, RayHit& hit, Vec3f& attenuation, Ray& out) const override {
 		Vec3f scatterDir = hit.nor + RandomVec3f(-1.0f, 1.0f).normalized();
@@ -32,7 +37,7 @@ public:
 
 class Metal : public Material {
 public:
-	Metal(const Vec3f& albedo, Scalar blurr): Material(), albedo(albedo), blurr(std::min(blurr, (Scalar)1.0)) { }
+	Metal(const std::string& name, const Vec3f& albedo, Scalar blurr): Material(name), albedo(albedo), blurr(std::min(blurr, (Scalar)1.0)) { }
 
 	bool scatter(const Ray& ray, RayHit& hit, Vec3f& attenuation, Ray& out) const override {
 		Vec3f reflected = ray.dir.reflect(hit.nor).normalized();
@@ -50,7 +55,7 @@ public:
 
 class Dielectric : public Material {
 public:
-	Dielectric(Scalar refractionRatio) : Material(), refractionRatio(refractionRatio) { }
+	Dielectric(const std::string& name, Scalar refractionRatio) : Material(name), refractionRatio(refractionRatio) { }
 
 	bool scatter(const Ray& ray, RayHit& hit, Vec3f& attenuation, Ray& out) const override {
 		attenuation = Vec3f(1.0f);

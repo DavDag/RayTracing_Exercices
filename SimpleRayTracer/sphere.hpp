@@ -6,7 +6,7 @@
 
 class Sphere {
 public:
-	Sphere(const Vec3f& cen, Scalar rad, Material* mat): cen(cen), rad(rad), mat(mat) { }
+	Sphere(const std::string& name, const Vec3f& cen, Scalar rad, Material* mat): name(name), cen(cen), rad(rad), mat(mat) { }
 
 	bool hit(const Ray& ray, RayHit& hit) const {
 		/*
@@ -79,6 +79,7 @@ public:
 	}
 
 public:
+	std::string name;
 	Vec3f cen;
 	Scalar rad;
 	Material* mat;

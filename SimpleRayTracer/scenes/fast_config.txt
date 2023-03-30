@@ -1,0 +1,3 @@
+./scenes/sample01.tga
+800 600
+16 4
