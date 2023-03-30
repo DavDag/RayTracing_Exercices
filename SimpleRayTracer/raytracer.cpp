@@ -3,6 +3,8 @@
 #include "rnd.hpp"
 #include <limits>
 
+#include <ppl.h>
+
 Scene parseScene(const std::string& scenefile) {
 	std::cout << "\n[Parsing]\n";
 
@@ -66,19 +68,22 @@ Vec3f* process(const Scene& scene, int w, int h) {
 
 	Vec3f* pixels = new Vec3f[(size_t) w * h];
 	memset(pixels, 0, sizeof(Vec3f) * w * h);
-	for (int y = 0; y < h; ++y)
-		for (int x = 0; x < w; ++x) {
+
+	auto part = concurrency::affinity_partitioner();
+	concurrency::parallel_for(0, w, [&scene, &w, &h, &pixels](size_t x) {
+		for (int y = 0; y < h; ++y) {
 			Vec3f& p = pixels[y * w + x];
 			p = processPixel(scene, x, y);
 			p = gamma(p, 2.0);
 		}
+	}, part);
 
 	return pixels;
 }
 
 Vec3f processPixel(const Scene& scene, int px, int py) {
-	constexpr int samples = 16;
-	constexpr int depthMax = 4;
+	constexpr int samples = 128;
+	constexpr int depthMax = 64;
 	Vec3f out;
 	for (int i = 0; i < samples; ++i) {
 		Ray ray = scene.camera.getRayFor(px + rndFloat(), py + rndFloat());
