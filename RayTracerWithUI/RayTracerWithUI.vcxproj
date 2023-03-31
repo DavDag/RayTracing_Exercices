@@ -100,13 +100,18 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="src\core\pixel.cpp" />
     <ClCompile Include="src\image\image.cpp" />
+    <ClCompile Include="src\options\options.cpp" />
+    <ClCompile Include="src\scene\scene.cpp" />
     <ClCompile Include="src\viewer\viewer.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\core\core.hpp" />
     <ClInclude Include="src\core\types.hpp" />
+    <ClInclude Include="src\core\vec3.hpp" />
     <ClInclude Include="src\image\image.hpp" />
     <ClInclude Include="src\core\pixel.hpp" />
+    <ClInclude Include="src\options\options.hpp" />
+    <ClInclude Include="src\scene\scene.hpp" />
     <ClInclude Include="src\viewer\viewer.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

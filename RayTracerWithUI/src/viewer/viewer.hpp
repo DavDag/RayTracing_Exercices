@@ -1,14 +1,12 @@
 #pragma once
 
-#include "../image/image.hpp"
-
-struct GLFWwindow;
-
 namespace rt {
 
+	class Image;
+	
 	class Viewer {
 	public:
-		Viewer(const Image& image, i32 padding, f32 updatePerSec);
+		Viewer(const Image& image, int padding, float updatePerSec);
 
 		void init();
 		void start();
@@ -21,12 +19,12 @@ namespace rt {
 
 	private:
 		bool _valid;
-		i32 _ww, _wh, _pd;
+		int _ww, _wh, _pd;
 		const Image& _image;
-		GLFWwindow* _window;
-		f32 _updatePerSec;
-		f64 _accTimeSinceLastUpdateSec;
-		u32 _imageTex;
+		void* _window;
+		float _updatePerSec;
+		double _accTimeSinceLastUpdateSec;
+		unsigned int _imageTex;
 	};
 
 } // namespace rt

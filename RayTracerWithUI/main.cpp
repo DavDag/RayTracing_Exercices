@@ -1,28 +1,31 @@
-#include <cstdlib>
-#include <thread>
-
 #include "./src/core/core.hpp"
+#include "./src/scene/scene.hpp"
+#include "./src/options/options.hpp"
+#include "./src/image/image.hpp"
 #include "./src/viewer/viewer.hpp"
 
-i32 main(i32 argc, u8* argv[]) {
-    i32 w = 1920, h = 1080;
+#include <cstdlib>
+#include <thread>
+#include <iostream>
+
+int main(int argc, char* argv[]) {
+    if (argc < 3) {
+        std::cout << "Usage: <scenefile> <configfile>\n";
+        exit(EXIT_FAILURE);
+    }
     //
-    rt::Image image(w, h);
+    std::unique_ptr<rt::Scene> scene = rt::Scene::FromFile(argv[1]);
+    std::unique_ptr<rt::Options> options = rt::Options::FromFile(argv[2]);
+    if (!scene || !options)
+        exit(EXIT_FAILURE);
+    //
+    rt::Image image(scene->w, scene->h);
     rt::Viewer viewer(image, 32, 4.0f);
     std::thread tviewer([&viewer]() {
         viewer.init();
         viewer.start();
         viewer.exit();
     });
-    //
-    for (i32 i = 0; i < 1'000; ++i) {
-        for (i32 j = 0; j < 100; ++j) {
-            i32 px = i32(((f32)rand() / (RAND_MAX + 1)) * w);
-            i32 py = i32(((f32)rand() / (RAND_MAX + 1)) * h);
-            image.set(px, py, rt::Pixel(1.0f));
-        }
-        std::this_thread::sleep_for(std::chrono::milliseconds(1));
-    }
     //
     tviewer.join();
     exit(EXIT_SUCCESS);

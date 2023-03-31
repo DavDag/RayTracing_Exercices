@@ -1,13 +1,15 @@
 #include "viewer.hpp"
 
+#include "../image/image.hpp"
+
+#include <iostream>
+
 #include <GLFW/glfw3.h>
 #include <GL/glew.h>
 #include <imgui.h>
 #include <imgui_internal.h>
 #include <backends/imgui_impl_glfw.h>
 #include <backends/imgui_impl_opengl3.h>
-
-#include <iostream>
 
 #ifdef _DEBUG
 #define GL_CALL(query) do { query; checkOpenGLError(#query, __FILE__, __LINE__); } while(0);
@@ -24,17 +26,17 @@ void mouseBtnCallback(GLFWwindow* window, int key, int action, int mods);
 void scrollCallback(GLFWwindow* window, double dx, double dy);
 void framebufferSizeCallback(GLFWwindow* window, int width, int height);
 
-int initGLFW(GLFWwindow*& window, int w, int h, rt::Viewer& viewer);
+int initGLFW(GLFWwindow** window, int w, int h, rt::Viewer& viewer);
 int initGLEW();
 int initImGui(GLFWwindow* window);
 
-void exitGLFW(GLFWwindow*& window);
+void exitGLFW(GLFWwindow** window);
 void exitGLEW();
 void exitImGui();
 
 namespace rt {
 
-	Viewer::Viewer(const Image& image, i32 padding, f32 updatePerSec):
+	Viewer::Viewer(const Image& image, int padding, float updatePerSec):
         _valid(false), _ww(0), _wh(0), _pd(padding), _image(image), _window(nullptr),
         _updatePerSec(updatePerSec), _accTimeSinceLastUpdateSec(0), _imageTex(0)
 	{
@@ -43,7 +45,7 @@ namespace rt {
 	}
 
 	void Viewer::init() {
-        if (int err = initGLFW(this->_window, this->_ww, this->_wh, *this); err != 0) {
+        if (int err = initGLFW((GLFWwindow**)&this->_window, this->_ww, this->_wh, *this); err != 0) {
             std::cerr << "Error initializing GLFW, <code> = " << err << "\n";
             this->_valid = false;
             return;
@@ -53,7 +55,7 @@ namespace rt {
             this->_valid = false;
             return;
         }
-        if (int err = initImGui(this->_window); err != 0) {
+        if (int err = initImGui((GLFWwindow*)this->_window); err != 0) {
             std::cerr << "Error initializing ImGui, <code> = " << err << "\n";
             this->_valid = false;
             return;
@@ -73,7 +75,7 @@ namespace rt {
         GL_CALL(glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST));
         GL_CALL(glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT));
         GL_CALL(glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT));
-        f32 borderColor[] = { 1.0f, 1.0f, 1.0f };
+        float borderColor[] = { 1.0f, 1.0f, 1.0f };
         GL_CALL(glTexParameterfv(GL_TEXTURE_2D, GL_TEXTURE_BORDER_COLOR, borderColor));
         GL_CALL(glBindTexture(GL_TEXTURE_2D, NULL));
 	}
@@ -81,7 +83,7 @@ namespace rt {
     void Viewer::exit() {
         exitImGui();
         exitGLEW();
-        exitGLFW(this->_window);
+        exitGLFW((GLFWwindow**)&this->_window);
     }
 
     void Viewer::start() {
@@ -89,7 +91,7 @@ namespace rt {
         //
         glfwSwapInterval(1);
         f64 lastFrameTimeSec = glfwGetTime();
-        while (!glfwWindowShouldClose(this->_window)) {
+        while (!glfwWindowShouldClose((GLFWwindow*)this->_window)) {
             glfwPollEvents();
             ImGui_ImplOpenGL3_NewFrame();
             ImGui_ImplGlfw_NewFrame();
@@ -111,12 +113,12 @@ namespace rt {
             //
             ImGui::Render();
             ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
-            glfwSwapBuffers(this->_window);
+            glfwSwapBuffers((GLFWwindow*)this->_window);
         }
     }
 
     void Viewer::stop() {
-        glfwSetWindowShouldClose(this->_window, GLFW_TRUE);
+        glfwSetWindowShouldClose((GLFWwindow*)this->_window, GLFW_TRUE);
     }
 
     void Viewer::preview() {
@@ -126,10 +128,10 @@ namespace rt {
             | ImGuiWindowFlags_NoInputs
             | ImGuiWindowFlags_NoSavedSettings
             ;
-        ImGui::SetNextWindowPos(ImVec2(this->_pd, this->_pd));
-        ImGui::SetNextWindowContentSize(ImVec2((f32)this->_image.width(), (f32)this->_image.height()));
+        ImGui::SetNextWindowPos(ImVec2((float)this->_pd, (float)this->_pd));
+        ImGui::SetNextWindowContentSize(ImVec2((float)this->_image.width(), (float)this->_image.height()));
         ImGui::Begin("Preview", nullptr, flags);
-        ImGui::Image((ImTextureID)this->_imageTex, ImVec2((f32)this->_image.width(), (f32)this->_image.height()));
+        ImGui::Image((ImTextureID)this->_imageTex, ImVec2((float)this->_image.width(), (float)this->_image.height()));
         ImGui::End();
         ImGui::PopStyleVar();
     }
@@ -153,7 +155,7 @@ namespace rt {
 // GLFW
 // ==========================================================================================
 
-int initGLFW(GLFWwindow*& window, int w, int h, rt::Viewer& viewer) {
+int initGLFW(GLFWwindow** window, int w, int h, rt::Viewer& viewer) {
     glfwSetErrorCallback(errorCallback);
     if (!glfwInit()) return 1;
     glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 4);
@@ -161,19 +163,19 @@ int initGLFW(GLFWwindow*& window, int w, int h, rt::Viewer& viewer) {
     glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE); // 4.5+ only
     glfwWindowHint(GLFW_RESIZABLE, GLFW_FALSE);
     //glfwWindowHint(GLFW_DECORATED, GLFW_FALSE);
-    window = glfwCreateWindow(w, h, "Ray Tracer", NULL, NULL);
-    if (!window) return 2;
-    glfwSetWindowUserPointer(window, &viewer);
-    glfwSetKeyCallback(window, keyCallback);
-    glfwSetMouseButtonCallback(window, mouseBtnCallback);
-    glfwSetScrollCallback(window, scrollCallback);
-    glfwSetFramebufferSizeCallback(window, framebufferSizeCallback);
-    glfwMakeContextCurrent(window);
+    (*window) = glfwCreateWindow(w, h, "Ray Tracer", NULL, NULL);
+    if (!*window) return 2;
+    glfwSetWindowUserPointer(*window, &viewer);
+    glfwSetKeyCallback(*window, keyCallback);
+    glfwSetMouseButtonCallback(*window, mouseBtnCallback);
+    glfwSetScrollCallback(*window, scrollCallback);
+    glfwSetFramebufferSizeCallback(*window, framebufferSizeCallback);
+    glfwMakeContextCurrent(*window);
     return 0;
 }
 
-void exitGLFW(GLFWwindow*& window) {
-    glfwDestroyWindow(window);
+void exitGLFW(GLFWwindow** window) {
+    glfwDestroyWindow(*window);
     glfwTerminate();
 }
 
