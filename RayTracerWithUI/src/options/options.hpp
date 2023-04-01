@@ -14,7 +14,7 @@ namespace rt {
 	public:
 		Options() = delete;
 		Options(const OptionsData& data);
-		static std::unique_ptr<Options> FromFile(const std::string& filename);
+		static std::shared_ptr<Options> FromFile(const std::string& filename);
 
 	public:
 		const i32 w, h;

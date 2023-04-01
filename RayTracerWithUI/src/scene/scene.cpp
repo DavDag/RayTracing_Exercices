@@ -17,9 +17,11 @@ namespace rt {
 		Vec3 pos(0.0f);
 		Vec3 target(0.0f);
 		f32 fovy = 0.0f;
+		f32 aspect = 0.0f;
 		bool bPos = false;
 		bool bTarget = false;
 		bool bFovy = false;
+		bool bAspect = false;
 		//
 		std::string line{}, prop{}, equal{};
 		while (std::getline(in, line)) {
@@ -40,14 +42,20 @@ namespace rt {
 				bFovy = true;
 				ss >> fovy;
 				break;
+			case crc32("aspect"):
+				bAspect = true;
+				f32 w, h;
+				ss >> w >> h;
+				aspect = w / h;
+				break;
 			default:
 				break;	
 			}
 			//
-			if (bPos && bTarget && bFovy) break;
+			if (bPos && bTarget && bFovy && bAspect) break;
 		}
 		//
-		data.camera = std::make_shared<Camera>(pos, target, fovy);
+		data.camera = std::make_shared<Camera>(pos, target, aspect, fovy);
 	}
 
 	void ReadMatDiffusive(std::ifstream& in, std::string& name, SceneData& data) {
@@ -105,15 +113,15 @@ namespace rt {
 		data.objects.push_back(std::make_shared<Sphere>(name, mat));
 	}
 
-	std::unique_ptr<Scene> Scene::FromFile(const std::string& filename) {
+	std::shared_ptr<Scene> Scene::FromFile(const std::string& filename) {
 		std::ifstream in(filename);
 		if (!in.is_open()) {
 			std::cerr << "Unable to open scene file:" << filename << "\n";
-			return std::unique_ptr<Scene>(nullptr);
+			return std::shared_ptr<Scene>(nullptr);
 		}
 		//
 		SceneData data {
-			.camera = std::unique_ptr<Camera>(nullptr),
+			.camera = std::shared_ptr<Camera>(nullptr),
 			.materials = std::unordered_map<u32, std::shared_ptr<Material>>(),
 			.objects = std::vector<std::shared_ptr<Shape>>()
 		};

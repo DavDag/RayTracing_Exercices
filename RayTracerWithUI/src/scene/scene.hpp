@@ -17,7 +17,7 @@ namespace rt {
 	public:
 		Scene() = delete;
 		Scene(const SceneData& data);
-		static std::unique_ptr<Scene> FromFile(const std::string& filename);
+		static std::shared_ptr<Scene> FromFile(const std::string& filename);
 
 	public:
 		const std::shared_ptr<Camera> camera;

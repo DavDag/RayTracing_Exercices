@@ -9,11 +9,11 @@ namespace rt {
 
 	}
 
-	std::unique_ptr<Options> Options::FromFile(const std::string& filename) {
+	std::shared_ptr<Options> Options::FromFile(const std::string& filename) {
 		std::ifstream in(filename);
 		if (!in.is_open()) {
 			std::cerr << "Unable to open options file:" << filename << "\n";
-			return std::unique_ptr<Options>(nullptr);
+			return std::shared_ptr<Options>(nullptr);
 		}
 		//
 		OptionsData data {

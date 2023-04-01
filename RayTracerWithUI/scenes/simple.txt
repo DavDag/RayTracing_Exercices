@@ -2,6 +2,7 @@ CAMERA
 pos = 0 0 1
 target = 0 0 0
 fovy = 45
+aspect = 16 9
 
 MAT_DIFF orange_mat
 albedo = 1.0 0.2 0.0

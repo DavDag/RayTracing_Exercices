@@ -3,6 +3,7 @@
 #include "./src/options/options.hpp"
 #include "./src/image/image.hpp"
 #include "./src/viewer/viewer.hpp"
+#include "./src/raytracer/raytracer.hpp"
 
 #include <cstdlib>
 #include <thread>
@@ -15,17 +16,21 @@ int main(int argc, char* argv[]) {
         exit(EXIT_FAILURE);
     }
 
-    // Load scene & options from file
-    std::unique_ptr<rt::Scene> scene = rt::Scene::FromFile(argv[1]);
-    std::unique_ptr<rt::Options> options = rt::Options::FromFile(argv[2]);
+    // Load Scene & Options from file
+    std::shared_ptr<rt::Scene> scene = rt::Scene::FromFile(argv[1]);
+    std::shared_ptr<rt::Options> options = rt::Options::FromFile(argv[2]);
     if (!scene || !options)
         exit(EXIT_FAILURE);
 
-    // Create image & viewer
+    // Create Image, RayTracer & Viewer
     rt::Image image(options->w, options->h);
+    rt::RayTracer raytracer(scene, options, image);
     rt::Viewer viewer(image, 32, 4.0f);
 
-    // Launch viewer in another thread
+    // Build RayTracer internal structs
+    raytracer.build();
+
+    // Launch Viewer in another thread
     std::thread tviewer([&viewer]() {
         viewer.init();
         viewer.start();
@@ -33,6 +38,7 @@ int main(int argc, char* argv[]) {
     });
 
     // Start RayTracer
+    raytracer.process();
     
     // Join & exit
     tviewer.join();

@@ -100,8 +100,10 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="src\camera\camera.cpp" />
     <ClCompile Include="src\core\pixel.cpp" />
+    <ClCompile Include="src\core\vec3.cpp" />
     <ClCompile Include="src\image\image.cpp" />
     <ClCompile Include="src\options\options.cpp" />
+    <ClCompile Include="src\raytracer\raytracer.cpp" />
     <ClCompile Include="src\scene\scene.cpp" />
     <ClCompile Include="src\viewer\viewer.cpp" />
   </ItemGroup>
@@ -109,6 +111,7 @@
     <ClInclude Include="src\camera\camera.hpp" />
     <ClInclude Include="src\core\core.hpp" />
     <ClInclude Include="src\core\crc32.hpp" />
+    <ClInclude Include="src\core\ray.hpp" />
     <ClInclude Include="src\core\types.hpp" />
     <ClInclude Include="src\core\vec3.hpp" />
     <ClInclude Include="src\image\image.hpp" />
@@ -116,6 +119,7 @@
     <ClInclude Include="src\materials\diffusive.h" />
     <ClInclude Include="src\materials\material.hpp" />
     <ClInclude Include="src\options\options.hpp" />
+    <ClInclude Include="src\raytracer\raytracer.hpp" />
     <ClInclude Include="src\scene\scene.hpp" />
     <ClInclude Include="src\shapes\shape.hpp" />
     <ClInclude Include="src\shapes\sphere.hpp" />
