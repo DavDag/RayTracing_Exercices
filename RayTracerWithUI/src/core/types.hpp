@@ -13,7 +13,7 @@ using u16  = uint16_t;
 using u32  = uint32_t;
 using u64  = uint64_t;
 
-using f32  = float;
+using f32  = double;
 using f64  = double;
 
 using c8   = char;
@@ -28,7 +28,7 @@ static_assert(sizeof(u16 ) == 2);
 static_assert(sizeof(u32 ) == 4);
 static_assert(sizeof(u64 ) == 8);
 
-static_assert(sizeof(f32 ) == 4);
+static_assert(sizeof(f32 ) == 8);
 static_assert(sizeof(f64 ) == 8);
 
 static_assert(sizeof(c8  ) == 1);

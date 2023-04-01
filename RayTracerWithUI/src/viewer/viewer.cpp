@@ -40,34 +40,34 @@ namespace rt {
         _valid(false), _ww(0), _wh(0), _pd(padding), _image(image), _window(nullptr),
         _updatePerSec(updatePerSec), _accTimeSinceLastUpdateSec(0), _imageTex(0)
 	{
-        this->_ww = image.width()  + padding * 2;
-        this->_wh = image.height() + padding * 2;
+        _ww = image.width()  + padding * 2;
+        _wh = image.height() + padding * 2;
 	}
 
 	void Viewer::init() {
-        if (int err = initGLFW((GLFWwindow**)&this->_window, this->_ww, this->_wh, *this); err != 0) {
+        if (int err = initGLFW((GLFWwindow**)&_window, _ww, _wh, *this); err != 0) {
             std::cerr << "Error initializing GLFW, <code> = " << err << "\n";
-            this->_valid = false;
+            _valid = false;
             return;
         }
         if (int err = initGLEW(); err != GLEW_OK) {
             std::cerr << "Error initializing GLEW, <code> = " << glewGetErrorString(err) << "\n";
-            this->_valid = false;
+            _valid = false;
             return;
         }
-        if (int err = initImGui((GLFWwindow*)this->_window); err != 0) {
+        if (int err = initImGui((GLFWwindow*)_window); err != 0) {
             std::cerr << "Error initializing ImGui, <code> = " << err << "\n";
-            this->_valid = false;
+            _valid = false;
             return;
         }
-        this->_valid = true;
+        _valid = true;
         //
-        GL_CALL(glGenTextures(1, &this->_imageTex));
-        GL_CALL(glBindTexture(GL_TEXTURE_2D, this->_imageTex));
+        GL_CALL(glGenTextures(1, &_imageTex));
+        GL_CALL(glBindTexture(GL_TEXTURE_2D, _imageTex));
         GL_CALL(
             glTexImage2D(
                 GL_TEXTURE_2D, 0, GL_RGB,
-                this->_image.width(), this->_image.height(),
+                _image.width(), _image.height(),
                 0, GL_RGB, GL_UNSIGNED_BYTE, NULL
             )
         );
@@ -83,15 +83,15 @@ namespace rt {
     void Viewer::exit() {
         exitImGui();
         exitGLEW();
-        exitGLFW((GLFWwindow**)&this->_window);
+        exitGLFW((GLFWwindow**)&_window);
     }
 
     void Viewer::start() {
-        if (!this->_valid) return;
+        if (!_valid) return;
         //
         glfwSwapInterval(1);
         f64 lastFrameTimeSec = glfwGetTime();
-        while (!glfwWindowShouldClose((GLFWwindow*)this->_window)) {
+        while (!glfwWindowShouldClose((GLFWwindow*)_window)) {
             glfwPollEvents();
             ImGui_ImplOpenGL3_NewFrame();
             ImGui_ImplGlfw_NewFrame();
@@ -101,24 +101,24 @@ namespace rt {
             //
             {
                 f64 now = glfwGetTime();
-                this->_accTimeSinceLastUpdateSec += (now - lastFrameTimeSec);
+                _accTimeSinceLastUpdateSec += (now - lastFrameTimeSec);
                 lastFrameTimeSec = now;
-                if (this->_accTimeSinceLastUpdateSec >= (1.0 / this->_updatePerSec)) {
+                if (_accTimeSinceLastUpdateSec >= (1.0 / _updatePerSec)) {
                     // to ensure no more than 1 update with low-fps
-                    this->_accTimeSinceLastUpdateSec = 0;
-                    this->update();
+                    _accTimeSinceLastUpdateSec = 0;
+                    update();
                 }
-                this->preview();
+                preview();
             }
             //
             ImGui::Render();
             ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
-            glfwSwapBuffers((GLFWwindow*)this->_window);
+            glfwSwapBuffers((GLFWwindow*)_window);
         }
     }
 
     void Viewer::stop() {
-        glfwSetWindowShouldClose((GLFWwindow*)this->_window, GLFW_TRUE);
+        glfwSetWindowShouldClose((GLFWwindow*)_window, GLFW_TRUE);
     }
 
     void Viewer::preview() {
@@ -128,24 +128,24 @@ namespace rt {
             | ImGuiWindowFlags_NoInputs
             | ImGuiWindowFlags_NoSavedSettings
             ;
-        ImGui::SetNextWindowPos(ImVec2((float)this->_pd, (float)this->_pd));
-        ImGui::SetNextWindowContentSize(ImVec2((float)this->_image.width(), (float)this->_image.height()));
+        ImGui::SetNextWindowPos(ImVec2((float)_pd, (float)_pd));
+        ImGui::SetNextWindowContentSize(ImVec2((float)_image.width(), (float)_image.height()));
         ImGui::Begin("Preview", nullptr, flags);
 #pragma warning(push)
 #pragma warning(disable: 4312) // 'type cast': conversion from 'unsigned int' to 'ImTextureID' of greater size
-        ImGui::Image((ImTextureID)this->_imageTex, ImVec2((float)this->_image.width(), (float)this->_image.height()));
+        ImGui::Image((ImTextureID)_imageTex, ImVec2((float)_image.width(), (float)_image.height()));
 #pragma warning(pop)
         ImGui::End();
         ImGui::PopStyleVar();
     }
 
     void Viewer::update() {
-        GL_CALL(glBindTexture(GL_TEXTURE_2D, this->_imageTex));
+        GL_CALL(glBindTexture(GL_TEXTURE_2D, _imageTex));
         GL_CALL(
             glTexSubImage2D(
                 GL_TEXTURE_2D, 0, 0, 0,
-                this->_image.width(), this->_image.height(),
-                GL_RGB, GL_UNSIGNED_BYTE, this->_image.rgb()
+                _image.width(), _image.height(),
+                GL_RGB, GL_UNSIGNED_BYTE, _image.rgb()
             )
         );
         GL_CALL(glBindTexture(GL_TEXTURE_2D, NULL));

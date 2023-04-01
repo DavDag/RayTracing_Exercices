@@ -7,39 +7,39 @@ namespace rt {
 	Image::Image(i32 w, i32 h):
 		_w(w), _h(h), _data(nullptr)
 	{
-		this->_data = new u8[3 * w * h];
-		memset(this->_data, (u8)0, sizeof(u8) * 3 * w * h);
+		_data = new u8[3 * w * h];
+		memset(_data, (u8)0, sizeof(u8) * 3 * w * h);
 	}
 
 	void Image::set(i32 px, i32 py, Color pixel) {
-		i32 index = 3 * ((this->_w * py) + px);
-		this->_data[index + 0] = (u32(pixel.r * 255.0f)) & 0xff;
-		this->_data[index + 1] = (u32(pixel.g * 255.0f)) & 0xff;
-		this->_data[index + 2] = (u32(pixel.b * 255.0f)) & 0xff;
+		i32 index = 3 * ((_w * py) + px);
+		_data[index + 0] = (u32(pixel.r * 255.0f)) & 0xff;
+		_data[index + 1] = (u32(pixel.g * 255.0f)) & 0xff;
+		_data[index + 2] = (u32(pixel.b * 255.0f)) & 0xff;
 	}
 
 	Color Image::get(i32 px, i32 py) const {
-		i32 index = 3 * ((this->_w * py) + px);
-		f32 r = (this->_data[index + 0] / 255.0f);
-		f32 g = (this->_data[index + 1] / 255.0f);
-		f32 b = (this->_data[index + 2] / 255.0f);
+		i32 index = 3 * ((_w * py) + px);
+		f32 r = (_data[index + 0] / 255.0f);
+		f32 g = (_data[index + 1] / 255.0f);
+		f32 b = (_data[index + 2] / 255.0f);
 		return Color(r, g, b);
 	}
 
 	const u8* Image::rgb() const {
-		return this->_data;
+		return _data;
 	}
 
 	i32 Image::width() const {
-		return this->_w;
+		return _w;
 	}
 
 	i32 Image::height() const {
-		return this->_h;
+		return _h;
 	}
 
 	void Image::save(const std::string& filename) const {
-		writeTGA(filename, this->_w, this->_h, this->_data);
+		writeTGA(filename, _w, _h, _data);
 	}
 
 	void Image::open(const std::string& filename) const {

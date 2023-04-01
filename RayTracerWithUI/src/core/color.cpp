@@ -13,7 +13,7 @@ namespace rt {
 	}
 
 	bool Color::hasNaNs() const {
-		return std::isnan(this->r) || std::isnan(this->g) || std::isnan(this->b);
+		return std::isnan(r) || std::isnan(g) || std::isnan(b);
 	}
 
 	std::ostream& operator<<(std::ostream& out, const Color& color) {
@@ -23,33 +23,33 @@ namespace rt {
 
 	Color Color::gammaCorrected(f32 gamma) const {
 		f32 exp = 1.0f / gamma;
-		f32 nr = std::powf(this->r, exp);
-		f32 ng = std::powf(this->g, exp);
-		f32 nb = std::powf(this->b, exp);
+		f32 nr = std::powf(r, exp);
+		f32 ng = std::powf(g, exp);
+		f32 nb = std::powf(b, exp);
 		return Color(nr, ng, nb);
 	}
 
 	Color& Color::operator+=(const Color& other) {
-		this->r += other.r;
-		this->g += other.g;
-		this->b += other.b;
+		r += other.r;
+		g += other.g;
+		b += other.b;
 		DBG_ASSERT(hasNaNs() == false);
 		return (*this);
 	}
 
 	Color& Color::operator*=(const Color& other) {
-		this->r *= other.r;
-		this->g *= other.g;
-		this->b *= other.b;
+		r *= other.r;
+		g *= other.g;
+		b *= other.b;
 		DBG_ASSERT(hasNaNs() == false);
 		return (*this);
 	}
 
 	Color& Color::operator/=(f32 scalar) {
 		f32 tmp = 1.0f / scalar;
-		this->r *= tmp;
-		this->g *= tmp;
-		this->b *= tmp;
+		r *= tmp;
+		g *= tmp;
+		b *= tmp;
 		DBG_ASSERT(hasNaNs() == false);
 		return (*this);
 	}

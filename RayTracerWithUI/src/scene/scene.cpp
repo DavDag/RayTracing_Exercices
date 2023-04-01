@@ -35,10 +35,12 @@ namespace rt {
 		Vec3 target(0.0f);
 		f32 fovy = 0.0f;
 		i32 vieww = 0, viewh = 0;
+		f32 aperture = 0.0f;
 		bool bPos = false;
 		bool bTarget = false;
 		bool bFovy = false;
 		bool bView = false;
+		bool bAperture = false;
 		//
 		std::string line{}, prop{}, equal{};
 		while (std::getline(in, line)) {
@@ -63,14 +65,18 @@ namespace rt {
 				bView = true;
 				ss >> vieww >> viewh;
 				break;
+			case crc32("aperture"):
+				bAperture = true;
+				ss >> aperture;
+				break;
 			default:
 				break;	
 			}
 			//
-			if (bPos && bTarget && bFovy && bView) break;
+			if (bPos && bTarget && bFovy && bView && bAperture) break;
 		}
 		//
-		data.camera = std::make_shared<Camera>(pos, target, vieww, viewh, fovy);
+		data.camera = std::make_shared<Camera>(pos, target, vieww, viewh, fovy, aperture);
 	}
 
 	void ReadMatDiffusive(std::ifstream& in, std::string& name, SceneData& data) {

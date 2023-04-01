@@ -1,0 +1,44 @@
+CAMERA
+pos = -2 2 1
+target = 0 0 -1
+view = 400 225
+fovy = 90
+aperture = 2.0
+
+MAT_DIFF ground_mat
+albedo = 0.8 0.8 0.0
+
+MAT_DIFF center_mat
+albedo = 0.1 0.2 0.5
+
+MAT_DIEL left_mat
+refractionRatio = 1.5
+
+MAT_METAL right_mat
+albedo = 0.8 0.6 0.2
+fuzziness = 0.0
+
+OBJ_SPHERE center_sphere
+cen = 0 0 -1
+rad = 0.5
+mat = center_mat
+
+OBJ_SPHERE left_sphere_1
+cen = -1 0 -1
+rad = 0.5
+mat = left_mat
+
+OBJ_SPHERE left_sphere_2
+cen = -1 0 -1
+rad = -0.45
+mat = left_mat
+
+OBJ_SPHERE right_sphere
+cen = 1 0 -1
+rad = 0.5
+mat = right_mat
+
+OBJ_SPHERE ground_sphere
+cen = 0 -100.5 -1
+rad = 100
+mat = ground_mat

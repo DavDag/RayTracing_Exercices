@@ -16,16 +16,20 @@ namespace rt {
 		}
 
 		void print(std::ostream& out) const override {
-			out << "MAT_METAL " << this->name << "\n"
-				<< "albedo = " << this->_albedo << "\n"
-				<< "fuzziness = " << this->_fuzziness << "\n";
+			out << "MAT_METAL " << name << "\n"
+				<< "albedo = " << _albedo << "\n"
+				<< "fuzziness = " << _fuzziness << "\n";
 		}
 
-		Ray scatter(const Ray& ray, const RayHit& payload, SurfaceInfo& out) const override {
+		bool scatter(
+			const Ray& ray, const RayHit& payload,
+			SurfaceInfo& out, Ray& scattered
+		) const override {
 			Vec3 reflected = Vec3::reflect(ray.dir, payload.norm);
-			Vec3 scattered = reflected + (Vec3::rndInUnitSphere() * this->_fuzziness);
-			out.attenuation = this->_albedo;
-			return Ray(payload.pos, scattered);
+			Vec3 scatteredDir = reflected + Vec3::rndInUnitSphere() * _fuzziness;
+			out.attenuation = _albedo;
+			scattered = Ray(payload.pos, Vec3::unit(scatteredDir));
+			return Vec3::dot(scattered.dir, payload.norm) > 0;
 		}
 
 	private:

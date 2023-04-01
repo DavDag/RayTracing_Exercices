@@ -16,7 +16,7 @@ namespace rt {
 		}
 
 		operator bool() const {
-			return (this->obj != nullptr);
+			return (obj != nullptr);
 		}
 
 	public:

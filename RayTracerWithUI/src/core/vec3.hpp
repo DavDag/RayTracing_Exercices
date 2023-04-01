@@ -41,6 +41,9 @@ namespace rt {
 
 		static Vec3 rnd();
 		static Vec3 rndInUnitSphere();
+		static Vec3 rndInUnitHemisphere(const Vec3& surfNorm);
+		static Vec3 rndUnitVector();
+		static Vec3 rndInUnitDisk();
 
 	public:
 		f32 x, y, z;

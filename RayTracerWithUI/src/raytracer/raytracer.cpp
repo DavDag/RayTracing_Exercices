@@ -26,16 +26,16 @@ namespace rt {
 	void RayTracer::process() {
 		auto tbeg = std::chrono::high_resolution_clock::now();
 		{
-			i32 w = this->_scene->camera->imgW();
-			i32 h = this->_scene->camera->imgH();
+			i32 w = _scene->camera->imgW();
+			i32 h = _scene->camera->imgH();
 #ifdef _PROFILE
 			for (i32 y = 0; y < h; ++y) {
 				profiler::FrameStart();
 #else
-			concurrency::parallel_for(0, h, [&](i32 y) {
+			concurrency::parallel_for(0, h-1, [&](i32 y) {
 #endif // _PROFILE
 				for (i32 x = 0; x < w; ++x) {
-					Color p = this->pixel(x, y);
+					Color p = pixel(x, y);
 #ifdef _DEBUG
 					if ((p.r > 1.0f || p.g > 1.0f || p.b > 1.0f)
 						|| (p.r < 0.0f || p.g < 0.0f || p.b < 0.0f))
@@ -45,7 +45,7 @@ namespace rt {
 					}
 #endif // _DEBUG
 					p = p.gammaCorrected(2.0f);
-					this->_image.set(x, y, p);
+					_image.set(x, y, p);
 				}
 #ifdef _PROFILE
 				profiler::FrameEnd();
@@ -60,16 +60,16 @@ namespace rt {
 	}
 
 	Color RayTracer::pixel(i32 px, i32 py) {
-		Camera& camera = *this->_scene->camera;
+		Camera& camera = *_scene->camera;
 		i32 w = camera.imgW(), h = camera.imgH();
-		i32 samples = this->_options->samples;
-		i32 maxdepth = this->_options->maxdepth;
+		i32 samples = _options->samples;
+		i32 maxdepth = _options->maxdepth;
 		Color out(0.0f);
 		for (i32 si = 0; si < samples; ++si) {
-			f32 dx = (px + rnd_uniform<f32>(0.0f, 1.0f)) / w;
-			f32 dy = (py + rnd_uniform<f32>(0.0f, 1.0f)) / h;
+			f32 dx = (px + rnd_uniform<f32>(0.0f, 1.0f)) / (w-1);
+			f32 dy = (py + rnd_uniform<f32>(0.0f, 1.0f)) / (h-1);
 			Ray ray = camera.getRay(dx, dy);
-			out += this->trace(ray, maxdepth);
+			out += trace(ray, maxdepth);
 		}
 		out /= (f32)samples;
 		return out;
@@ -79,16 +79,19 @@ namespace rt {
 		if (depth == 0) return BLACK;
 		//
 		RayHit payload{};
-		const auto& objects = this->_scene->objects;
+		const auto& objects = _scene->objects;
 		for (const auto& shape : objects) shape->hit(ray, payload);
 		//
 		if (payload) {
 			// Scatter + compose
 			SurfaceInfo surface{};
-			Ray scattered = payload.obj->mat->scatter(ray, payload, surface);
-			Color out = this->trace(scattered, depth - 1);
-			out *= surface.attenuation;
-			return out;
+			Ray scattered{};
+			if (payload.obj->mat->scatter(ray, payload, surface, scattered)) {
+				Color out = trace(scattered, depth - 1);
+				out *= surface.attenuation;
+				return out;
+			}
+			return BLACK;
 		}
 		else {
 			// Sky (athmosphere)

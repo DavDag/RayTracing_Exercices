@@ -10,7 +10,7 @@ namespace rt {
 		explicit Ray(Vec3 orig, Vec3 dir): orig(orig), dir(dir) { }
 
 		Vec3 operator()(f32 t) const {
-			return this->orig + (this->dir * t);
+			return orig + (dir * t);
 		}
 
 	public:

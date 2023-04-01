@@ -3,6 +3,7 @@ pos = 0 0 1
 target = 0 0 0
 view = 1200 800
 fovy = 45
+aperture = 2.0
 
 MAT_DIFF orange_mat
 albedo = 1.0 0.2 0.0

@@ -1,8 +1,9 @@
 CAMERA
 pos = 0 0.8 4
 target = 0 0 0
-view = 1920 1080
+view = 7680 4320
 fovy = 45
+aperture = 0.1
 
 MAT_DIFF diff_ground
 albedo = 0.32 0.176 0.66

@@ -12,32 +12,36 @@ namespace rt {
 		) :
 			Material(name), _refractionRatio(refractionRatio)
 		{
-			this->_refractionRatioInv = 1.0f / refractionRatio;
+			_refractionRatioInv = 1.0f / refractionRatio;
 		}
 
 		void print(std::ostream& out) const override {
-			out << "MAT_DIEL " << this->name << "\n"
-				<< "refractionRatio = " << this->_refractionRatio << "\n";
+			out << "MAT_DIEL " << name << "\n"
+				<< "refractionRatio = " << _refractionRatio << "\n";
 		}
 
-		Ray scatter(const Ray& ray, const RayHit& payload, SurfaceInfo& out) const override {
-			out.attenuation = Color(1.0f);
-			f32 rr = (payload.frontFace) ? this->_refractionRatioInv : this->_refractionRatio;
+		bool scatter(
+			const Ray& ray, const RayHit& payload,
+			SurfaceInfo& out, Ray& scattered
+		) const override {
+			f32 rr = (payload.frontFace) ? _refractionRatioInv : _refractionRatio;
 			f32 cosTheta = std::min<f32>(Vec3::dot(-ray.dir, payload.norm), 1.0f);
 			f32 sinTheta = std::sqrt(1.0f - cosTheta * cosTheta);
 			bool cannotRefract = rr * sinTheta > 1.0f;
 
-			Vec3 scatter(0.0f);
+			Vec3 scatteredDir(0.0f);
 			if (cannotRefract || reflectance(cosTheta, rr) > rnd_uniform<f32>(0.0f, 1.0f)) {
-				scatter = Vec3::reflect(ray.dir, payload.norm);
+				scatteredDir = Vec3::reflect(ray.dir, payload.norm);
 			}
 			else {
 				Vec3 perp = (ray.dir + payload.norm * cosTheta) * rr;
 				Vec3 para = payload.norm * -std::sqrt(std::abs(1.0f - perp.lengthSquared()));
-				scatter = perp + para;
+				scatteredDir = perp + para;
 			}
 
-			return Ray(payload.pos, Vec3::unit(scatter));
+			out.attenuation = Color(1.0f);
+			scattered = Ray(payload.pos, Vec3::unit(scatteredDir));
+			return true;
 		}
 
 	private:

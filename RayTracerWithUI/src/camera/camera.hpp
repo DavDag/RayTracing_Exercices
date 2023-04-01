@@ -6,7 +6,11 @@ namespace rt {
 
 	class Camera {
 	public:
-		Camera(Vec3 pos, Vec3 target, i32 imgw, i32 imgh, f32 fovy);
+		Camera(
+			Vec3 pos, Vec3 target,
+			i32 imgw, i32 imgh,
+			f32 fovy, f32 aperture
+		);
 
 		void print(std::ostream& out) const;
 
@@ -17,8 +21,9 @@ namespace rt {
 	private:
 		Vec3 _pos, _target;
 		i32 _imgw, _imgh;
-		f32 _fovy;
-		Vec3 _xInc, _yInc;
+		f32 _fovy, _aperture;
+		Vec3 _w, _u, _v;
+		Vec3 _lowLeft, _xInc, _yInc;
 		f32 _aspect;
 	};
 

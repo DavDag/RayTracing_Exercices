@@ -80,7 +80,8 @@ std::shared_ptr<rt::Scene> rndScene() {
         rt::Vec3(0.0f, 0.8f, 4.0f),
         rt::Vec3(0.0f, 0.0f, 0.0f),
         1920, 1080,
-        45.0f
+        45.0f,
+        2.0f
     );
     // Materials
     std::vector<std::shared_ptr<rt::Material>> materials{};
