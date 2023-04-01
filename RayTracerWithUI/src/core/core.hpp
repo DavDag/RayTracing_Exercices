@@ -1,8 +1,15 @@
 #pragma once
 
+#ifdef _DEBUG
+#define DBG_ASSERT(eq) do { if (!eq) { __debugbreak(); exit(1); } } while(0);
+#else
+#define DBG_ASSERT(eq) 
+#endif // DEBUG
+
 #include "types.hpp"
+#include "math.hpp"
 #include "crc32.hpp"
-#include "pixel.hpp"
+#include "color.hpp"
 #include "vec3.hpp"
 #include "ray.hpp"
 #include "rnd.hpp"
@@ -17,12 +24,3 @@
 #include <fstream>
 #include <iostream>
 
-namespace rt {
-
-	static constexpr f32 PI = 3.141592f;
-
-	static constexpr f32 degToRad(f32 degrees) {
-		return degrees * PI / 180.0f;
-	}
-
-} // namespace rt

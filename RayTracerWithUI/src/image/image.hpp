@@ -8,8 +8,8 @@ namespace rt {
 	public:
 		Image(i32 w, i32 h);
 
-		void set(i32 px, i32 py, Pixel pixel);
-		Pixel get(i32 px, i32 py) const;
+		void set(i32 px, i32 py, Color pixel);
+		Color get(i32 px, i32 py) const;
 		const u8* rgb() const;
 
 		i32 width() const;

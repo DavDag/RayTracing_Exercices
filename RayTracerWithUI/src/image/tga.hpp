@@ -33,11 +33,11 @@ void writeTGA(const std::string& filename, i32 w, i32 h, const u8* pixelsRGB) {
 	for (i32 y = 0; y < h; ++y)
 		for (i32 x = 0; x < w; ++x) {
 			i32 index = 3 * (y * w + x);
-			char bgr[] = {
+			const u8 bgr[] = {
 				pixelsRGB[index + 2],
 				pixelsRGB[index + 1],
 				pixelsRGB[index + 0],
 			};
-			out.write(bgr, sizeof(bgr));
+			out.write(reinterpret_cast<const char*>(bgr), sizeof(bgr));
 		}
 }

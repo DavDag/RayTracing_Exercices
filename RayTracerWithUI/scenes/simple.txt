@@ -1,8 +1,8 @@
 CAMERA
 pos = 0 0 1
 target = 0 0 0
+view = 1920 1080
 fovy = 45
-aspect = 16 9
 
 MAT_DIFF orange_mat
 albedo = 1.0 0.2 0.0
@@ -11,11 +11,11 @@ MAT_DIFF ground_mat
 albedo = 0.5 0.3 0.7
 
 OBJ_SPHERE mid_sphere
-pos = 0 0 -1
+cen = 0 0 -1
 rad = 0.5
 mat = orange_mat
 
 OBJ_SPHERE ground_sphere
-pos = 0 -100.5 -1
+cen = 0 -100.5 -1
 rad = 100
 mat = ground_mat

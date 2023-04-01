@@ -131,7 +131,10 @@ namespace rt {
         ImGui::SetNextWindowPos(ImVec2((float)this->_pd, (float)this->_pd));
         ImGui::SetNextWindowContentSize(ImVec2((float)this->_image.width(), (float)this->_image.height()));
         ImGui::Begin("Preview", nullptr, flags);
+#pragma warning(push)
+#pragma warning(disable: 4312) // 'type cast': conversion from 'unsigned int' to 'ImTextureID' of greater size
         ImGui::Image((ImTextureID)this->_imageTex, ImVec2((float)this->_image.width(), (float)this->_image.height()));
+#pragma warning(pop)
         ImGui::End();
         ImGui::PopStyleVar();
     }

@@ -15,12 +15,12 @@ namespace rt {
 		void process();
 
 	private:
-		Pixel pixel(i32 x, i32 y);
-		Pixel trace(Ray& ray);
+		Color pixel(i32 x, i32 y);
+		Color trace(Ray& ray, i32 depth);
 
 	private:
-		const std::shared_ptr<Scene> _scene;
-		const std::shared_ptr<Options> _options;
+		std::shared_ptr<Scene> _scene;
+		std::shared_ptr<Options> _options;
 		Image& _image;
 	};
 

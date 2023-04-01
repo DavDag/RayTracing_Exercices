@@ -1,5 +1,9 @@
 #include "raytracer.hpp"
 
+#include "rayhit.hpp"
+
+#include <ppl.h>
+
 namespace rt {
 
 	RayTracer::RayTracer(
@@ -17,39 +21,55 @@ namespace rt {
 	}
 
 	void RayTracer::process() {
-		i32 w = this->_options->w;
-		i32 h = this->_options->h;
-		for (int y = 0; y < h; ++y) {
+		i32 w = this->_scene->camera->imgW();
+		i32 h = this->_scene->camera->imgH();
+		concurrency::parallel_for(0, h, [&](i32 y) {
 			for (int x = 0; x < w; ++x) {
-				Pixel p = this->pixel(x, y);
+				Color p = this->pixel(x, y);
 				p = p.gammaCorrected(2.0f);
 				this->_image.set(x, y, p);
 			}
-		}
+		});
 	}
 
-	Pixel RayTracer::pixel(i32 px, i32 py) {
+	Color RayTracer::pixel(i32 px, i32 py) {
 		Camera& camera = *this->_scene->camera;
-		i32 w = this->_options->w;
-		i32 h = this->_options->h;
+		i32 w = camera.imgW(), h = camera.imgH();
 		i32 samples = this->_options->samples;
 		i32 maxdepth = this->_options->maxdepth;
-		Pixel out(0.0f);
-		//for (int si = 0; si < samples; ++si) {
-			f32 dx = (px + 0.0f) / w;
-			f32 dy = (py + 0.0f) / h;
+		Color out(0.0f);
+		for (int si = 0; si < samples; ++si) {
+			f32 dx = (px + rnd_uniform<f32>(-0.5f, 0.5f)) / w;
+			f32 dy = (py + rnd_uniform<f32>(-0.5f, 0.5f)) / h;
 			Ray ray = camera.getRay(dx, dy);
-			out += this->trace(ray);
-		//}
+			out += this->trace(ray, maxdepth);
+		}
+		out /= (f32)samples;
 		return out;
 	}
-
-	Pixel RayTracer::trace(Ray& ray) {
-		// Sky (athmosphere)
-		static Pixel SkyColorA = Pixel(1.0f, 1.0f, 1.0f);
-		static Pixel SkyColorB = Pixel(0.5f, 0.7f, 1.0f);
-		f32 t = ray.dir.y / 2.0f + 0.5f;
-		return Pixel::lerp(SkyColorA, SkyColorB, t);
+	
+	Color RayTracer::trace(Ray& ray, i32 depth) {
+		if (depth == 0) return BLACK;
+		//
+		RayHit payload{};
+		const auto& objects = this->_scene->objects;
+		for (const auto& shape : objects) shape->hit(ray, payload);
+		//
+		if (payload) {
+			// Scatter + compose
+			SurfaceInfo surface{};
+			Ray scattered = payload.obj->mat->scatter(ray, payload, surface);
+			Color out = this->trace(scattered, depth - 1);
+			out *= surface.attenuation;
+			return out;
+		}
+		else {
+			// Sky (athmosphere)
+			static Color SkyColorA = Color(1.0f, 1.0f, 1.0f);
+			static Color SkyColorB = Color(0.5f, 0.7f, 1.0f);
+			f32 t = ray.dir.y / 2.0f + 0.5f;
+			return Color::lerp(SkyColorA, SkyColorB, t);
+		}
 	}
 
 } // namespace rt

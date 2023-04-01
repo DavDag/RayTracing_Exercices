@@ -45,7 +45,7 @@
     <ClCompile Include="src\image\image.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\core\pixel.cpp">
+    <ClCompile Include="src\core\color.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\scene\scene.cpp">
@@ -71,7 +71,7 @@
     <ClInclude Include="src\image\image.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\core\pixel.hpp">
+    <ClInclude Include="src\core\color.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\core\core.hpp">
@@ -95,16 +95,13 @@
     <ClInclude Include="src\camera\camera.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\materials\material.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="src\shapes\shape.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\shapes\sphere.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\materials\diffusive.h">
+    <ClInclude Include="src\materials\diffusive.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\raytracer\raytracer.hpp">
@@ -114,6 +111,21 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\image\tga.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\core\rnd.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\materials\material.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\raytracer\rayhit.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\materials\surfaceinfo.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\core\math.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

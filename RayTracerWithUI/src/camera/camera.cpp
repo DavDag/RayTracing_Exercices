@@ -2,9 +2,11 @@
 
 namespace rt {
 
-	Camera::Camera(Vec3 pos, Vec3 target, f32 aspect, f32 fovy) :
-		_pos(pos), _target(target), _aspect(aspect), _fovy(fovy)
+	Camera::Camera(Vec3 pos, Vec3 target, i32 imgw, i32 imgh, f32 fovy):
+		_pos(pos), _target(target), _imgw(imgw), _imgh(imgh), _fovy(fovy)
 	{
+		this->_aspect = imgw / (f32)imgh;
+
 		// Viewport using aspect ration + fovy
 		f32 theta = degToRad(fovy);
 		f32 viewh = 2.0f * std::tan(theta / 2.0f);
@@ -34,6 +36,24 @@ namespace rt {
 		Vec3 rayDir = xinc + (-yinc) - this->_pos;
 
 		return Ray(rayOrig, Vec3::unit(rayDir));
+	}
+
+	void Camera::print(std::ostream& out) const {
+		out << "pos = " << this->_pos << "\n"
+			<< "target = " << this->_target << "\n"
+			<< "view = " << this->_imgw << " x " << this->_imgh << "\n"
+			<< "fovy = " << this->_fovy << "\n"
+			<< "_aspect = " << this->_aspect << "\n"
+			<< "_xInc = " << this->_xInc << "\n"
+			<< "_yInc = " << this->_yInc << "\n";
+	}
+
+	i32 Camera::imgW() const {
+		return this->_imgw;
+	}
+
+	i32 Camera::imgH() const {
+		return this->_imgh;
 	}
 
 } // namespace rt

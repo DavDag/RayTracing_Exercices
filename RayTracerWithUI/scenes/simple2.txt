@@ -1,0 +1,37 @@
+CAMERA
+pos = 0 0 1
+target = 0 0 0
+view = 1200 800
+fovy = 45
+
+MAT_DIFF diff_1
+albedo = 1.0 0.2 0.0
+
+MAT_DIFF diff_2
+albedo = 0.3 0.2 0.8
+
+MAT_DIFF diff_3
+albedo = 0.7 0.1 0.5
+
+MAT_DIFF ground_mat
+albedo = 0.5 0.3 0.7
+
+OBJ_SPHERE mid_sphere
+cen = 0 0 -1
+rad = 0.5
+mat = diff_1
+
+OBJ_SPHERE left_sphere
+cen = -1 0 -1
+rad = 0.5
+mat = diff_2
+
+OBJ_SPHERE right_sphere
+cen = 1 0 -1
+rad = 0.5
+mat = diff_3
+
+OBJ_SPHERE ground_sphere
+cen = 0 -100.5 -1
+rad = 100
+mat = ground_mat

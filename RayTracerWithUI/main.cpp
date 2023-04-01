@@ -20,7 +20,7 @@ int main(int argc, char* argv[]) {
         exit(EXIT_FAILURE);
 
     // Create Image, RayTracer & Viewer
-    rt::Image image(options->w, options->h);
+    rt::Image image(scene->camera->imgW(), scene->camera->imgH());
     rt::RayTracer raytracer(scene, options, image);
     rt::Viewer viewer(image, 32, 4.0f);
 

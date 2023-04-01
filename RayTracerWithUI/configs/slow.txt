@@ -1,3 +1,2 @@
-output = 1920 1080
-samples = 1000
-maxdepth = 64
+samples = 256
+maxdepth = 32

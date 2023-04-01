@@ -20,9 +20,9 @@ namespace rt {
 		static std::shared_ptr<Scene> FromFile(const std::string& filename);
 
 	public:
-		const std::shared_ptr<Camera> camera;
-		const std::unordered_map<u32, std::shared_ptr<Material>> materials;
-		const std::vector<std::shared_ptr<Shape>> objects;
+		std::shared_ptr<Camera> camera;
+		std::unordered_map<u32, std::shared_ptr<Material>> materials;
+		std::vector<std::shared_ptr<Shape>> objects;
 	};
 
 } // namespace rt

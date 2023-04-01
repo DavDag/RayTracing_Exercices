@@ -1,17 +1,31 @@
 #include "vec3.hpp"
 
-#include <cmath>
+#include "core.hpp"
 
 namespace rt {
 
 	Vec3::Vec3(): Vec3(0.0f) { }
 	Vec3::Vec3(f32 v): Vec3(v, v, v) { }
-	Vec3::Vec3(f32 x, f32 y, f32 z): x(x), y(y), z(z) { }
+	Vec3::Vec3(f32 x, f32 y, f32 z):
+		x(x), y(y), z(z)
+	{
+		DBG_ASSERT(hasNaNs() == false);
+	}
+
+	bool Vec3::hasNaNs() const {
+		return std::isnan(this->x) || std::isnan(this->y) || std::isnan(this->z);
+	}
+
+	std::ostream& operator<<(std::ostream& out, const Vec3& vec) {
+		out << vec.x << "," << vec.y << "," << vec.z;
+		return out;
+	}
 
 	Vec3& Vec3::operator+=(const Vec3& other) {
 		this->x += other.x;
 		this->y += other.y;
 		this->z += other.z;
+		DBG_ASSERT(hasNaNs() == false);
 		return (*this);
 	}
 
@@ -19,6 +33,7 @@ namespace rt {
 		this->x -= other.x;
 		this->y -= other.y;
 		this->z -= other.z;
+		DBG_ASSERT(hasNaNs() == false);
 		return (*this);
 	}
 
@@ -26,6 +41,7 @@ namespace rt {
 		this->x *= scalar;
 		this->y *= scalar;
 		this->z *= scalar;
+		DBG_ASSERT(hasNaNs() == false);
 		return (*this);
 	}
 
@@ -34,6 +50,7 @@ namespace rt {
 		this->x *= tmp;
 		this->y *= tmp;
 		this->z *= tmp;
+		DBG_ASSERT(hasNaNs() == false);
 		return (*this);
 	}
 
@@ -84,6 +101,14 @@ namespace rt {
 		return x2 + y2 + z2;
 	}
 
+	bool Vec3::isZero() const {
+		constexpr f32 pos = +0.00001f;
+		constexpr f32 neg = -0.00001f;
+		return (this->x < pos && this->x > neg)
+			&& (this->y < pos && this->y > neg)
+			&& (this->z < pos && this->z > neg);
+	}
+
 	Vec3 Vec3::unit(const Vec3& vec) {
 		f32 lenght = vec.length();
 		return vec / lenght;
@@ -105,6 +130,13 @@ namespace rt {
 
 	Vec3 Vec3::lerp(const Vec3& veca, const Vec3& vecb, f32 t) {
 		return veca * (1.0f - t) + vecb * t;
+	}
+
+	Vec3 Vec3::rndInUnitSphere() {
+		f32 x = rnd_normal<f32>(0.0f, 1.0f);
+		f32 y = rnd_normal<f32>(0.0f, 1.0f);
+		f32 z = rnd_normal<f32>(0.0f, 1.0f);
+		return Vec3::unit(Vec3(x, y, z));
 	}
 
 } // namespace rt

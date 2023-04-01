@@ -3,7 +3,6 @@
 namespace rt {
 
 	Options::Options(const OptionsData& data):
-		w(data.outw), h(data.outh),
 		samples(data.samples), maxdepth(data.maxdepth)
 	{
 
@@ -17,8 +16,6 @@ namespace rt {
 		}
 		//
 		OptionsData data {
-			.outw = 0,
-			.outh = 0,
 			.samples = 0,
 			.maxdepth = 0,
 		};
@@ -30,9 +27,6 @@ namespace rt {
 			std::istringstream ss(line);
 			ss >> tag >> equal;
 			switch (crc32(tag)) {
-			case crc32("output"):
-				ss >> data.outw >> data.outh;
-				break;
 			case crc32("samples"):
 				ss >> data.samples;
 				break;
@@ -44,7 +38,11 @@ namespace rt {
 				break;
 			}
 		}
-		//
+#ifdef _DEBUG
+		std::cout << "\n======OPTIONS======\n";
+		std::cout << "samples = " << data.samples << "\n";
+		std::cout << "maxdepth = " << data.maxdepth << "\n";
+#endif // _DEBUG
 		return std::make_unique<Options>(data);
 	}
 
