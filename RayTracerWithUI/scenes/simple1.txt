@@ -1,7 +1,7 @@
 CAMERA
 pos = 0 0 1
 target = 0 0 0
-view = 1920 1080
+view = 1200 800
 fovy = 45
 
 MAT_DIFF orange_mat

@@ -23,7 +23,7 @@ namespace rt {
 		Ray scatter(const Ray& ray, const RayHit& payload, SurfaceInfo& out) const override {
 			out.attenuation = Color(1.0f);
 			f32 rr = (payload.frontFace) ? this->_refractionRatioInv : this->_refractionRatio;
-			f32 cosTheta = std::min(Vec3::dot(-ray.dir, payload.norm), 1.0f);
+			f32 cosTheta = std::min<f32>(Vec3::dot(-ray.dir, payload.norm), 1.0f);
 			f32 sinTheta = std::sqrt(1.0f - cosTheta * cosTheta);
 			bool cannotRefract = rr * sinTheta > 1.0f;
 

@@ -4,6 +4,9 @@ target = 0 0 0
 view = 1920 1080
 fovy = 45
 
+MAT_DIFF diff_ground
+albedo = 0.32 0.176 0.66
+
 MAT_DIFF diff_1
 albedo = 0.336472 0.355265 0.324428
 
@@ -269,6 +272,10 @@ fuzziness = 0.824445
 MAT_DIEL diele_0
 refractionRatio = 0.708094
 
+MAT_METAL glass
+albedo = 0.8 0.8 0.8
+fuzziness = 0.05
+
 MAT_METAL metal_10
 albedo = 0.212574 0.00174965 0.534332
 fuzziness = 0.433963
@@ -365,9 +372,14 @@ MAT_DIEL diele_9
 refractionRatio = -15.2001
 
 OBJ_SPHERE ground
-mat = metal_16
+mat = diff_ground
 cen = 0 -1000 0
 rad = 1000
+
+OBJ_SPHERE r_sphere_01
+mat = glass
+cen = 1 0.25 0
+rad = 0.25
 
 OBJ_SPHERE sphere_-15_-5.000000
 mat = diff_55

@@ -10,6 +10,10 @@
 #include <thread>
 #include <iostream>
 
+#ifdef _PROFILE
+#include "./deps/profilerlib/profilerlib.hpp"
+#endif // _PROFILE
+
 std::shared_ptr<rt::Scene> rndScene();
 
 int main(int argc, char* argv[]) {
@@ -20,8 +24,8 @@ int main(int argc, char* argv[]) {
     }
 
     // Load Scene & Options from file
-    std::shared_ptr<rt::Scene> scene = rt::Scene::FromFile(argv[1]);
     //std::shared_ptr<rt::Scene> scene = rndScene();
+    std::shared_ptr<rt::Scene> scene = rt::Scene::FromFile(argv[1]);
     std::shared_ptr<rt::Options> options = rt::Options::FromFile(argv[2]);
     if (!scene || !options)
         exit(EXIT_FAILURE);
@@ -43,13 +47,28 @@ int main(int argc, char* argv[]) {
         viewer.exit();
     });
 
-    // Start RayTracer
+    // RayTracer
+#ifdef _PROFILE
+    profiler::Enable();
+    profiler::FrameStart();
+#endif // _PROFILE
     raytracer.process();
-    image.save(argv[3]);
+#ifdef _PROFILE
+    profiler::FrameEnd();
+    profiler::Disable();
+    profiler::LogStats(profiler::GetStatsTable());
+#endif // _PROFILE
     
-    // Join & exit
+    // Save to file
+    image.save(argv[3]);
+
+    // Wait Viewer
     tviewer.join();
+
+    // Open result
+#ifndef _PROFILE
     image.open(argv[3]);
+#endif // _PROFILE
     exit(EXIT_SUCCESS);
 }
 
@@ -112,8 +131,8 @@ std::shared_ptr<rt::Scene> rndScene() {
             data.objects.push_back({
                 std::make_shared<rt::Sphere>(
                     name,
-                    materials[rt::rnd_uniform<int>(0, materials.size() - 1)],
-                    rt::Vec3(x + offx, 0.099f, z + offz),
+                    materials[rt::rnd_uniform<int>(0, (int)materials.size() - 1)],
+                    rt::Vec3(x + offx, 0.099f, (float)z + offz),
                     0.1f
                 )
                 });
