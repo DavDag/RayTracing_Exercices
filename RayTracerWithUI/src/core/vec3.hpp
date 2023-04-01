@@ -23,11 +23,12 @@ namespace rt {
 		Vec3 operator/(f32 scalar) const;
 
 		f32 length() const;
-		f64 lengthSquared() const;
+		f32 lengthSquared() const;
 
 		static Vec3 unit(const Vec3& vec);
 		static f32 dot(const Vec3& veca, const Vec3& vecb);
 		static Vec3 cross(const Vec3& veca, const Vec3& vecb);
+		static Vec3 lerp(const Vec3& veca, const Vec3& vecb, f32 t);
 
 	public:
 		f32 x, y, z;

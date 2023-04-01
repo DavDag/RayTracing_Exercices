@@ -6,7 +6,7 @@ namespace rt {
 		_pos(pos), _target(target), _aspect(aspect), _fovy(fovy)
 	{
 		// Viewport using aspect ration + fovy
-		f32 theta = degreesToRadians(fovy);
+		f32 theta = degToRad(fovy);
 		f32 viewh = 2.0f * std::tan(theta / 2.0f);
 		f32 vieww = this->_aspect * viewh;
 

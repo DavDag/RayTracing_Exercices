@@ -116,6 +116,7 @@
     <ClInclude Include="src\core\vec3.hpp" />
     <ClInclude Include="src\image\image.hpp" />
     <ClInclude Include="src\core\pixel.hpp" />
+    <ClInclude Include="src\image\tga.hpp" />
     <ClInclude Include="src\materials\diffusive.h" />
     <ClInclude Include="src\materials\material.hpp" />
     <ClInclude Include="src\options\options.hpp" />

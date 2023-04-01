@@ -34,4 +34,12 @@ namespace rt {
 		return out;
 	}
 
+	Pixel Pixel::lerp(const Pixel& a, const Pixel& b, f32 t) {
+		f32 it = 1.0f - t;
+		f32 nr = a.r * it + b.r * t;
+		f32 ng = a.g * it + b.g * t;
+		f32 nb = a.b * it + b.b * t;
+		return Pixel(nr, ng, nb);
+	}
+
 } // namespace rt

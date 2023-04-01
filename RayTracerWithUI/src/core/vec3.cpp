@@ -77,7 +77,7 @@ namespace rt {
 		return std::sqrtf(this->lengthSquared());
 	}
 
-	f64 Vec3::lengthSquared() const {
+	f32 Vec3::lengthSquared() const {
 		f32 x2 = this->x * this->x;
 		f32 y2 = this->y * this->y;
 		f32 z2 = this->z * this->z;
@@ -101,6 +101,10 @@ namespace rt {
 		f32 y = veca.z * vecb.x - vecb.z * veca.x;
 		f32 z = veca.x * vecb.y - vecb.x * veca.y;
 		return Vec3(x, y, z);
+	}
+
+	Vec3 Vec3::lerp(const Vec3& veca, const Vec3& vecb, f32 t) {
+		return veca * (1.0f - t) + vecb * t;
 	}
 
 } // namespace rt

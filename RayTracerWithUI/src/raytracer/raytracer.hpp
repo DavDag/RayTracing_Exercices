@@ -16,6 +16,7 @@ namespace rt {
 
 	private:
 		Pixel pixel(i32 x, i32 y);
+		Pixel trace(Ray& ray);
 
 	private:
 		const std::shared_ptr<Scene> _scene;

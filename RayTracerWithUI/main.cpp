@@ -1,6 +1,3 @@
-#include "./src/core/core.hpp"
-#include "./src/scene/scene.hpp"
-#include "./src/options/options.hpp"
 #include "./src/image/image.hpp"
 #include "./src/viewer/viewer.hpp"
 #include "./src/raytracer/raytracer.hpp"
@@ -11,8 +8,8 @@
 
 int main(int argc, char* argv[]) {
     // Checks arguments
-    if (argc != 3) {
-        std::cout << "Usage: <scenefile> <configfile>\n";
+    if (argc != 4) {
+        std::cout << "Usage: <scenefile> <configfile> <outputfile>\n";
         exit(EXIT_FAILURE);
     }
 
@@ -39,8 +36,10 @@ int main(int argc, char* argv[]) {
 
     // Start RayTracer
     raytracer.process();
+    image.save(argv[3]);
     
     // Join & exit
     tviewer.join();
+    image.open(argv[3]);
     exit(EXIT_SUCCESS);
 }

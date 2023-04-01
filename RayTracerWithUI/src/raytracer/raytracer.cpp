@@ -22,6 +22,7 @@ namespace rt {
 		for (int y = 0; y < h; ++y) {
 			for (int x = 0; x < w; ++x) {
 				Pixel p = this->pixel(x, y);
+				p = p.gammaCorrected(2.0f);
 				this->_image.set(x, y, p);
 			}
 		}
@@ -38,9 +39,17 @@ namespace rt {
 			f32 dx = (px + 0.0f) / w;
 			f32 dy = (py + 0.0f) / h;
 			Ray ray = camera.getRay(dx, dy);
-			out.r = ray.dir.y / 2.0f + 0.5f;
+			out += this->trace(ray);
 		//}
 		return out;
+	}
+
+	Pixel RayTracer::trace(Ray& ray) {
+		// Sky (athmosphere)
+		static Pixel SkyColorA = Pixel(1.0f, 1.0f, 1.0f);
+		static Pixel SkyColorB = Pixel(0.5f, 0.7f, 1.0f);
+		f32 t = ray.dir.y / 2.0f + 0.5f;
+		return Pixel::lerp(SkyColorA, SkyColorB, t);
 	}
 
 } // namespace rt

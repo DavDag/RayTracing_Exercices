@@ -15,6 +15,9 @@ namespace rt {
 		i32 width() const;
 		i32 height() const;
 
+		void save(const std::string& filename) const;
+		void open(const std::string& filename) const;
+
 	private:
 		i32 _w, _h;
 		u8* _data;

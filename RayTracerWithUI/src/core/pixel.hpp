@@ -18,6 +18,8 @@ namespace rt {
 
 		std::ostream& operator<<(std::ostream& out) const;
 
+		static Pixel lerp(const Pixel& a, const Pixel& b, f32 t);
+
 	public:
 		f32 r, g, b;
 	};

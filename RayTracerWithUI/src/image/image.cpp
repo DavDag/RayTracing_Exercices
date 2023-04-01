@@ -1,5 +1,7 @@
 #include "image.hpp"
 
+#include "tga.hpp"
+
 namespace rt {
 
 	Image::Image(i32 w, i32 h):
@@ -34,6 +36,16 @@ namespace rt {
 
 	i32 Image::height() const {
 		return this->_h;
+	}
+
+	void Image::save(const std::string& filename) const {
+		writeTGA(filename, this->_w, this->_h, this->_data);
+	}
+
+	void Image::open(const std::string& filename) const {
+		std::ostringstream cmd;
+		cmd << "start paintdotnet:\"" << filename << "\"";
+		system(cmd.str().c_str());
 	}
 
 } // namespace rt
