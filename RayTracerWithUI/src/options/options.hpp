@@ -2,13 +2,12 @@
 
 #include "../core/core.hpp"
 
-#include <string>
-#include <memory>
-
 namespace rt {
 
 	struct OptionsData {
-
+		i32 outw, outh;
+		i32 samples;
+		i32 maxdepth;
 	};
 
 	class Options {
@@ -16,6 +15,11 @@ namespace rt {
 		Options() = delete;
 		Options(const OptionsData& data);
 		static std::unique_ptr<Options> FromFile(const std::string& filename);
+
+	public:
+		const i32 w, h;
+		const i32 samples;
+		const i32 maxdepth;
 	};
 
 } // namespace rt

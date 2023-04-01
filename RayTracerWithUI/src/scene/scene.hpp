@@ -1,14 +1,16 @@
 #pragma once
 
 #include "../core/core.hpp"
-
-#include <string>
-#include <memory>
+#include "../camera/camera.hpp"
+#include "../materials/material.hpp"
+#include "../shapes/shape.hpp"
 
 namespace rt {
 
 	struct SceneData {
-
+		std::shared_ptr<Camera> camera;
+		std::unordered_map<u32, std::shared_ptr<Material>> materials;
+		std::vector<std::shared_ptr<Shape>> objects;
 	};
 
 	class Scene {
@@ -18,7 +20,9 @@ namespace rt {
 		static std::unique_ptr<Scene> FromFile(const std::string& filename);
 
 	public:
-		i32 w, h;
+		const std::shared_ptr<Camera> camera;
+		const std::unordered_map<u32, std::shared_ptr<Material>> materials;
+		const std::vector<std::shared_ptr<Shape>> objects;
 	};
 
 } // namespace rt

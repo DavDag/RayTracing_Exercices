@@ -225,6 +225,8 @@ int initImGui(GLFWwindow* window) {
     if (!ImGui_ImplGlfw_InitForOpenGL(window, true)) return 1;
     if (!ImGui_ImplOpenGL3_Init("#version 450")) return 2;
     ImGuiIO& io = ImGui::GetIO();
+    io.IniFilename = nullptr; // disable imgui.ini
+    io.LogFilename = nullptr; // disable log
     ImFontConfig cfg;
     cfg.SizePixels = 22;
     io.Fonts->AddFontDefault(&cfg);
