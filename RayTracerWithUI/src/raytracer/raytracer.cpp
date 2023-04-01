@@ -26,6 +26,14 @@ namespace rt {
 		concurrency::parallel_for(0, h, [&](i32 y) {
 			for (int x = 0; x < w; ++x) {
 				Color p = this->pixel(x, y);
+#ifdef _DEBUG
+				if ((p.r > 1.0f || p.g > 1.0f || p.b > 1.0f)
+					|| (p.r < 0.0f || p.g < 0.0f || p.b < 0.0f))
+				{
+					__debugbreak();
+					exit(1);
+				}
+#endif // _DEBUG
 				p = p.gammaCorrected(2.0f);
 				this->_image.set(x, y, p);
 			}
@@ -39,8 +47,8 @@ namespace rt {
 		i32 maxdepth = this->_options->maxdepth;
 		Color out(0.0f);
 		for (int si = 0; si < samples; ++si) {
-			f32 dx = (px + rnd_uniform<f32>(-0.5f, 0.5f)) / w;
-			f32 dy = (py + rnd_uniform<f32>(-0.5f, 0.5f)) / h;
+			f32 dx = (px + rnd_uniform<f32>(0.0f, 1.0f)) / w;
+			f32 dy = (py + rnd_uniform<f32>(0.0f, 1.0f)) / h;
 			Ray ray = camera.getRay(dx, dy);
 			out += this->trace(ray, maxdepth);
 		}

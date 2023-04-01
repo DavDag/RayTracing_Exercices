@@ -41,11 +41,11 @@ namespace rt {
 	void Camera::print(std::ostream& out) const {
 		out << "pos = " << this->_pos << "\n"
 			<< "target = " << this->_target << "\n"
-			<< "view = " << this->_imgw << " x " << this->_imgh << "\n"
+			<< "view = " << this->_imgw << " " << this->_imgh << "\n"
 			<< "fovy = " << this->_fovy << "\n"
-			<< "_aspect = " << this->_aspect << "\n"
-			<< "_xInc = " << this->_xInc << "\n"
-			<< "_yInc = " << this->_yInc << "\n";
+			<< "#_aspect = " << this->_aspect << "\n"
+			<< "#_xInc = " << this->_xInc << "\n"
+			<< "#_yInc = " << this->_yInc << "\n";
 	}
 
 	i32 Camera::imgW() const {

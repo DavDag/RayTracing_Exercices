@@ -16,20 +16,16 @@ namespace rt {
 		}
 
 		void print(std::ostream& out) const override {
-			out << "[" << this->name << "]\n"
+			out << "MAT_DIFF " << this->name << "\n"
 				<< "albedo = " << this->albedo << "\n";
 		}
 
 		Ray scatter(const Ray& ray, const RayHit& payload, SurfaceInfo& out) const override {
-			Vec3 scatterDir = payload.norm + Vec3::rndInUnitSphere();
-			if (scatterDir.isZero()) {
-				scatterDir = payload.norm;
-			}
-			else {
-				scatterDir = Vec3::unit(scatterDir);
-			}
+			Vec3 scattered = payload.norm + Vec3::rndInUnitSphere();
+			//if (scattered.isZero())
+			//	scattered = payload.norm;
 			out.attenuation = this->albedo;
-			return Ray(payload.pos, scatterDir);
+			return Ray(payload.pos, Vec3::unit(scattered));
 		}
 
 	private:

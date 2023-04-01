@@ -36,8 +36,10 @@ namespace rt {
 		static Vec3 unit(const Vec3& vec);
 		static f32 dot(const Vec3& veca, const Vec3& vecb);
 		static Vec3 cross(const Vec3& veca, const Vec3& vecb);
+		static Vec3 reflect(const Vec3& vec, const Vec3& surfNorm);
 		static Vec3 lerp(const Vec3& veca, const Vec3& vecb, f32 t);
 
+		static Vec3 rnd();
 		static Vec3 rndInUnitSphere();
 
 	public:

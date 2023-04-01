@@ -1,2 +1,2 @@
-samples = 16
+samples = 1
 maxdepth = 4

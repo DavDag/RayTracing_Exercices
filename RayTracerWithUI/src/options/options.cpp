@@ -5,7 +5,13 @@ namespace rt {
 	Options::Options(const OptionsData& data):
 		samples(data.samples), maxdepth(data.maxdepth)
 	{
+		//
+	}
 
+	std::ostream& operator<<(std::ostream& out, const Options& options) {
+		out << "samples = " << options.samples << "\n";
+		out << "maxdepth = " << options.maxdepth << "\n";
+		return out;
 	}
 
 	std::shared_ptr<Options> Options::FromFile(const std::string& filename) {
@@ -38,11 +44,6 @@ namespace rt {
 				break;
 			}
 		}
-#ifdef _DEBUG
-		std::cout << "\n======OPTIONS======\n";
-		std::cout << "samples = " << data.samples << "\n";
-		std::cout << "maxdepth = " << data.maxdepth << "\n";
-#endif // _DEBUG
 		return std::make_unique<Options>(data);
 	}
 

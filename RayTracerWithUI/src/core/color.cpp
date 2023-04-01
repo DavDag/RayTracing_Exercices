@@ -17,7 +17,7 @@ namespace rt {
 	}
 
 	std::ostream& operator<<(std::ostream& out, const Color& color) {
-		out << color.r << "," << color.g << "," << color.b;
+		out << color.r << " " << color.g << " " << color.b;
 		return out;
 	}
 
@@ -60,6 +60,13 @@ namespace rt {
 		f32 ng = a.g * it + b.g * t;
 		f32 nb = a.b * it + b.b * t;
 		return Color(nr, ng, nb);
+	}
+
+	Color Color::rnd() {
+		f32 r = rnd_uniform<f32>(0.0f, 1.0f);
+		f32 g = rnd_uniform<f32>(0.0f, 1.0f);
+		f32 b = rnd_uniform<f32>(0.0f, 1.0f);
+		return Color(r, g, b);
 	}
 
 } // namespace rt

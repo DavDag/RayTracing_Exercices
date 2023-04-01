@@ -1,6 +1,8 @@
 #include "scene.hpp"
 
 #include "../materials/diffusive.hpp"
+#include "../materials/metallic.hpp"
+#include "../materials/dielectric.hpp"
 #include "../shapes/sphere.hpp"
 
 namespace rt {
@@ -11,6 +13,21 @@ namespace rt {
 		objects(data.objects)
 	{
 
+	}
+
+	std::ostream& operator<<(std::ostream& out, const Scene& scene) {
+		out << "CAMERA\n";
+		scene.camera->print(out);
+		out << "\n";
+		for (const auto& mat : scene.materials) {
+			mat.second->print(out);
+			out << "\n";
+		}
+		for (const auto& obj : scene.objects) {
+			obj->print(out);
+			out << "\n";
+		}
+		return out;
 	}
 
 	void ReadCamera(std::ifstream& in, SceneData& data) {
@@ -84,6 +101,68 @@ namespace rt {
 		});
 	}
 
+	void ReadMatMetallic(std::ifstream& in, std::string& name, SceneData& data) {
+		Color albedo(0.0f);
+		f32 fuzziness = 0.0f;
+		bool bAlbedo = false;
+		bool bFuzziness = false;
+		//
+		std::string line{}, prop{}, equal{};
+		while (std::getline(in, line)) {
+			if (line.size() == 0) continue;
+			if (line[0] == '#') continue;
+			std::istringstream ss(line);
+			ss >> prop >> equal;
+			switch (crc32(prop)) {
+			case crc32("albedo"):
+				bAlbedo = true;
+				ss >> albedo.r >> albedo.g >> albedo.b;
+				break;
+			case crc32("fuzziness"):
+				bFuzziness = true;
+				ss >> fuzziness;
+				break;
+			default:
+				break;
+			}
+			//
+			if (bAlbedo && bFuzziness) break;
+		}
+		//
+		data.materials.insert({
+			crc32(name),
+			std::make_shared<Metallic>(name, albedo, fuzziness)
+		});
+	}
+
+	void ReadMatDielectric(std::ifstream& in, std::string& name, SceneData& data) {
+		f32 refractionRatio = 0.0f;
+		bool bRefractionRatio = false;
+		//
+		std::string line{}, prop{}, equal{};
+		while (std::getline(in, line)) {
+			if (line.size() == 0) continue;
+			if (line[0] == '#') continue;
+			std::istringstream ss(line);
+			ss >> prop >> equal;
+			switch (crc32(prop)) {
+			case crc32("refractionRatio"):
+				bRefractionRatio = true;
+				ss >> refractionRatio;
+				break;
+			default:
+				break;
+			}
+			//
+			if (bRefractionRatio) break;
+		}
+		//
+		data.materials.insert({
+			crc32(name),
+			std::make_shared<Dielectric>(name, refractionRatio)
+		});
+	}
+
 	void ReadObjSphere(std::ifstream& in, std::string& name, SceneData& data) {
 		std::string matName{};
 		std::shared_ptr<Material> mat(nullptr);
@@ -103,7 +182,13 @@ namespace rt {
 			case crc32("mat"):
 				bMat = true;
 				ss >> matName;
-				mat = data.materials.at(crc32(matName));
+				if (auto it = data.materials.find(crc32(matName)); it != data.materials.end()) {
+					mat = it->second;
+				}
+				else {
+					std::cerr << "Unable to find material: <" << matName << ">\n";
+					exit(EXIT_FAILURE);
+				}
 				break;
 			case crc32("cen"):
 				bCen = true;
@@ -150,6 +235,14 @@ namespace rt {
 					ss >> name;
 					ReadMatDiffusive(in, name, data);
 					break;
+				case crc32("MAT_METAL"):
+					ss >> name;
+					ReadMatMetallic(in, name, data);
+					break;
+				case crc32("MAT_DIEL"):
+					ss >> name;
+					ReadMatDielectric(in, name, data);
+					break;
 				case crc32("OBJ_SPHERE"):
 					ss >> name;
 					ReadObjSphere(in, name, data);
@@ -159,20 +252,6 @@ namespace rt {
 					break;
 			}
 		}
-#ifdef _DEBUG
-		std::cout << "\n=======SCENE=======\n";
-		std::cout << "[MainCamera]\n";
-		data.camera->print(std::cout);
-		std::cout << "\n";
-		for (const auto& mat : data.materials) {
-			mat.second->print(std::cout);
-			std::cout << "\n";
-		}
-		for (const auto& obj : data.objects) {
-			obj->print(std::cout);
-			std::cout << "\n";
-		}
-#endif // _DEBUG
 		return std::make_unique<Scene>(data);
 	}
 

@@ -17,8 +17,8 @@ namespace rt {
 		}
 
 		void print(std::ostream& out) const override {
-			out << "[" << this->name << "]\n"
-				<< "mat = [" << this->mat->name << "]\n"
+			out << "OBJ_SPHERE " << this->name << "\n"
+				<< "mat = " << this->mat->name << "\n"
 				<< "cen = " << this->cen << "\n"
 				<< "rad = " << this->rad << "\n";
 		}
@@ -88,8 +88,8 @@ namespace rt {
 			payload.tmax = res;
 			payload.pos = ray(res);
 			Vec3 norm = (payload.pos - this->cen) / this->rad;
-			bool frontFace = Vec3::dot(ray.dir, norm) < 0;
-			payload.norm = (frontFace) ? norm : -norm;
+			payload.frontFace = Vec3::dot(ray.dir, norm) < 0;
+			payload.norm = (payload.frontFace) ? norm : -norm;
 		}
 
 	private:

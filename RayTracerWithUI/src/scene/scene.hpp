@@ -17,6 +17,9 @@ namespace rt {
 	public:
 		Scene() = delete;
 		Scene(const SceneData& data);
+
+		friend std::ostream& operator<<(std::ostream& out, const Scene& scene);
+
 		static std::shared_ptr<Scene> FromFile(const std::string& filename);
 
 	public:

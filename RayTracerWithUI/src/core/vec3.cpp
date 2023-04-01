@@ -17,7 +17,7 @@ namespace rt {
 	}
 
 	std::ostream& operator<<(std::ostream& out, const Vec3& vec) {
-		out << vec.x << "," << vec.y << "," << vec.z;
+		out << vec.x << " " << vec.y << " " << vec.z;
 		return out;
 	}
 
@@ -128,8 +128,19 @@ namespace rt {
 		return Vec3(x, y, z);
 	}
 
+	Vec3 Vec3::reflect(const Vec3& vec, const Vec3& surfNorm) {
+		return vec - surfNorm * (Vec3::dot(vec, surfNorm) * 2.0f);
+	}
+
 	Vec3 Vec3::lerp(const Vec3& veca, const Vec3& vecb, f32 t) {
 		return veca * (1.0f - t) + vecb * t;
+	}
+
+	Vec3 Vec3::rnd() {
+		f32 x = rnd_uniform<f32>(-1.0f, 1.0f);
+		f32 y = rnd_uniform<f32>(-1.0f, 1.0f);
+		f32 z = rnd_uniform<f32>(-1.0f, 1.0f);
+		return Vec3(x, y, z);
 	}
 
 	Vec3 Vec3::rndInUnitSphere() {

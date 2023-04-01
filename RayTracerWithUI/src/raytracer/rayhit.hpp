@@ -8,7 +8,12 @@ namespace rt {
 
 	class RayHit {
 	public:
-		RayHit(): obj(nullptr), tmin(0.0001f), tmax(f32max), pos(0.0f), norm(0.0f) { }
+		RayHit():
+			obj(nullptr), tmin(0.0001f), tmax(f32max),
+			frontFace(false), pos(0.0f), norm(0.0f)
+		{
+			//
+		}
 
 		operator bool() const {
 			return (this->obj != nullptr);
@@ -17,6 +22,7 @@ namespace rt {
 	public:
 		const Shape* obj;
 		f32 tmin, tmax;
+		bool frontFace;
 		Vec3 pos, norm;
 	};
 

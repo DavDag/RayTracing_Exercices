@@ -13,6 +13,9 @@ namespace rt {
 	public:
 		Options() = delete;
 		Options(const OptionsData& data);
+
+		friend std::ostream& operator<<(std::ostream& out, const Options& options);
+
 		static std::shared_ptr<Options> FromFile(const std::string& filename);
 
 	public:

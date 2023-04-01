@@ -22,6 +22,7 @@ namespace rt {
 		Color& operator/=(f32 scalar);
 
 		static Color lerp(const Color& a, const Color& b, f32 t);
+		static Color rnd();
 
 	public:
 		f32 r, g, b;

@@ -119,8 +119,10 @@
     <ClInclude Include="src\image\image.hpp" />
     <ClInclude Include="src\core\color.hpp" />
     <ClInclude Include="src\image\tga.hpp" />
+    <ClInclude Include="src\materials\dielectric.hpp" />
     <ClInclude Include="src\materials\diffusive.hpp" />
     <ClInclude Include="src\materials\material.hpp" />
+    <ClInclude Include="src\materials\metallic.hpp" />
     <ClInclude Include="src\materials\surfaceinfo.hpp" />
     <ClInclude Include="src\options\options.hpp" />
     <ClInclude Include="src\raytracer\rayhit.hpp" />
