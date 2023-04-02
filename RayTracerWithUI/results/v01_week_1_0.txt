@@ -1,0 +1,32 @@
+samples = 2056
+maxdepth = 128
+
+CAMERA
+pos = 0 0 1
+target = 0 0 0
+view = 1200 800
+fovy = 45
+aperture = 0.01
+distToFocus = 2
+#_aspect = 1.5
+#_xInc = 2.48528 0 0
+#_yInc = 0 1.65685 0
+
+MAT_DIFF ground_mat
+albedo = 0.5 0.5 0.5
+
+MAT_DIFF center_mat
+albedo = 0.5 0.5 0.5
+
+OBJ_SPHERE center_sphere
+mat = center_mat
+cen = 0 0 -1
+rad = 0.5
+
+OBJ_SPHERE ground_sphere
+mat = ground_mat
+cen = 0 -100.5 -1
+rad = 100
+
+
+Time: 10556 (ms) or 10.556 (sec)

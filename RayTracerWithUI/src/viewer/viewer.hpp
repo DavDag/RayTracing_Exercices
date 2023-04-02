@@ -6,7 +6,7 @@ namespace rt {
 	
 	class Viewer {
 	public:
-		Viewer(const Image& image, int padding, float updatePerSec);
+		Viewer(bool enabled, const Image& image, int padding, float updatePerSec);
 
 		void init();
 		void start();
@@ -18,7 +18,7 @@ namespace rt {
 		void update();
 
 	private:
-		bool _valid;
+		bool _enabled, _valid;
 		int _ww, _wh, _pd;
 		const Image& _image;
 		void* _window;

@@ -1,13 +1,19 @@
+samples = 2056
+maxdepth = 128
+
 CAMERA
-pos = -2 2 1
+pos = 3 3 2
 target = 0 0 -1
 view = 1200 800
-fovy = 90
+fovy = 20
 aperture = 0.1
-distToFocus = 4
+distToFocus = 5
+#_aspect = 1.5
+#_xInc = 1.52704 0 -1.52704
+#_yInc = -0.587756 1.17551 -0.587756
 
 MAT_DIFF ground_mat
-albedo = 0.8 0.8 0.0
+albedo = 0.8 0.8 0
 
 MAT_DIFF center_mat
 albedo = 0.1 0.2 0.5
@@ -17,29 +23,32 @@ refractionRatio = 1.5
 
 MAT_METAL right_mat
 albedo = 0.8 0.6 0.2
-fuzziness = 0.0
+fuzziness = 0
 
 OBJ_SPHERE center_sphere
+mat = center_mat
 cen = 0 0 -1
 rad = 0.5
-mat = center_mat
 
 OBJ_SPHERE left_sphere_1
+mat = left_mat
 cen = -1 0 -1
 rad = 0.5
-mat = left_mat
 
 OBJ_SPHERE left_sphere_2
+mat = left_mat
 cen = -1 0 -1
 rad = -0.45
-mat = left_mat
 
 OBJ_SPHERE right_sphere
+mat = right_mat
 cen = 1 0 -1
 rad = 0.5
-mat = right_mat
 
 OBJ_SPHERE ground_sphere
+mat = ground_mat
 cen = 0 -100.5 -1
 rad = 100
-mat = ground_mat
+
+
+Time: 20902 (ms) or 20.902 (sec)

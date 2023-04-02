@@ -36,15 +36,19 @@ void exitImGui();
 
 namespace rt {
 
-	Viewer::Viewer(const Image& image, int padding, float updatePerSec):
-        _valid(false), _ww(0), _wh(0), _pd(padding), _image(image), _window(nullptr),
-        _updatePerSec(updatePerSec), _accTimeSinceLastUpdateSec(0), _imageTex(0)
+	Viewer::Viewer(bool enabled, const Image& image, int padding, float updatePerSec):
+        _enabled(enabled), _valid(false),
+        _ww(0), _wh(0), _pd(padding),
+        _image(image), _window(nullptr),
+        _updatePerSec(updatePerSec), _accTimeSinceLastUpdateSec(0),
+        _imageTex(0)
 	{
         _ww = image.width()  + padding * 2;
         _wh = image.height() + padding * 2;
 	}
 
 	void Viewer::init() {
+        if (!_enabled) return;
         if (int err = initGLFW((GLFWwindow**)&_window, _ww, _wh, *this); err != 0) {
             std::cerr << "Error initializing GLFW, <code> = " << err << "\n";
             _valid = false;
@@ -81,12 +85,14 @@ namespace rt {
 	}
 
     void Viewer::exit() {
+        if (!_enabled) return;
         exitImGui();
         exitGLEW();
         exitGLFW((GLFWwindow**)&_window);
     }
 
     void Viewer::start() {
+        if (!_enabled) return;
         if (!_valid) return;
         //
         glfwSwapInterval(1);
@@ -118,10 +124,12 @@ namespace rt {
     }
 
     void Viewer::stop() {
+        if (!_enabled) return;
         glfwSetWindowShouldClose((GLFWwindow*)_window, GLFW_TRUE);
     }
 
     void Viewer::preview() {
+        if (!_enabled) return;
         ImGui::PushStyleVar(ImGuiStyleVar_WindowPadding, ImVec2(0, 0));
         ImGuiWindowFlags flags = ImGuiWindowFlags_NoNav
             | ImGuiWindowFlags_NoDecoration
@@ -140,6 +148,7 @@ namespace rt {
     }
 
     void Viewer::update() {
+        if (!_enabled) return;
         GL_CALL(glBindTexture(GL_TEXTURE_2D, _imageTex));
         GL_CALL(
             glTexSubImage2D(

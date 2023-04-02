@@ -18,10 +18,11 @@ std::shared_ptr<rt::Scene> rndScene();
 
 int main(int argc, char* argv[]) {
     // Checks arguments
-    if (argc != 4) {
-        std::cout << "Usage: <scenefile> <configfile> <outputfile>\n";
+    if (argc < 4) {
+        std::cout << "Usage: <scenefile> <configfile> <outputfile> [--preview]\n";
         exit(EXIT_FAILURE);
     }
+    bool preview = (argc > 4 && strcmp(argv[4], "--preview") == 0);
 
     // Load Scene & Options from file
     //std::shared_ptr<rt::Scene> scene = rndScene();
@@ -32,15 +33,15 @@ int main(int argc, char* argv[]) {
     std::cout << (*options) << "\n";
     std::cout << (*scene) << "\n";
 
-    // Create Image, RayTracer & Viewer
+    // Create Image & RayTracer
     rt::Image image(scene->camera->imgW(), scene->camera->imgH());
     rt::RayTracer raytracer(scene, options, image);
-    rt::Viewer viewer(image, 32, 4.0f);
 
-    // Build RayTracer internal structs
+    // Build RayTracer internal structures
     raytracer.build();
 
     // Launch Viewer in another thread
+    rt::Viewer viewer(preview, image, 32, 4.0f);
     std::thread tviewer([&viewer]() {
         viewer.init();
         viewer.start();
@@ -51,12 +52,12 @@ int main(int argc, char* argv[]) {
 #ifdef _PROFILE
     profiler::Enable();
     profiler::FrameStart();
-#endif // _PROFILE
     raytracer.process();
-#ifdef _PROFILE
     profiler::FrameEnd();
     profiler::Disable();
     profiler::LogStats(profiler::GetStatsTable());
+#else
+    raytracer.process();
 #endif // _PROFILE
     
     // Save to file
@@ -66,9 +67,7 @@ int main(int argc, char* argv[]) {
     tviewer.join();
 
     // Open result
-#ifndef _PROFILE
-    image.open(argv[3]);
-#endif // _PROFILE
+    if (preview) image.open(argv[3]);
     exit(EXIT_SUCCESS);
 }
 
