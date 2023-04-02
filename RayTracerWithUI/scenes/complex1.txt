@@ -1,1938 +1,1762 @@
 CAMERA
-pos = 0 0.8 4
+pos = 3 0.6 3
 target = 0 0 0
-view = 7680 4320
-fovy = 45
-aperture = 0.1
+view = 1920 1080
+fovy = 30
+aperture = 0.05
+distToFocus = 4
 
-MAT_DIFF diff_ground
-albedo = 0.32 0.176 0.66
+MAT_DIFF mat_sphere_-2.000000_4.250000
+albedo = 0.721849 0.375145 0.607307
 
-MAT_DIFF diff_1
-albedo = 0.336472 0.355265 0.324428
+MAT_DIEL dielMat
+refractionRatio = 1.5
 
-MAT_DIFF diff_16
-albedo = 0.0112935 0.728298 0.0401349
+MAT_DIFF mat_sphere_-2.000000_-2.250000
+albedo = 0.870717 0.396656 0.981383
 
-MAT_DIFF diff_0
-albedo = 0.0966635 0.789783 0.476989
+MAT_METAL mat_sphere_2.500000_-2.250000
+albedo = 0.137223 0.906415 0.544846
+fuzziness = 0.247807
 
-MAT_DIFF diff_2
-albedo = 0.730871 0.562599 0.189177
+MAT_DIFF mat_sphere_-2.500000_2.000000
+albedo = 0.560403 0.222379 0.448686
 
-MAT_DIFF diff_40
-albedo = 0.291058 0.443786 0.939588
+MAT_DIFF groundMat
+albedo = 0.5 0.5 0.5
 
-MAT_DIFF diff_22
-albedo = 0.0932095 0.29395 0.860944
+MAT_DIFF mat_sphere_1.000000_-1.250000
+albedo = 0.39185 0.985077 0.648303
 
-MAT_DIFF diff_3
-albedo = 0.503383 0.135012 0.623977
+MAT_METAL mat_sphere_-2.000000_0.750000
+albedo = 0.0245679 0.918259 0.266338
+fuzziness = 0.394812
 
-MAT_DIFF diff_5
-albedo = 0.228784 0.452617 0.869071
+MAT_DIFF mat_sphere_-2.500000_1.000000
+albedo = 0.15002 0.635926 0.789033
 
-MAT_DIFF diff_32
-albedo = 0.238834 0.628305 0.426863
+MAT_DIFF mat_sphere_-3.000000_-3.500000
+albedo = 0.413819 0.454334 0.176491
 
-MAT_DIFF diff_4
-albedo = 0.998644 0.378813 0.519286
+MAT_DIFF diffMat
+albedo = 0.132734 0.216077 0.255722
 
-MAT_DIFF diff_26
-albedo = 0.0712871 0.668187 0.84014
+MAT_DIFF mat_sphere_-2.000000_1.500000
+albedo = 0.588853 0.513116 0.605892
 
-MAT_DIFF diff_6
-albedo = 0.66563 0.898612 0.862449
+MAT_DIFF mat_sphere_-0.500000_0.500000
+albedo = 0.591118 0.871781 0.736037
 
-MAT_DIFF diff_7
-albedo = 0.749502 0.938372 0.469153
+MAT_DIFF mat_sphere_-2.500000_2.500000
+albedo = 0.610251 0.419816 0.919777
 
-MAT_DIFF diff_57
-albedo = 0.594932 0.23282 0.909624
+MAT_METAL mat_sphere_-0.500000_4.750000
+albedo = 0.980318 0.951131 0.0246607
+fuzziness = 0.398778
 
-MAT_DIFF diff_9
-albedo = 0.585936 0.536363 0.471848
+MAT_DIFF mat_sphere_-3.000000_-4.250000
+albedo = 0.327021 0.644476 0.507899
 
-MAT_DIFF diff_8
-albedo = 0.677153 0.598203 0.989402
+MAT_METAL metalMat
+albedo = 0.94987 0.158321 0.322084
+fuzziness = 0.01
 
-MAT_DIFF diff_11
-albedo = 0.771946 0.527475 0.681682
+MAT_DIFF mat_sphere_-2.500000_3.250000
+albedo = 0.515702 0.465544 0.281393
 
-MAT_DIFF diff_10
-albedo = 0.0640635 0.651934 0.343249
+MAT_DIFF mat_sphere_-3.000000_-4.500000
+albedo = 0.791777 0.857484 0.612871
 
-MAT_DIFF diff_38
-albedo = 0.966527 0.453812 0.170391
+MAT_DIEL mat_sphere_-3.000000_2.000000
+refractionRatio = 4.61699
 
-MAT_DIFF diff_19
-albedo = 0.712607 0.821416 0.104791
+MAT_DIEL mat_sphere_-3.000000_-0.750000
+refractionRatio = 3.29953
 
-MAT_DIFF diff_12
-albedo = 0.148938 0.211291 0.85781
+MAT_DIFF mat_sphere_2.500000_-3.000000
+albedo = 0.073762 0.566564 0.593109
 
-MAT_DIFF diff_47
-albedo = 0.930064 0.272575 0.957354
+MAT_DIFF mat_sphere_-1.500000_-0.500000
+albedo = 0.975158 0.865974 0.415383
 
-MAT_DIFF diff_13
-albedo = 0.583175 0.0115702 0.056242
+MAT_DIFF mat_sphere_-3.000000_-4.000000
+albedo = 0.413877 0.269966 0.511135
 
-MAT_DIFF diff_14
-albedo = 0.682457 0.549795 0.194655
+MAT_DIFF mat_sphere_-3.000000_-1.250000
+albedo = 0.443209 0.12654 0.236376
 
-MAT_DIFF diff_60
-albedo = 0.0797091 0.0481184 0.90919
+MAT_DIFF mat_sphere_-2.000000_1.250000
+albedo = 0.907818 0.28541 0.0329952
 
-MAT_DIFF diff_56
-albedo = 0.224316 0.681918 0.485375
+MAT_DIFF mat_sphere_-3.000000_-3.000000
+albedo = 0.0870979 0.302238 0.319787
 
-MAT_DIFF diff_28
-albedo = 0.296969 0.670554 0.852571
+MAT_METAL mat_sphere_-1.500000_1.750000
+albedo = 0.102424 0.0857728 0.341136
+fuzziness = 0.975557
 
-MAT_DIFF diff_15
-albedo = 0.711339 0.41775 0.471044
+MAT_DIFF mat_sphere_-3.000000_-1.750000
+albedo = 0.714618 0.336608 0.400352
 
-MAT_DIFF diff_49
-albedo = 0.372988 0.814285 0.900548
+MAT_DIFF mat_sphere_2.500000_-1.750000
+albedo = 0.728082 0.229101 0.940013
 
-MAT_DIFF diff_17
-albedo = 0.709601 0.855377 0.973363
+MAT_DIFF mat_sphere_-3.000000_1.000000
+albedo = 0.37488 0.835704 0.249448
 
-MAT_DIFF diff_25
-albedo = 0.865106 0.178861 0.7522
+MAT_DIFF mat_sphere_-3.000000_1.750000
+albedo = 0.426147 0.554364 0.682762
 
-MAT_DIFF diff_18
-albedo = 0.0564051 0.553449 0.834692
+MAT_DIFF mat_sphere_1.000000_-4.250000
+albedo = 0.980419 0.804117 0.530431
 
-MAT_DIFF diff_36
-albedo = 0.154494 0.473756 0.828091
+MAT_DIFF mat_sphere_-3.000000_3.750000
+albedo = 0.172317 0.892629 0.112973
 
-MAT_DIFF diff_20
-albedo = 0.168467 0.593537 0.50598
+MAT_DIFF mat_sphere_-2.000000_3.500000
+albedo = 0.234989 0.150968 0.385247
 
-MAT_DIFF diff_63
-albedo = 0.577034 0.659176 0.791468
+MAT_DIFF mat_sphere_-0.500000_-4.250000
+albedo = 0.276449 0.466943 0.794548
 
-MAT_DIFF diff_21
-albedo = 0.907897 0.485782 0.66756
+MAT_DIFF mat_sphere_-3.000000_4.500000
+albedo = 0.966045 0.946467 0.897679
 
-MAT_DIFF diff_35
-albedo = 0.473709 0.406173 0.109095
+MAT_METAL mat_sphere_-3.000000_4.750000
+albedo = 0.42631 0.405435 0.731566
+fuzziness = 0.443847
 
-MAT_DIFF diff_23
-albedo = 0.783085 0.0361556 0.845998
+MAT_DIFF mat_sphere_-1.500000_-2.750000
+albedo = 0.439071 0.418036 0.027223
 
-MAT_DIFF diff_24
-albedo = 0.837588 0.702267 0.411476
+MAT_METAL mat_sphere_-1.000000_1.000000
+albedo = 0.668017 0.841629 0.294895
+fuzziness = 0.890401
 
-MAT_DIFF diff_27
-albedo = 0.149739 0.538767 0.511111
+MAT_METAL mat_sphere_2.000000_-4.750000
+albedo = 0.465241 0.637018 0.484867
+fuzziness = 0.0296991
 
-MAT_DIFF diff_29
-albedo = 0.0242164 0.670537 0.407441
+MAT_DIFF mat_sphere_-2.500000_-4.750000
+albedo = 0.724984 0.71974 0.553331
 
-MAT_DIFF diff_58
-albedo = 0.685542 0.638755 0.490737
+MAT_DIFF mat_sphere_-2.500000_-4.500000
+albedo = 0.498685 0.0133063 0.308123
 
-MAT_DIFF diff_64
-albedo = 0.613766 0.304662 0.155398
+MAT_DIFF mat_sphere_-2.500000_-3.750000
+albedo = 0.194849 0.560144 0.734559
 
-MAT_DIFF diff_30
-albedo = 0.94434 0.717716 0.0722832
+MAT_DIFF mat_sphere_-2.000000_0.500000
+albedo = 0.773669 0.793367 0.604103
 
-MAT_DIFF diff_31
-albedo = 0.897718 0.932787 0.907379
+MAT_METAL mat_sphere_-2.500000_-3.500000
+albedo = 0.31015 0.26881 0.705366
+fuzziness = 0.715445
 
-MAT_DIFF diff_33
-albedo = 0.983732 0.993171 0.152037
+MAT_METAL mat_sphere_-1.000000_4.500000
+albedo = 0.0454056 0.77319 0.643295
+fuzziness = 0.514714
 
-MAT_DIFF diff_34
-albedo = 0.657463 0.386907 0.984715
+MAT_METAL mat_sphere_-2.500000_4.750000
+albedo = 0.760712 0.334727 0.612149
+fuzziness = 0.0204474
 
-MAT_DIFF diff_37
-albedo = 0.832179 0.533921 0.157599
+MAT_DIFF mat_sphere_-2.500000_-3.250000
+albedo = 0.569941 0.611059 0.405683
 
-MAT_DIFF diff_39
-albedo = 0.275955 0.685814 0.281952
+MAT_METAL mat_sphere_-2.500000_-3.000000
+albedo = 0.618045 0.644697 0.152933
+fuzziness = 0.221018
 
-MAT_DIFF diff_41
-albedo = 0.981509 0.24475 0.877969
+MAT_DIFF mat_sphere_-2.500000_2.750000
+albedo = 0.485406 0.0164113 0.190146
 
-MAT_DIFF diff_42
-albedo = 0.776095 0.283187 0.429192
+MAT_DIFF mat_sphere_2.000000_4.250000
+albedo = 0.490228 0.774562 0.884761
 
-MAT_DIFF diff_55
-albedo = 0.179479 0.42204 0.811204
+MAT_DIEL mat_sphere_2.500000_-5.000000
+refractionRatio = 2.76429
 
-MAT_DIFF diff_43
-albedo = 0.235684 0.132351 0.958681
+MAT_DIFF mat_sphere_-2.500000_-2.750000
+albedo = 0.975847 0.129588 0.324729
 
-MAT_DIFF diff_44
-albedo = 0.668719 0.492355 0.524542
+MAT_DIEL mat_sphere_-2.500000_-2.500000
+refractionRatio = 11.6545
 
-MAT_DIFF diff_45
-albedo = 0.878484 0.122117 0.515452
+MAT_METAL mat_sphere_-2.500000_-2.250000
+albedo = 0.461358 0.228508 0.286983
+fuzziness = 0.959871
 
-MAT_DIFF diff_46
-albedo = 0.594277 0.582781 0.212861
+MAT_DIFF mat_sphere_-2.500000_-0.750000
+albedo = 0.00176711 0.300216 0.709373
 
-MAT_DIFF diff_48
-albedo = 0.0890616 0.597491 0.674569
+MAT_DIEL mat_sphere_-2.500000_-2.000000
+refractionRatio = 6.46665
 
-MAT_DIFF diff_50
-albedo = 0.567553 0.905492 0.558387
+MAT_METAL mat_sphere_-2.500000_-1.250000
+albedo = 0.774002 0.83823 0.191464
+fuzziness = 0.165796
 
-MAT_DIFF diff_51
-albedo = 0.467285 0.73811 0.700501
+MAT_DIFF mat_sphere_-1.500000_-1.000000
+albedo = 0.820288 0.101125 0.397889
 
-MAT_DIFF diff_52
-albedo = 0.427229 0.262575 0.220636
+MAT_METAL mat_sphere_-2.500000_0.500000
+albedo = 0.947844 0.35871 0.278586
+fuzziness = 0.637401
 
-MAT_DIFF diff_53
-albedo = 0.561499 0.235786 0.0696099
+MAT_DIFF mat_sphere_1.500000_3.750000
+albedo = 0.832332 0.482667 0.835156
 
-MAT_DIFF diff_54
-albedo = 0.571349 0.684346 0.540849
+MAT_DIFF mat_sphere_-2.500000_1.750000
+albedo = 0.227084 0.555973 0.389796
 
-MAT_DIFF diff_59
-albedo = 0.939093 0.314668 0.113514
+MAT_DIFF mat_sphere_-1.500000_-4.250000
+albedo = 0.207729 0.277287 0.905289
 
-MAT_DIFF diff_61
-albedo = 0.968391 0.381052 0.417261
+MAT_DIFF mat_sphere_0.500000_-3.500000
+albedo = 0.364495 0.546576 0.778574
 
-MAT_DIFF diff_62
-albedo = 0.918523 0.209244 0.445432
+MAT_DIFF mat_sphere_-2.500000_2.250000
+albedo = 0.722708 0.847499 0.601788
 
-MAT_DIFF diff_65
-albedo = 0.936769 0.809954 0.179824
+MAT_DIFF mat_sphere_-2.500000_3.000000
+albedo = 0.715059 0.635868 0.00295997
 
-MAT_DIFF diff_66
-albedo = 0.61226 0.0121497 0.797158
+MAT_METAL mat_sphere_1.500000_2.500000
+albedo = 0.468274 0.0542244 0.467715
+fuzziness = 0.0559126
 
-MAT_DIFF diff_67
-albedo = 0.407839 0.229879 0.759519
+MAT_DIFF mat_sphere_-2.500000_4.000000
+albedo = 0.00265142 0.986603 0.306432
 
-MAT_DIFF diff_68
-albedo = 0.384022 0.362968 0.281995
+MAT_DIFF mat_sphere_-2.500000_4.250000
+albedo = 0.00078323 0.807304 0.368616
 
-MAT_DIFF diff_69
-albedo = 0.371361 0.428806 0.123999
+MAT_METAL mat_sphere_-2.000000_-0.750000
+albedo = 0.705684 0.0776924 0.290076
+fuzziness = 0.283003
 
-MAT_METAL metal_0
-albedo = 0.54945 0.582745 0.0605426
-fuzziness = 0.38061
+MAT_METAL mat_sphere_0.500000_-4.000000
+albedo = 0.716855 0.318904 0.823571
+fuzziness = 0.615366
 
-MAT_METAL metal_1
-albedo = 0.158063 0.363133 0.0708842
-fuzziness = 0.457426
+MAT_METAL mat_sphere_-1.500000_-3.250000
+albedo = 0.0607817 0.995199 0.239825
+fuzziness = 0.576104
 
-MAT_METAL metal_13
-albedo = 0.313958 0.250691 0.133386
-fuzziness = 0.337796
+MAT_DIFF mat_sphere_-2.000000_2.000000
+albedo = 0.214233 0.239813 0.0365239
 
-MAT_METAL metal_25
-albedo = 0.794213 0.403898 0.223416
-fuzziness = 0.248574
+MAT_DIFF mat_sphere_-2.000000_3.000000
+albedo = 0.490534 0.549894 0.924427
 
-MAT_METAL metal_2
-albedo = 0.470702 0.815789 0.319717
-fuzziness = 0.3868
+MAT_DIFF mat_sphere_-2.000000_4.000000
+albedo = 0.773803 0.24849 0.882719
 
-MAT_METAL metal_3
-albedo = 0.641561 0.265908 0.572041
-fuzziness = 0.838497
+MAT_DIFF mat_sphere_-1.500000_0.500000
+albedo = 0.826982 0.232065 0.989642
 
-MAT_METAL metal_4
-albedo = 0.244776 0.676322 0.966059
-fuzziness = 0.160898
+MAT_DIEL mat_sphere_-1.500000_-5.000000
+refractionRatio = 9.96548
 
-MAT_METAL metal_5
-albedo = 0.502981 0.208238 0.58634
-fuzziness = 0.500984
+MAT_METAL mat_sphere_0.500000_-1.000000
+albedo = 0.817287 0.282504 0.75276
+fuzziness = 0.458343
 
-MAT_METAL metal_6
-albedo = 0.220382 0.357273 0.747131
-fuzziness = 0.474886
+MAT_DIFF mat_sphere_-1.500000_-4.750000
+albedo = 0.771002 0.0585183 0.737504
 
-MAT_METAL metal_7
-albedo = 0.787459 0.590839 0.633836
-fuzziness = 0.290168
+MAT_DIFF mat_sphere_-1.500000_-3.500000
+albedo = 0.283931 0.638215 0.286318
 
-MAT_METAL metal_22
-albedo = 0.618707 0.166027 0.95594
-fuzziness = 0.996777
+MAT_DIFF mat_sphere_-1.500000_1.000000
+albedo = 0.415303 0.0860319 0.843993
 
-MAT_METAL metal_8
-albedo = 0.0818407 0.927716 0.807849
-fuzziness = 0.219524
+MAT_METAL mat_sphere_-1.500000_2.250000
+albedo = 0.692679 0.315177 0.897247
+fuzziness = 0.998725
 
-MAT_METAL metal_9
-albedo = 0.193686 0.567186 0.641527
-fuzziness = 0.824445
+MAT_DIFF mat_sphere_-1.500000_3.000000
+albedo = 0.427267 0.596874 0.693518
 
-MAT_DIEL diele_0
-refractionRatio = 0.708094
+MAT_DIEL mat_sphere_-1.000000_-2.500000
+refractionRatio = 11.6522
 
-MAT_METAL glass
-albedo = 0.8 0.8 0.8
-fuzziness = 0.05
+MAT_DIFF mat_sphere_-1.500000_3.250000
+albedo = 0.270695 0.732375 0.481987
 
-MAT_METAL metal_10
-albedo = 0.212574 0.00174965 0.534332
-fuzziness = 0.433963
+MAT_DIFF mat_sphere_-1.500000_4.500000
+albedo = 0.211354 0.275436 0.582579
 
-MAT_METAL metal_11
-albedo = 0.467659 0.704024 0.272659
-fuzziness = 0.5783
+MAT_METAL mat_sphere_-1.500000_4.750000
+albedo = 0.304061 0.330437 0.540996
+fuzziness = 0.432536
 
-MAT_METAL metal_12
-albedo = 0.240143 0.300085 0.124377
-fuzziness = 0.209861
+MAT_DIFF mat_sphere_-1.000000_-4.250000
+albedo = 0.823136 0.575035 0.520195
 
-MAT_METAL metal_14
-albedo = 0.347059 0.935692 0.71827
-fuzziness = 0.878824
+MAT_DIFF mat_sphere_-1.000000_-3.250000
+albedo = 0.649801 0.541457 0.657359
 
-MAT_METAL metal_15
-albedo = 0.766735 0.888365 0.167563
-fuzziness = 0.390646
+MAT_DIFF mat_sphere_-1.000000_-2.750000
+albedo = 0.375439 0.821387 0.190975
 
-MAT_METAL metal_16
-albedo = 0.487815 0.309156 0.350267
-fuzziness = 0.0547201
+MAT_DIFF mat_sphere_1.500000_-3.750000
+albedo = 0.235859 0.157892 0.621433
 
-MAT_METAL metal_17
-albedo = 0.494397 0.170743 0.0505524
-fuzziness = 0.443424
+MAT_DIFF mat_sphere_-1.000000_-2.250000
+albedo = 0.692088 0.79371 0.198664
 
-MAT_METAL metal_18
-albedo = 0.983064 0.709968 0.197394
-fuzziness = 0.585601
+MAT_METAL mat_sphere_2.000000_-4.000000
+albedo = 0.0791859 0.381448 0.864019
+fuzziness = 0.0415497
 
-MAT_METAL metal_19
-albedo = 0.930531 0.877648 0.125305
-fuzziness = 0.500669
+MAT_METAL mat_sphere_2.500000_-2.750000
+albedo = 0.521983 0.639741 0.918597
+fuzziness = 0.572347
 
-MAT_METAL metal_20
-albedo = 0.41478 0.974819 0.662678
-fuzziness = 0.109124
+MAT_METAL mat_sphere_-1.000000_-2.000000
+albedo = 0.395516 0.970209 0.939001
+fuzziness = 0.500507
 
-MAT_METAL metal_21
-albedo = 0.766027 0.799554 0.775038
-fuzziness = 0.481474
+MAT_DIFF mat_sphere_-1.000000_-1.750000
+albedo = 0.801576 0.870672 0.194605
 
-MAT_METAL metal_23
-albedo = 0.524353 0.625529 0.431048
-fuzziness = 0.430293
+MAT_DIFF mat_sphere_-1.000000_-1.500000
+albedo = 0.244243 0.872815 0.677808
 
-MAT_METAL metal_24
-albedo = 0.231644 0.565698 0.767253
-fuzziness = 0.817371
+MAT_METAL mat_sphere_-1.000000_-1.000000
+albedo = 0.0928914 0.959073 0.437334
+fuzziness = 0.543215
 
-MAT_METAL metal_26
-albedo = 0.0384474 0.914354 0.927655
-fuzziness = 0.231236
+MAT_DIFF mat_sphere_-1.000000_1.250000
+albedo = 0.971618 0.950941 0.88248
 
-MAT_METAL metal_27
-albedo = 0.999903 0.453557 0.400002
-fuzziness = 0.0278781
+MAT_DIFF mat_sphere_-0.500000_-4.000000
+albedo = 0.818538 0.641382 0.136822
 
-MAT_METAL metal_28
-albedo = 0.875713 0.726552 0.13174
-fuzziness = 0.461715
+MAT_DIFF mat_sphere_-1.000000_1.750000
+albedo = 0.810976 0.637531 0.272344
 
-MAT_METAL metal_29
-albedo = 0.568081 0.825721 0.963584
-fuzziness = 0.739012
+MAT_DIFF mat_sphere_-1.000000_2.250000
+albedo = 0.582921 0.17586 0.929492
 
-MAT_DIEL diele_1
-refractionRatio = -4.81939
+MAT_DIFF mat_sphere_-1.000000_2.500000
+albedo = 0.109957 0.744544 0.863858
 
-MAT_DIEL diele_2
-refractionRatio = 15.8373
+MAT_DIFF mat_sphere_-1.000000_3.000000
+albedo = 0.287565 0.0435751 0.411457
 
-MAT_DIEL diele_3
-refractionRatio = 8.96385
+MAT_DIFF mat_sphere_-1.000000_3.500000
+albedo = 0.959962 0.304983 0.841898
 
-MAT_DIEL diele_4
-refractionRatio = 11.2735
+MAT_METAL mat_sphere_-1.000000_4.250000
+albedo = 0.734241 0.562204 0.130014
+fuzziness = 0.913538
 
-MAT_DIEL diele_5
-refractionRatio = -8.16977
+MAT_METAL mat_sphere_-0.500000_-3.750000
+albedo = 0.0617547 0.958957 0.831696
+fuzziness = 0.810891
 
-MAT_DIEL diele_6
-refractionRatio = 21.5249
+MAT_DIEL mat_sphere_-0.500000_2.500000
+refractionRatio = 18.5103
 
-MAT_DIEL diele_7
-refractionRatio = 0.684882
+MAT_DIFF mat_sphere_-0.500000_-4.750000
+albedo = 0.680728 0.433897 0.636558
 
-MAT_DIEL diele_8
-refractionRatio = -22.5406
+MAT_DIFF mat_sphere_-0.500000_-3.500000
+albedo = 0.99311 0.389013 0.0578525
 
-MAT_DIEL diele_9
-refractionRatio = -15.2001
+MAT_DIFF mat_sphere_1.000000_0.500000
+albedo = 0.929972 0.654334 0.373739
+
+MAT_DIFF mat_sphere_-0.500000_-3.250000
+albedo = 0.920137 0.920146 0.367569
+
+MAT_DIFF mat_sphere_-0.500000_-3.000000
+albedo = 0.317704 0.911484 0.268451
+
+MAT_METAL mat_sphere_-0.500000_-1.500000
+albedo = 0.0847368 0.329302 0.728482
+fuzziness = 0.550191
+
+MAT_METAL mat_sphere_-0.500000_-1.000000
+albedo = 0.500481 0.738466 0.479544
+fuzziness = 0.070135
+
+MAT_DIFF mat_sphere_-0.500000_-0.750000
+albedo = 0.302997 0.964105 0.323571
+
+MAT_METAL mat_sphere_-0.500000_1.000000
+albedo = 0.11207 0.748091 0.101156
+fuzziness = 0.912708
+
+MAT_DIFF mat_sphere_-0.500000_1.250000
+albedo = 0.870662 0.710925 0.049262
+
+MAT_DIFF mat_sphere_-0.500000_1.500000
+albedo = 0.623031 0.33331 0.230963
+
+MAT_DIFF mat_sphere_-0.500000_1.750000
+albedo = 0.837647 0.0506392 0.406624
+
+MAT_DIFF mat_sphere_-0.500000_3.500000
+albedo = 0.201116 0.0854479 0.655021
+
+MAT_DIFF mat_sphere_-0.500000_4.000000
+albedo = 0.231331 0.591838 0.629526
+
+MAT_DIFF mat_sphere_-0.500000_3.750000
+albedo = 0.938253 0.429461 0.529025
+
+MAT_DIFF mat_sphere_-0.500000_4.250000
+albedo = 0.78692 0.436483 0.472766
+
+MAT_DIFF mat_sphere_-0.500000_4.500000
+albedo = 0.38528 0.840596 0.4086
+
+MAT_DIFF mat_sphere_0.500000_-5.000000
+albedo = 0.74823 0.813158 0.942143
+
+MAT_METAL mat_sphere_0.500000_-3.250000
+albedo = 0.334295 0.777642 0.54866
+fuzziness = 0.377065
+
+MAT_DIFF mat_sphere_2.000000_-5.000000
+albedo = 0.730504 0.157504 0.852829
+
+MAT_DIFF mat_sphere_0.500000_-2.750000
+albedo = 0.0303957 0.229403 0.517044
+
+MAT_METAL mat_sphere_2.000000_2.000000
+albedo = 0.781555 0.443614 0.685717
+fuzziness = 0.222076
+
+MAT_DIFF mat_sphere_0.500000_-2.000000
+albedo = 0.939367 0.181175 0.474986
+
+MAT_DIFF mat_sphere_0.500000_-1.250000
+albedo = 0.772029 0.597776 0.262366
+
+MAT_DIFF mat_sphere_0.500000_1.000000
+albedo = 0.684126 0.429299 0.695284
+
+MAT_DIFF mat_sphere_0.500000_1.750000
+albedo = 0.522176 0.935401 0.74781
+
+MAT_DIEL mat_sphere_0.500000_2.000000
+refractionRatio = 1.77028
+
+MAT_DIFF mat_sphere_0.500000_2.250000
+albedo = 0.592391 0.305531 0.286785
+
+MAT_METAL mat_sphere_1.000000_3.000000
+albedo = 0.23033 0.237685 0.27048
+fuzziness = 0.335812
+
+MAT_DIFF mat_sphere_0.500000_2.750000
+albedo = 0.499564 0.438792 0.933545
+
+MAT_DIFF mat_sphere_0.500000_3.500000
+albedo = 0.652893 0.779509 0.702379
+
+MAT_DIFF mat_sphere_1.000000_4.250000
+albedo = 0.759641 0.633586 0.836393
+
+MAT_METAL mat_sphere_0.500000_3.750000
+albedo = 0.910166 0.641237 0.143442
+fuzziness = 0.0761678
+
+MAT_DIFF mat_sphere_0.500000_4.500000
+albedo = 0.918865 0.511414 0.457937
+
+MAT_DIFF mat_sphere_1.000000_-4.750000
+albedo = 0.192312 0.112645 0.464375
+
+MAT_DIFF mat_sphere_1.000000_-4.500000
+albedo = 0.711862 0.280556 0.725665
+
+MAT_METAL mat_sphere_1.000000_-3.500000
+albedo = 0.254279 0.280429 0.568531
+fuzziness = 0.577402
+
+MAT_DIFF mat_sphere_1.000000_-3.250000
+albedo = 0.141337 0.470747 0.432272
+
+MAT_DIFF mat_sphere_1.500000_-0.750000
+albedo = 0.370336 0.470492 0.0988761
+
+MAT_DIFF mat_sphere_1.000000_-2.500000
+albedo = 0.489691 0.886723 0.0130828
+
+MAT_METAL mat_sphere_1.000000_-2.250000
+albedo = 0.633563 0.712541 0.0621083
+fuzziness = 0.0292037
+
+MAT_DIFF mat_sphere_1.000000_-1.750000
+albedo = 0.461348 0.72725 0.0633672
+
+MAT_DIFF mat_sphere_1.000000_-1.500000
+albedo = 0.0135216 0.700662 0.643532
+
+MAT_DIFF mat_sphere_1.000000_-0.750000
+albedo = 0.409283 0.497299 0.130163
+
+MAT_DIFF mat_sphere_1.000000_0.750000
+albedo = 0.843928 0.254057 0.586011
+
+MAT_DIFF mat_sphere_1.000000_1.250000
+albedo = 0.240043 0.0984557 0.552786
+
+MAT_DIFF mat_sphere_1.000000_1.500000
+albedo = 0.436857 0.502723 0.9243
+
+MAT_DIEL mat_sphere_1.000000_1.750000
+refractionRatio = 5.15579
+
+MAT_METAL mat_sphere_1.000000_2.500000
+albedo = 0.935898 0.737342 0.248107
+fuzziness = 0.361615
+
+MAT_DIFF mat_sphere_1.000000_3.250000
+albedo = 0.557958 0.199054 0.52024
+
+MAT_DIFF mat_sphere_1.000000_3.750000
+albedo = 0.0642332 0.60229 0.133785
+
+MAT_DIFF mat_sphere_1.000000_4.000000
+albedo = 0.885182 0.63892 0.298762
+
+MAT_DIFF mat_sphere_1.000000_4.500000
+albedo = 0.354384 0.483669 0.166067
+
+MAT_DIFF mat_sphere_1.500000_-5.000000
+albedo = 0.799135 0.0250796 0.617734
+
+MAT_DIFF mat_sphere_1.500000_-4.750000
+albedo = 0.646437 0.141876 0.477359
+
+MAT_DIFF mat_sphere_1.500000_-4.500000
+albedo = 0.232704 0.860098 0.789371
+
+MAT_METAL mat_sphere_1.500000_-4.250000
+albedo = 0.218012 0.672091 0.495719
+fuzziness = 0.869709
+
+MAT_DIFF mat_sphere_1.500000_-2.250000
+albedo = 0.49663 0.833774 0.122572
+
+MAT_DIFF mat_sphere_1.500000_-2.000000
+albedo = 0.605904 0.610154 0.743596
+
+MAT_DIFF mat_sphere_1.500000_-1.500000
+albedo = 0.974849 0.943366 0.24311
+
+MAT_DIFF mat_sphere_1.500000_-0.500000
+albedo = 0.379936 0.882386 0.665185
+
+MAT_DIEL mat_sphere_1.500000_0.750000
+refractionRatio = 12.6616
+
+MAT_DIFF mat_sphere_1.500000_1.250000
+albedo = 0.781556 0.470745 0.319883
+
+MAT_DIFF mat_sphere_1.500000_2.000000
+albedo = 0.44775 0.355896 0.450825
+
+MAT_DIFF mat_sphere_1.500000_2.250000
+albedo = 0.0396335 0.149777 0.892598
+
+MAT_METAL mat_sphere_1.500000_3.250000
+albedo = 0.477768 0.359874 0.467649
+fuzziness = 0.906893
+
+MAT_DIFF mat_sphere_1.500000_4.000000
+albedo = 0.835389 0.0457767 0.687228
+
+MAT_METAL mat_sphere_1.500000_4.750000
+albedo = 0.556364 0.243772 0.107611
+fuzziness = 0.514013
+
+MAT_DIFF mat_sphere_2.000000_-4.500000
+albedo = 0.537748 0.619812 0.94426
+
+MAT_DIFF mat_sphere_2.000000_-3.250000
+albedo = 0.199723 0.813459 0.456192
+
+MAT_DIFF mat_sphere_2.000000_-3.000000
+albedo = 0.776709 0.527287 0.694159
+
+MAT_DIFF mat_sphere_2.000000_-2.750000
+albedo = 0.341933 0.457579 0.789936
+
+MAT_METAL mat_sphere_2.500000_-2.500000
+albedo = 0.171022 0.401495 0.550785
+fuzziness = 0.938863
+
+MAT_DIFF mat_sphere_2.000000_-2.250000
+albedo = 0.0936771 0.886342 0.624131
+
+MAT_DIFF mat_sphere_2.000000_-1.750000
+albedo = 0.655524 0.777825 0.38712
+
+MAT_DIFF mat_sphere_2.000000_-1.500000
+albedo = 0.968888 0.213737 0.316681
+
+MAT_DIEL mat_sphere_2.000000_-1.250000
+refractionRatio = 3.47759
+
+MAT_DIFF mat_sphere_2.500000_3.250000
+albedo = 0.862249 0.640964 0.981756
+
+MAT_DIFF mat_sphere_2.000000_-1.000000
+albedo = 0.395917 0.286061 0.448361
+
+MAT_DIFF mat_sphere_2.000000_-0.750000
+albedo = 0.721165 0.359755 0.711297
+
+MAT_METAL mat_sphere_2.000000_0.750000
+albedo = 0.262209 0.105663 0.474956
+fuzziness = 0.609566
+
+MAT_DIFF mat_sphere_2.000000_1.250000
+albedo = 0.387893 0.98221 0.251606
+
+MAT_METAL mat_sphere_2.000000_1.750000
+albedo = 0.229932 0.0552163 0.343673
+fuzziness = 0.434597
+
+MAT_DIFF mat_sphere_2.000000_3.750000
+albedo = 0.711932 0.651932 0.402582
+
+MAT_DIFF mat_sphere_2.500000_-4.250000
+albedo = 0.808353 0.992209 0.937185
+
+MAT_DIFF mat_sphere_2.500000_-4.000000
+albedo = 0.503208 0.334148 0.681043
+
+MAT_DIFF mat_sphere_2.500000_-3.750000
+albedo = 0.307778 0.735117 0.809552
+
+MAT_DIFF mat_sphere_2.500000_-3.500000
+albedo = 0.214464 0.394916 0.00502786
+
+MAT_DIEL mat_sphere_2.500000_-3.250000
+refractionRatio = 14.9676
+
+MAT_METAL mat_sphere_2.500000_-1.250000
+albedo = 0.240349 0.907594 0.481255
+fuzziness = 0.676152
+
+MAT_DIEL mat_sphere_2.500000_-1.000000
+refractionRatio = 8.01312
+
+MAT_DIFF mat_sphere_2.500000_1.500000
+albedo = 0.685328 0.462407 0.856867
+
+MAT_DIFF mat_sphere_2.500000_1.750000
+albedo = 0.626627 0.891771 0.664918
+
+MAT_DIFF mat_sphere_2.500000_2.500000
+albedo = 0.786698 0.700122 0.573757
+
+MAT_DIFF mat_sphere_2.500000_2.750000
+albedo = 0.332624 0.114062 0.907735
+
+MAT_DIFF mat_sphere_2.500000_4.250000
+albedo = 0.368559 0.71757 0.835978
 
 OBJ_SPHERE ground
-mat = diff_ground
-cen = 0 -1000 0
-rad = 1000
-
-OBJ_SPHERE r_sphere_01
-mat = glass
-cen = 1 0.25 0
-rad = 0.25
-
-OBJ_SPHERE sphere_-15_-5.000000
-mat = diff_55
-cen = -4.91619 0.099 -14.9454
-rad = 0.1
-
-OBJ_SPHERE sphere_-15_-4.500000
-mat = diff_2
-cen = -4.66283 0.099 -14.9777
-rad = 0.1
-
-OBJ_SPHERE sphere_-15_-4.000000
-mat = metal_17
-cen = -4.22063 0.099 -14.8642
-rad = 0.1
-
-OBJ_SPHERE sphere_-15_-3.500000
-mat = diff_42
-cen = -3.59983 0.099 -15.2127
-rad = 0.1
-
-OBJ_SPHERE sphere_-15_-3.000000
-mat = diff_41
-cen = -3.07427 0.099 -15.0516
-rad = 0.1
-
-OBJ_SPHERE sphere_-15_-2.500000
-mat = metal_20
-cen = -2.54341 0.099 -14.9553
-rad = 0.1
-
-OBJ_SPHERE sphere_-15_-1.500000
-mat = diele_4
-cen = -1.43797 0.099 -15.1755
-rad = 0.1
-
-OBJ_SPHERE sphere_-15_-1.000000
-mat = metal_23
-cen = -1.188 0.099 -15.1942
-rad = 0.1
-
-OBJ_SPHERE sphere_-15_-0.500000
-mat = diff_57
-cen = -0.746134 0.099 -15.1988
-rad = 0.1
-
-OBJ_SPHERE sphere_-15_0.000000
-mat = diff_66
-cen = 0.230664 0.099 -14.8745
-rad = 0.1
-
-OBJ_SPHERE sphere_-15_0.500000
-mat = diele_5
-cen = 0.3569 0.099 -14.8251
-rad = 0.1
-
-OBJ_SPHERE sphere_-15_1.000000
-mat = diff_45
-cen = 0.958134 0.099 -15.1024
-rad = 0.1
-
-OBJ_SPHERE sphere_-15_1.500000
-mat = diff_41
-cen = 1.73684 0.099 -15.094
-rad = 0.1
-
-OBJ_SPHERE sphere_-15_2.000000
-mat = diff_65
-cen = 2.09946 0.099 -14.7777
-rad = 0.1
-
-OBJ_SPHERE sphere_-15_2.500000
-mat = metal_12
-cen = 2.35697 0.099 -15.2024
-rad = 0.1
-
-OBJ_SPHERE sphere_-15_3.000000
-mat = metal_6
-cen = 3.15232 0.099 -14.8944
-rad = 0.1
-
-OBJ_SPHERE sphere_-15_3.500000
-mat = metal_19
-cen = 3.41169 0.099 -14.8164
-rad = 0.1
-
-OBJ_SPHERE sphere_-15_4.000000
-mat = diff_55
-cen = 4.23505 0.099 -15.1404
-rad = 0.1
-
-OBJ_SPHERE sphere_-15_4.500000
-mat = metal_0
-cen = 4.56512 0.099 -14.7964
-rad = 0.1
-
-OBJ_SPHERE sphere_-14_-5.000000
-mat = diff_29
-cen = -5.24894 0.099 -14.2314
-rad = 0.1
-
-OBJ_SPHERE sphere_-14_-4.500000
-mat = diff_13
-cen = -4.46478 0.099 -13.9277
-rad = 0.1
-
-OBJ_SPHERE sphere_-14_-4.000000
-mat = diff_62
-cen = -4.11388 0.099 -14.1214
-rad = 0.1
-
-OBJ_SPHERE sphere_-14_-3.500000
-mat = diele_8
-cen = -3.49376 0.099 -13.8305
-rad = 0.1
-
-OBJ_SPHERE sphere_-14_-2.500000
-mat = diff_4
-cen = -2.25628 0.099 -13.7502
-rad = 0.1
-
-OBJ_SPHERE sphere_-14_-2.000000
-mat = metal_24
-cen = -1.82605 0.099 -14.1346
-rad = 0.1
-
-OBJ_SPHERE sphere_-14_-1.000000
-mat = diff_25
-cen = -1.12446 0.099 -14.199
-rad = 0.1
-
-OBJ_SPHERE sphere_-14_-0.500000
-mat = diff_44
-cen = -0.658109 0.099 -14.113
-rad = 0.1
-
-OBJ_SPHERE sphere_-14_0.500000
-mat = diele_5
-cen = 0.368719 0.099 -13.9935
-rad = 0.1
-
-OBJ_SPHERE sphere_-14_1.500000
-mat = diff_65
-cen = 1.3435 0.099 -14.2393
-rad = 0.1
-
-OBJ_SPHERE sphere_-14_2.500000
-mat = metal_19
-cen = 2.69271 0.099 -14.0893
-rad = 0.1
-
-OBJ_SPHERE sphere_-14_4.000000
-mat = metal_3
-cen = 4.16316 0.099 -14.1918
-rad = 0.1
-
-OBJ_SPHERE sphere_-14_4.500000
-mat = diff_52
-cen = 4.41472 0.099 -13.9226
-rad = 0.1
-
-OBJ_SPHERE sphere_-13_-5.000000
-mat = diff_52
-cen = -4.91031 0.099 -12.9805
-rad = 0.1
-
-OBJ_SPHERE sphere_-13_-4.000000
-mat = diff_59
-cen = -3.75422 0.099 -13.1138
-rad = 0.1
-
-OBJ_SPHERE sphere_-13_-3.500000
-mat = metal_17
-cen = -3.65687 0.099 -12.8218
-rad = 0.1
-
-OBJ_SPHERE sphere_-13_-3.000000
-mat = diff_1
-cen = -3.1816 0.099 -12.8578
-rad = 0.1
-
-OBJ_SPHERE sphere_-13_-2.500000
-mat = diff_38
-cen = -2.48746 0.099 -13.1513
-rad = 0.1
-
-OBJ_SPHERE sphere_-13_-1.000000
-mat = diff_26
-cen = -1.11502 0.099 -12.8428
-rad = 0.1
-
-OBJ_SPHERE sphere_-13_-0.500000
-mat = diff_33
-cen = -0.550116 0.099 -13.011
-rad = 0.1
-
-OBJ_SPHERE sphere_-13_0.000000
-mat = diff_29
-cen = -0.0470468 0.099 -12.8961
-rad = 0.1
-
-OBJ_SPHERE sphere_-13_0.500000
-mat = metal_27
-cen = 0.562087 0.099 -12.9505
-rad = 0.1
-
-OBJ_SPHERE sphere_-13_1.000000
-mat = diff_19
-cen = 1.05283 0.099 -13.0855
-rad = 0.1
-
-OBJ_SPHERE sphere_-13_2.000000
-mat = diff_45
-cen = 1.93189 0.099 -13.2039
-rad = 0.1
-
-OBJ_SPHERE sphere_-13_2.500000
-mat = diff_65
-cen = 2.35498 0.099 -12.9307
-rad = 0.1
-
-OBJ_SPHERE sphere_-13_3.000000
-mat = metal_11
-cen = 3.12295 0.099 -13.011
-rad = 0.1
-
-OBJ_SPHERE sphere_-13_3.500000
-mat = diff_0
-cen = 3.29333 0.099 -13.1658
-rad = 0.1
-
-OBJ_SPHERE sphere_-13_4.000000
-mat = diff_49
-cen = 4.0214 0.099 -12.8547
-rad = 0.1
-
-OBJ_SPHERE sphere_-13_4.500000
-mat = diff_9
-cen = 4.39255 0.099 -13.193
-rad = 0.1
-
-OBJ_SPHERE sphere_-12_-5.000000
-mat = metal_20
-cen = -4.82442 0.099 -11.9665
-rad = 0.1
-
-OBJ_SPHERE sphere_-12_-4.500000
-mat = diff_68
-cen = -4.41791 0.099 -11.9956
-rad = 0.1
-
-OBJ_SPHERE sphere_-12_-4.000000
-mat = diff_8
-cen = -4.1371 0.099 -12.0874
-rad = 0.1
-
-OBJ_SPHERE sphere_-12_-3.500000
-mat = metal_16
-cen = -3.65859 0.099 -11.9692
-rad = 0.1
-
-OBJ_SPHERE sphere_-12_-3.000000
-mat = diff_43
-cen = -2.97097 0.099 -12.0238
-rad = 0.1
-
-OBJ_SPHERE sphere_-12_-2.500000
-mat = diff_60
-cen = -2.70682 0.099 -12.1616
-rad = 0.1
-
-OBJ_SPHERE sphere_-12_-0.500000
-mat = diff_18
-cen = -0.29137 0.099 -12.1215
-rad = 0.1
-
-OBJ_SPHERE sphere_-12_0.500000
-mat = diff_19
-cen = 0.362138 0.099 -11.9926
-rad = 0.1
-
-OBJ_SPHERE sphere_-12_2.500000
-mat = metal_3
-cen = 2.55133 0.099 -11.9686
-rad = 0.1
-
-OBJ_SPHERE sphere_-12_3.000000
-mat = metal_1
-cen = 2.87132 0.099 -11.8106
-rad = 0.1
-
-OBJ_SPHERE sphere_-12_3.500000
-mat = diff_3
-cen = 3.51995 0.099 -12.0642
-rad = 0.1
-
-OBJ_SPHERE sphere_-12_4.000000
-mat = diff_12
-cen = 3.95706 0.099 -12.0155
-rad = 0.1
-
-OBJ_SPHERE sphere_-11_-5.000000
-mat = diff_30
-cen = -5.24199 0.099 -10.8393
-rad = 0.1
-
-OBJ_SPHERE sphere_-11_-4.500000
-mat = diff_61
-cen = -4.41425 0.099 -10.953
-rad = 0.1
-
-OBJ_SPHERE sphere_-11_-4.000000
-mat = diff_25
-cen = -4.14371 0.099 -11.0926
-rad = 0.1
-
-OBJ_SPHERE sphere_-11_-2.500000
-mat = diff_65
-cen = -2.62896 0.099 -11.0818
-rad = 0.1
-
-OBJ_SPHERE sphere_-11_-2.000000
-mat = diff_68
-cen = -2.16495 0.099 -10.9817
-rad = 0.1
-
-OBJ_SPHERE sphere_-11_-1.500000
-mat = metal_28
-cen = -1.33249 0.099 -11.1035
-rad = 0.1
-
-OBJ_SPHERE sphere_-11_-1.000000
-mat = metal_12
-cen = -0.79056 0.099 -10.8068
-rad = 0.1
-
-OBJ_SPHERE sphere_-11_-0.500000
-mat = diff_21
-cen = -0.373303 0.099 -11.0664
-rad = 0.1
-
-OBJ_SPHERE sphere_-11_0.000000
-mat = metal_29
-cen = -0.145779 0.099 -11.0598
-rad = 0.1
-
-OBJ_SPHERE sphere_-11_0.500000
-mat = diff_46
-cen = 0.747043 0.099 -11.239
-rad = 0.1
-
-OBJ_SPHERE sphere_-11_1.000000
-mat = diff_49
-cen = 0.872688 0.099 -11.0288
-rad = 0.1
-
-OBJ_SPHERE sphere_-11_1.500000
-mat = diff_36
-cen = 1.38756 0.099 -10.821
-rad = 0.1
-
-OBJ_SPHERE sphere_-11_2.000000
-mat = diff_22
-cen = 1.99891 0.099 -11.0572
-rad = 0.1
-
-OBJ_SPHERE sphere_-11_3.000000
-mat = diff_3
-cen = 3.05095 0.099 -11.2332
-rad = 0.1
-
-OBJ_SPHERE sphere_-11_3.500000
-mat = metal_15
-cen = 3.31281 0.099 -10.8558
-rad = 0.1
-
-OBJ_SPHERE sphere_-10_-5.000000
-mat = diff_2
-cen = -4.83607 0.099 -10.0521
-rad = 0.1
-
-OBJ_SPHERE sphere_-10_-3.500000
-mat = diff_14
-cen = -3.47424 0.099 -9.85131
-rad = 0.1
-
-OBJ_SPHERE sphere_-10_-3.000000
-mat = metal_2
-cen = -3.20325 0.099 -10.2008
-rad = 0.1
-
-OBJ_SPHERE sphere_-10_-2.500000
-mat = diff_10
-cen = -2.38336 0.099 -9.8657
-rad = 0.1
-
-OBJ_SPHERE sphere_-10_-1.500000
-mat = diff_18
-cen = -1.4255 0.099 -10.0981
-rad = 0.1
-
-OBJ_SPHERE sphere_-10_-1.000000
-mat = diff_68
-cen = -0.939261 0.099 -9.7985
-rad = 0.1
-
-OBJ_SPHERE sphere_-10_-0.500000
-mat = metal_21
-cen = -0.710585 0.099 -10.2441
-rad = 0.1
-
-OBJ_SPHERE sphere_-10_0.000000
-mat = diff_59
-cen = 0.0605129 0.099 -9.84176
-rad = 0.1
-
-OBJ_SPHERE sphere_-10_0.500000
-mat = diele_4
-cen = 0.467433 0.099 -9.86968
-rad = 0.1
-
-OBJ_SPHERE sphere_-10_1.000000
-mat = diff_33
-cen = 1.1177 0.099 -9.92581
-rad = 0.1
-
-OBJ_SPHERE sphere_-10_1.500000
-mat = diff_49
-cen = 1.4856 0.099 -10.2248
-rad = 0.1
-
-OBJ_SPHERE sphere_-10_2.000000
-mat = diff_6
-cen = 2.15983 0.099 -10.2032
-rad = 0.1
-
-OBJ_SPHERE sphere_-10_3.000000
-mat = metal_29
-cen = 3.15164 0.099 -9.80401
-rad = 0.1
-
-OBJ_SPHERE sphere_-10_3.500000
-mat = diele_7
-cen = 3.35479 0.099 -9.99367
-rad = 0.1
-
-OBJ_SPHERE sphere_-10_4.500000
-mat = metal_7
-cen = 4.59787 0.099 -10.2467
-rad = 0.1
-
-OBJ_SPHERE sphere_-9_-5.000000
-mat = diff_20
-cen = -4.81865 0.099 -8.77382
-rad = 0.1
-
-OBJ_SPHERE sphere_-9_-4.000000
-mat = diff_32
-cen = -3.9585 0.099 -9.00172
-rad = 0.1
-
-OBJ_SPHERE sphere_-9_-3.500000
-mat = diff_5
-cen = -3.49333 0.099 -9.24272
-rad = 0.1
-
-OBJ_SPHERE sphere_-9_-3.000000
-mat = diff_51
-cen = -3.03657 0.099 -9.19187
-rad = 0.1
-
-OBJ_SPHERE sphere_-9_-2.500000
-mat = metal_10
-cen = -2.27063 0.099 -8.81141
-rad = 0.1
-
-OBJ_SPHERE sphere_-9_-2.000000
-mat = diff_33
-cen = -2.22156 0.099 -9.23746
-rad = 0.1
-
-OBJ_SPHERE sphere_-9_-1.500000
-mat = metal_27
-cen = -1.49362 0.099 -8.89418
-rad = 0.1
-
-OBJ_SPHERE sphere_-9_-0.500000
-mat = diff_66
-cen = -0.330837 0.099 -9.05411
-rad = 0.1
-
-OBJ_SPHERE sphere_-9_0.000000
-mat = diele_3
-cen = 0.0272556 0.099 -9.03313
-rad = 0.1
-
-OBJ_SPHERE sphere_-9_0.500000
-mat = diele_0
-cen = 0.279733 0.099 -9.22508
-rad = 0.1
-
-OBJ_SPHERE sphere_-9_1.000000
-mat = diff_64
-cen = 1.19202 0.099 -8.9564
-rad = 0.1
-
-OBJ_SPHERE sphere_-9_1.500000
-mat = metal_23
-cen = 1.29653 0.099 -8.89369
-rad = 0.1
-
-OBJ_SPHERE sphere_-9_2.500000
-mat = diff_60
-cen = 2.58413 0.099 -8.88737
-rad = 0.1
-
-OBJ_SPHERE sphere_-9_3.000000
-mat = diff_51
-cen = 3.02104 0.099 -9.23239
-rad = 0.1
-
-OBJ_SPHERE sphere_-9_3.500000
-mat = diff_48
-cen = 3.67726 0.099 -8.80449
-rad = 0.1
-
-OBJ_SPHERE sphere_-9_4.000000
-mat = diff_2
-cen = 4.24051 0.099 -9.10338
-rad = 0.1
-
-OBJ_SPHERE sphere_-9_4.500000
-mat = diff_41
-cen = 4.47341 0.099 -9.15624
-rad = 0.1
-
-OBJ_SPHERE sphere_-8_-5.000000
-mat = metal_9
-cen = -5.02254 0.099 -8.17898
-rad = 0.1
-
-OBJ_SPHERE sphere_-8_-4.500000
-mat = metal_24
-cen = -4.44645 0.099 -8.03693
-rad = 0.1
-
-OBJ_SPHERE sphere_-8_-3.500000
-mat = diff_30
-cen = -3.33958 0.099 -7.82003
-rad = 0.1
-
-OBJ_SPHERE sphere_-8_-3.000000
-mat = metal_0
-cen = -2.93506 0.099 -7.81178
-rad = 0.1
-
-OBJ_SPHERE sphere_-8_-2.000000
-mat = diff_0
-cen = -2.01769 0.099 -8.00195
-rad = 0.1
-
-OBJ_SPHERE sphere_-8_-1.500000
-mat = diff_49
-cen = -1.42021 0.099 -7.86774
-rad = 0.1
-
-OBJ_SPHERE sphere_-8_-1.000000
-mat = diff_35
-cen = -1.0707 0.099 -7.87268
-rad = 0.1
-
-OBJ_SPHERE sphere_-8_-0.500000
-mat = diff_61
-cen = -0.717039 0.099 -8.24347
-rad = 0.1
-
-OBJ_SPHERE sphere_-8_1.000000
-mat = diff_6
-cen = 0.902712 0.099 -8.08424
-rad = 0.1
-
-OBJ_SPHERE sphere_-8_1.500000
-mat = diff_4
-cen = 1.35422 0.099 -8.16999
-rad = 0.1
-
-OBJ_SPHERE sphere_-8_2.000000
-mat = diff_41
-cen = 1.87674 0.099 -7.75171
-rad = 0.1
-
-OBJ_SPHERE sphere_-8_2.500000
-mat = diff_40
-cen = 2.71238 0.099 -7.79331
-rad = 0.1
-
-OBJ_SPHERE sphere_-8_3.500000
-mat = diff_20
-cen = 3.27719 0.099 -7.95436
-rad = 0.1
-
-OBJ_SPHERE sphere_-8_4.000000
-mat = diff_44
-cen = 4.13462 0.099 -7.83057
-rad = 0.1
-
-OBJ_SPHERE sphere_-8_4.500000
-mat = diele_1
-cen = 4.52947 0.099 -8.11711
-rad = 0.1
-
-OBJ_SPHERE sphere_-7_-5.000000
-mat = diff_22
-cen = -5.16345 0.099 -6.81781
-rad = 0.1
-
-OBJ_SPHERE sphere_-7_-4.500000
-mat = diff_34
-cen = -4.49994 0.099 -7.1748
-rad = 0.1
-
-OBJ_SPHERE sphere_-7_-4.000000
-mat = diff_35
-cen = -4.02882 0.099 -6.75595
-rad = 0.1
-
-OBJ_SPHERE sphere_-7_-3.500000
-mat = metal_0
-cen = -3.62112 0.099 -7.03303
-rad = 0.1
-
-OBJ_SPHERE sphere_-7_-3.000000
-mat = diele_0
-cen = -2.90071 0.099 -6.96139
-rad = 0.1
-
-OBJ_SPHERE sphere_-7_-1.500000
-mat = diff_6
-cen = -1.5452 0.099 -6.83353
-rad = 0.1
-
-OBJ_SPHERE sphere_-7_-1.000000
-mat = diele_2
-cen = -0.866904 0.099 -7.18218
-rad = 0.1
-
-OBJ_SPHERE sphere_-7_-0.500000
-mat = diff_1
-cen = -0.511971 0.099 -7.1451
-rad = 0.1
-
-OBJ_SPHERE sphere_-7_0.000000
-mat = diff_8
-cen = -0.136234 0.099 -6.9936
-rad = 0.1
-
-OBJ_SPHERE sphere_-7_1.000000
-mat = metal_17
-cen = 1.0378 0.099 -7.1093
-rad = 0.1
-
-OBJ_SPHERE sphere_-7_1.500000
-mat = diff_68
-cen = 1.51144 0.099 -6.77137
-rad = 0.1
-
-OBJ_SPHERE sphere_-7_2.500000
-mat = metal_25
-cen = 2.43654 0.099 -6.82214
-rad = 0.1
-
-OBJ_SPHERE sphere_-7_3.000000
-mat = diff_37
-cen = 2.89197 0.099 -6.87707
-rad = 0.1
-
-OBJ_SPHERE sphere_-7_3.500000
-mat = diff_22
-cen = 3.29035 0.099 -6.94553
-rad = 0.1
-
-OBJ_SPHERE sphere_-7_4.000000
-mat = diff_8
-cen = 4.24758 0.099 -6.7665
-rad = 0.1
-
-OBJ_SPHERE sphere_-7_4.500000
-mat = metal_11
-cen = 4.63885 0.099 -7.12451
-rad = 0.1
-
-OBJ_SPHERE sphere_-6_-5.000000
-mat = diff_51
-cen = -5.17982 0.099 -5.85627
-rad = 0.1
-
-OBJ_SPHERE sphere_-6_-4.500000
-mat = diele_2
-cen = -4.58952 0.099 -6.11848
-rad = 0.1
-
-OBJ_SPHERE sphere_-6_-4.000000
-mat = diff_29
-cen = -3.95383 0.099 -6.18424
-rad = 0.1
-
-OBJ_SPHERE sphere_-6_-3.000000
-mat = diff_24
-cen = -2.9081 0.099 -6.22599
-rad = 0.1
-
-OBJ_SPHERE sphere_-6_-2.500000
-mat = diff_48
-cen = -2.73268 0.099 -5.94843
-rad = 0.1
-
-OBJ_SPHERE sphere_-6_-2.000000
-mat = diele_4
-cen = -1.80088 0.099 -5.96599
-rad = 0.1
-
-OBJ_SPHERE sphere_-6_-1.500000
-mat = diff_67
-cen = -1.50406 0.099 -5.88421
-rad = 0.1
-
-OBJ_SPHERE sphere_-6_-1.000000
-mat = diff_48
-cen = -0.797241 0.099 -6.20054
-rad = 0.1
-
-OBJ_SPHERE sphere_-6_-0.500000
-mat = diff_40
-cen = -0.621567 0.099 -5.87781
-rad = 0.1
-
-OBJ_SPHERE sphere_-6_0.000000
-mat = metal_21
-cen = -0.122933 0.099 -5.89529
-rad = 0.1
-
-OBJ_SPHERE sphere_-6_1.000000
-mat = diff_40
-cen = 0.915007 0.099 -6.00045
-rad = 0.1
-
-OBJ_SPHERE sphere_-6_1.500000
-mat = diele_2
-cen = 1.72082 0.099 -5.8197
-rad = 0.1
-
-OBJ_SPHERE sphere_-6_2.000000
-mat = diff_24
-cen = 1.9325 0.099 -5.97402
-rad = 0.1
-
-OBJ_SPHERE sphere_-6_3.500000
-mat = diff_17
-cen = 3.39836 0.099 -5.78771
-rad = 0.1
-
-OBJ_SPHERE sphere_-6_4.000000
-mat = metal_15
-cen = 3.82983 0.099 -6.17704
-rad = 0.1
-
-OBJ_SPHERE sphere_-5_-5.000000
-mat = diff_37
-cen = -5.12992 0.099 -4.87749
-rad = 0.1
-
-OBJ_SPHERE sphere_-5_-3.500000
-mat = diff_32
-cen = -3.52832 0.099 -5.13524
-rad = 0.1
-
-OBJ_SPHERE sphere_-5_-3.000000
-mat = diff_1
-cen = -3.02883 0.099 -4.79189
-rad = 0.1
-
-OBJ_SPHERE sphere_-5_-2.500000
-mat = diff_19
-cen = -2.42888 0.099 -4.88018
-rad = 0.1
-
-OBJ_SPHERE sphere_-5_-1.500000
-mat = metal_7
-cen = -1.64851 0.099 -5.08425
-rad = 0.1
-
-OBJ_SPHERE sphere_-5_-1.000000
-mat = diff_8
-cen = -1.23619 0.099 -4.99554
-rad = 0.1
-
-OBJ_SPHERE sphere_-5_-0.500000
-mat = diff_19
-cen = -0.268638 0.099 -5.14614
-rad = 0.1
-
-OBJ_SPHERE sphere_-5_0.000000
-mat = diff_66
-cen = -0.239827 0.099 -4.83367
-rad = 0.1
-
-OBJ_SPHERE sphere_-5_0.500000
-mat = diff_60
-cen = 0.506361 0.099 -4.91048
-rad = 0.1
-
-OBJ_SPHERE sphere_-5_1.000000
-mat = metal_27
-cen = 0.874217 0.099 -4.79763
-rad = 0.1
-
-OBJ_SPHERE sphere_-5_1.500000
-mat = diff_34
-cen = 1.43995 0.099 -5.07893
-rad = 0.1
-
-OBJ_SPHERE sphere_-5_2.000000
-mat = diff_9
-cen = 1.96184 0.099 -5.23235
-rad = 0.1
-
-OBJ_SPHERE sphere_-5_2.500000
-mat = diff_2
-cen = 2.46723 0.099 -5.1411
-rad = 0.1
-
-OBJ_SPHERE sphere_-5_3.000000
-mat = diff_13
-cen = 3.00427 0.099 -5.24002
-rad = 0.1
-
-OBJ_SPHERE sphere_-5_3.500000
-mat = diff_41
-cen = 3.68256 0.099 -4.92525
-rad = 0.1
-
-OBJ_SPHERE sphere_-5_4.500000
-mat = diele_3
-cen = 4.55378 0.099 -4.97265
-rad = 0.1
-
-OBJ_SPHERE sphere_-4_-5.000000
-mat = diff_24
-cen = -4.94736 0.099 -4.11843
-rad = 0.1
-
-OBJ_SPHERE sphere_-4_-4.500000
-mat = diff_31
-cen = -4.48892 0.099 -3.79497
-rad = 0.1
-
-OBJ_SPHERE sphere_-4_-4.000000
-mat = metal_26
-cen = -3.92423 0.099 -3.97067
-rad = 0.1
-
-OBJ_SPHERE sphere_-4_-3.500000
-mat = diff_41
-cen = -3.48391 0.099 -4.00145
-rad = 0.1
-
-OBJ_SPHERE sphere_-4_-3.000000
-mat = diff_50
-cen = -3.073 0.099 -3.91642
-rad = 0.1
-
-OBJ_SPHERE sphere_-4_-2.500000
-mat = diff_38
-cen = -2.5958 0.099 -3.7933
-rad = 0.1
-
-OBJ_SPHERE sphere_-4_-2.000000
-mat = diff_16
-cen = -2.03563 0.099 -3.76961
-rad = 0.1
-
-OBJ_SPHERE sphere_-4_-1.500000
-mat = diele_8
-cen = -1.59826 0.099 -4.16877
-rad = 0.1
-
-OBJ_SPHERE sphere_-4_-1.000000
-mat = diff_18
-cen = -0.775191 0.099 -3.82822
-rad = 0.1
-
-OBJ_SPHERE sphere_-4_-0.500000
-mat = diele_3
-cen = -0.697348 0.099 -3.99443
-rad = 0.1
-
-OBJ_SPHERE sphere_-4_0.000000
-mat = diff_40
-cen = -0.190572 0.099 -4.14947
-rad = 0.1
-
-OBJ_SPHERE sphere_-4_0.500000
-mat = diff_59
-cen = 0.509445 0.099 -3.96807
-rad = 0.1
-
-OBJ_SPHERE sphere_-4_1.000000
-mat = diff_36
-cen = 1.1644 0.099 -3.99403
-rad = 0.1
-
-OBJ_SPHERE sphere_-4_1.500000
-mat = metal_18
-cen = 1.5573 0.099 -4.14063
-rad = 0.1
-
-OBJ_SPHERE sphere_-4_2.000000
-mat = metal_11
-cen = 1.94949 0.099 -3.9998
-rad = 0.1
-
-OBJ_SPHERE sphere_-4_2.500000
-mat = diff_24
-cen = 2.61474 0.099 -3.91304
-rad = 0.1
-
-OBJ_SPHERE sphere_-4_4.000000
-mat = diff_29
-cen = 3.96353 0.099 -3.81483
-rad = 0.1
-
-OBJ_SPHERE sphere_-3_-5.000000
-mat = diff_52
-cen = -5.19669 0.099 -3.19193
-rad = 0.1
-
-OBJ_SPHERE sphere_-3_-4.500000
-mat = diff_33
-cen = -4.59656 0.099 -2.87924
-rad = 0.1
-
-OBJ_SPHERE sphere_-3_-4.000000
-mat = diff_12
-cen = -3.95718 0.099 -2.77241
-rad = 0.1
-
-OBJ_SPHERE sphere_-3_-3.500000
-mat = metal_11
-cen = -3.41022 0.099 -2.99513
-rad = 0.1
-
-OBJ_SPHERE sphere_-3_-3.000000
-mat = diff_51
-cen = -2.97086 0.099 -2.80146
-rad = 0.1
-
-OBJ_SPHERE sphere_-3_-1.000000
-mat = metal_29
-cen = -1.15446 0.099 -2.83457
-rad = 0.1
-
-OBJ_SPHERE sphere_-3_-0.500000
-mat = metal_22
-cen = -0.369609 0.099 -3.00272
-rad = 0.1
-
-OBJ_SPHERE sphere_-3_0.000000
-mat = diff_37
-cen = 0.209571 0.099 -3.23959
-rad = 0.1
-
-OBJ_SPHERE sphere_-3_1.000000
-mat = diff_3
-cen = 0.802103 0.099 -2.84806
-rad = 0.1
-
-OBJ_SPHERE sphere_-3_2.000000
-mat = diff_60
-cen = 1.81411 0.099 -3.23823
-rad = 0.1
-
-OBJ_SPHERE sphere_-3_2.500000
-mat = diff_66
-cen = 2.45583 0.099 -3.22891
-rad = 0.1
-
-OBJ_SPHERE sphere_-3_3.000000
-mat = diff_36
-cen = 2.8221 0.099 -2.92539
-rad = 0.1
-
-OBJ_SPHERE sphere_-3_3.500000
-mat = metal_16
-cen = 3.572 0.099 -2.75788
-rad = 0.1
-
-OBJ_SPHERE sphere_-3_4.000000
-mat = diff_18
-cen = 3.75149 0.099 -3.0166
-rad = 0.1
-
-OBJ_SPHERE sphere_-3_4.500000
-mat = diff_23
-cen = 4.43552 0.099 -3.18383
-rad = 0.1
-
-OBJ_SPHERE sphere_-2_-5.000000
-mat = diff_2
-cen = -5.14092 0.099 -1.8685
-rad = 0.1
-
-OBJ_SPHERE sphere_-2_-4.500000
-mat = metal_24
-cen = -4.67085 0.099 -2.09229
-rad = 0.1
-
-OBJ_SPHERE sphere_-2_-3.500000
-mat = metal_6
-cen = -3.36365 0.099 -2.05515
-rad = 0.1
-
-OBJ_SPHERE sphere_-2_-2.500000
-mat = diff_23
-cen = -2.60213 0.099 -2.14591
-rad = 0.1
-
-OBJ_SPHERE sphere_-2_-2.000000
-mat = diff_9
-cen = -1.86867 0.099 -1.84704
-rad = 0.1
-
-OBJ_SPHERE sphere_-2_-1.500000
-mat = metal_25
-cen = -1.44685 0.099 -1.91136
-rad = 0.1
-
-OBJ_SPHERE sphere_-2_-1.000000
-mat = metal_21
-cen = -1.14701 0.099 -1.86836
-rad = 0.1
-
-OBJ_SPHERE sphere_-2_0.000000
-mat = diff_20
-cen = 0.213511 0.099 -1.8825
-rad = 0.1
-
-OBJ_SPHERE sphere_-2_0.500000
-mat = metal_24
-cen = 0.592161 0.099 -2.16355
-rad = 0.1
-
-OBJ_SPHERE sphere_-2_1.000000
-mat = metal_7
-cen = 0.819509 0.099 -2.16619
-rad = 0.1
-
-OBJ_SPHERE sphere_-2_2.500000
-mat = diff_27
-cen = 2.72832 0.099 -1.88185
-rad = 0.1
-
-OBJ_SPHERE sphere_-2_3.500000
-mat = diff_38
-cen = 3.28866 0.099 -2.09643
-rad = 0.1
-
-OBJ_SPHERE sphere_-2_4.000000
-mat = diele_0
-cen = 4.09126 0.099 -2.19013
-rad = 0.1
-
-OBJ_SPHERE sphere_-2_4.500000
-mat = diff_1
-cen = 4.39075 0.099 -2.20948
-rad = 0.1
-
-OBJ_SPHERE sphere_-1_-5.000000
-mat = diff_9
-cen = -5.02303 0.099 -1.13721
-rad = 0.1
-
-OBJ_SPHERE sphere_-1_-4.500000
-mat = metal_4
-cen = -4.3982 0.099 -0.963963
-rad = 0.1
-
-OBJ_SPHERE sphere_-1_-4.000000
-mat = metal_1
-cen = -4.12419 0.099 -0.907295
-rad = 0.1
-
-OBJ_SPHERE sphere_-1_-3.500000
-mat = diff_68
-cen = -3.70151 0.099 -1.01372
-rad = 0.1
-
-OBJ_SPHERE sphere_-1_-3.000000
-mat = metal_25
-cen = -3.09069 0.099 -0.908079
-rad = 0.1
-
-OBJ_SPHERE sphere_-1_-2.500000
-mat = diff_57
-cen = -2.28563 0.099 -1.19335
-rad = 0.1
-
-OBJ_SPHERE sphere_-1_-2.000000
-mat = diff_11
-cen = -1.77248 0.099 -0.842301
-rad = 0.1
-
-OBJ_SPHERE sphere_-1_-1.500000
-mat = metal_21
-cen = -1.37894 0.099 -0.949851
-rad = 0.1
-
-OBJ_SPHERE sphere_-1_-1.000000
-mat = metal_24
-cen = -1.14612 0.099 -0.751874
-rad = 0.1
-
-OBJ_SPHERE sphere_-1_-0.500000
-mat = diff_30
-cen = -0.702652 0.099 -1.23581
-rad = 0.1
-
-OBJ_SPHERE sphere_-1_0.000000
-mat = metal_25
-cen = -0.232788 0.099 -1.13507
-rad = 0.1
-
-OBJ_SPHERE sphere_-1_0.500000
-mat = metal_21
-cen = 0.43585 0.099 -1.03446
-rad = 0.1
-
-OBJ_SPHERE sphere_-1_1.000000
-mat = diff_50
-cen = 0.781574 0.099 -0.940193
-rad = 0.1
-
-OBJ_SPHERE sphere_-1_1.500000
-mat = diff_58
-cen = 1.54322 0.099 -1.18333
-rad = 0.1
-
-OBJ_SPHERE sphere_-1_2.000000
-mat = diff_23
-cen = 1.98944 0.099 -0.955447
-rad = 0.1
-
-OBJ_SPHERE sphere_-1_3.000000
-mat = diff_64
-cen = 2.91519 0.099 -0.990865
-rad = 0.1
-
-OBJ_SPHERE sphere_-1_3.500000
-mat = metal_26
-cen = 3.4716 0.099 -0.984618
-rad = 0.1
-
-OBJ_SPHERE sphere_0_-5.000000
-mat = metal_8
-cen = -5.24624 0.099 -0.0430469
-rad = 0.1
-
-OBJ_SPHERE sphere_0_-4.500000
-mat = diele_8
-cen = -4.49963 0.099 -0.173999
-rad = 0.1
-
-OBJ_SPHERE sphere_0_-4.000000
-mat = diff_6
-cen = -4.21823 0.099 0.105728
-rad = 0.1
-
-OBJ_SPHERE sphere_0_-3.500000
-mat = diele_0
-cen = -3.62096 0.099 0.242764
-rad = 0.1
-
-OBJ_SPHERE sphere_0_-3.000000
-mat = metal_16
-cen = -2.80265 0.099 0.0138721
-rad = 0.1
-
-OBJ_SPHERE sphere_0_-2.500000
-mat = metal_18
-cen = -2.55557 0.099 0.120973
-rad = 0.1
-
-OBJ_SPHERE sphere_0_-2.000000
-mat = diff_62
-cen = -2.11245 0.099 -0.177485
-rad = 0.1
-
-OBJ_SPHERE sphere_0_-1.500000
-mat = diele_6
-cen = -1.38477 0.099 0.242328
-rad = 0.1
-
-OBJ_SPHERE sphere_0_-1.000000
-mat = diff_49
-cen = -0.806354 0.099 -0.0512216
-rad = 0.1
-
-OBJ_SPHERE sphere_0_-0.500000
-mat = metal_22
-cen = -0.351499 0.099 -0.207993
-rad = 0.1
-
-OBJ_SPHERE sphere_0_0.500000
-mat = diff_0
-cen = 0.315484 0.099 0.00923428
-rad = 0.1
-
-OBJ_SPHERE sphere_0_1.000000
-mat = metal_22
-cen = 0.807363 0.099 -0.246524
-rad = 0.1
-
-OBJ_SPHERE sphere_0_1.500000
-mat = diff_65
-cen = 1.67623 0.099 -0.0749204
-rad = 0.1
-
-OBJ_SPHERE sphere_0_3.000000
-mat = diff_19
-cen = 2.79623 0.099 0.138486
-rad = 0.1
-
-OBJ_SPHERE sphere_0_3.500000
-mat = diff_35
-cen = 3.26378 0.099 -0.00398718
-rad = 0.1
-
-OBJ_SPHERE sphere_0_4.000000
-mat = diff_51
-cen = 3.99733 0.099 0.199523
-rad = 0.1
-
-OBJ_SPHERE sphere_1_-5.000000
-mat = diff_29
-cen = -5.1335 0.099 1.18752
-rad = 0.1
-
-OBJ_SPHERE sphere_1_-4.500000
-mat = diff_4
-cen = -4.45675 0.099 0.959545
-rad = 0.1
-
-OBJ_SPHERE sphere_1_-4.000000
-mat = diele_4
-cen = -4.17869 0.099 1.15322
-rad = 0.1
-
-OBJ_SPHERE sphere_1_-3.000000
-mat = metal_9
-cen = -2.8676 0.099 0.850684
-rad = 0.1
-
-OBJ_SPHERE sphere_1_-2.000000
-mat = diff_40
-cen = -2.17563 0.099 0.853163
-rad = 0.1
-
-OBJ_SPHERE sphere_1_-1.000000
-mat = metal_25
-cen = -0.900584 0.099 1.19806
-rad = 0.1
-
-OBJ_SPHERE sphere_1_-0.500000
-mat = diff_2
-cen = -0.739534 0.099 1.06641
-rad = 0.1
-
-OBJ_SPHERE sphere_1_0.000000
-mat = metal_25
-cen = -0.0337299 0.099 0.765654
-rad = 0.1
-
-OBJ_SPHERE sphere_1_1.000000
-mat = diff_43
-cen = 1.21064 0.099 1.0559
-rad = 0.1
-
-OBJ_SPHERE sphere_1_1.500000
-mat = diff_3
-cen = 1.61388 0.099 0.986292
-rad = 0.1
-
-OBJ_SPHERE sphere_1_2.000000
-mat = metal_5
-cen = 2.11852 0.099 0.788319
-rad = 0.1
-
-OBJ_SPHERE sphere_1_2.500000
-mat = diff_61
-cen = 2.50843 0.099 1.10912
-rad = 0.1
-
-OBJ_SPHERE sphere_1_3.000000
-mat = metal_14
-cen = 2.83965 0.099 0.77009
-rad = 0.1
-
-OBJ_SPHERE sphere_1_3.500000
-mat = diff_4
-cen = 3.62344 0.099 0.875835
-rad = 0.1
-
-OBJ_SPHERE sphere_1_4.000000
-mat = diff_55
-cen = 3.87834 0.099 1.18372
-rad = 0.1
-
-OBJ_SPHERE sphere_1_4.500000
-mat = diele_8
-cen = 4.68476 0.099 0.802062
-rad = 0.1
-
-OBJ_SPHERE sphere_2_-5.000000
-mat = metal_18
-cen = -5.20296 0.099 1.79861
-rad = 0.1
-
-OBJ_SPHERE sphere_2_-4.500000
-mat = diff_3
-cen = -4.35008 0.099 1.88644
-rad = 0.1
-
-OBJ_SPHERE sphere_2_-4.000000
-mat = metal_21
-cen = -3.87415 0.099 1.87798
-rad = 0.1
-
-OBJ_SPHERE sphere_2_-3.000000
-mat = metal_0
-cen = -3.17359 0.099 1.91718
-rad = 0.1
-
-OBJ_SPHERE sphere_2_-2.500000
-mat = metal_24
-cen = -2.62816 0.099 1.76735
-rad = 0.1
-
-OBJ_SPHERE sphere_2_-2.000000
-mat = diff_17
-cen = -1.92294 0.099 1.98318
-rad = 0.1
-
-OBJ_SPHERE sphere_2_-1.500000
-mat = diff_7
-cen = -1.50281 0.099 2.1916
-rad = 0.1
-
-OBJ_SPHERE sphere_2_-0.500000
-mat = metal_26
-cen = -0.571079 0.099 1.77829
-rad = 0.1
-
-OBJ_SPHERE sphere_2_0.500000
-mat = metal_6
-cen = 0.71685 0.099 1.75441
-rad = 0.1
-
-OBJ_SPHERE sphere_2_1.500000
-mat = diff_65
-cen = 1.37757 0.099 2.06011
-rad = 0.1
-
-OBJ_SPHERE sphere_2_2.500000
-mat = diff_4
-cen = 2.27536 0.099 1.81623
-rad = 0.1
-
-OBJ_SPHERE sphere_2_3.000000
-mat = diff_5
-cen = 3.08333 0.099 1.96678
-rad = 0.1
-
-OBJ_SPHERE sphere_2_3.500000
-mat = diff_30
-cen = 3.26851 0.099 2.18699
-rad = 0.1
-
-OBJ_SPHERE sphere_2_4.000000
-mat = diff_39
-cen = 3.84492 0.099 2.10744
-rad = 0.1
-
-OBJ_SPHERE sphere_2_4.500000
-mat = diff_26
-cen = 4.3744 0.099 2.24486
-rad = 0.1
-
-OBJ_SPHERE sphere_3_-5.000000
-mat = metal_9
-cen = -5.08225 0.099 3.13568
-rad = 0.1
-
-OBJ_SPHERE sphere_3_-4.500000
-mat = diff_11
-cen = -4.44193 0.099 3.07009
-rad = 0.1
-
-OBJ_SPHERE sphere_3_-4.000000
-mat = metal_11
-cen = -4.16544 0.099 2.89861
-rad = 0.1
-
-OBJ_SPHERE sphere_3_-3.500000
-mat = metal_23
-cen = -3.43605 0.099 3.07781
-rad = 0.1
-
-OBJ_SPHERE sphere_3_-3.000000
-mat = diff_49
-cen = -2.7712 0.099 2.98529
-rad = 0.1
-
-OBJ_SPHERE sphere_3_-2.500000
-mat = metal_26
-cen = -2.36166 0.099 2.79352
-rad = 0.1
-
-OBJ_SPHERE sphere_3_-2.000000
-mat = diff_53
-cen = -1.94685 0.099 3.21597
-rad = 0.1
-
-OBJ_SPHERE sphere_3_-1.500000
-mat = diff_2
-cen = -1.62533 0.099 2.81582
-rad = 0.1
-
-OBJ_SPHERE sphere_3_-1.000000
-mat = diff_54
-cen = -0.816615 0.099 3.03903
-rad = 0.1
-
-OBJ_SPHERE sphere_3_-0.500000
-mat = diff_45
-cen = -0.43672 0.099 2.84519
-rad = 0.1
-
-OBJ_SPHERE sphere_3_0.500000
-mat = diff_50
-cen = 0.398494 0.099 2.84282
-rad = 0.1
-
-OBJ_SPHERE sphere_3_1.500000
-mat = diff_45
-cen = 1.34344 0.099 2.91706
-rad = 0.1
-
-OBJ_SPHERE sphere_3_2.000000
-mat = diff_16
-cen = 2.18881 0.099 3.07085
-rad = 0.1
-
-OBJ_SPHERE sphere_3_2.500000
-mat = metal_15
-cen = 2.51874 0.099 3.09688
-rad = 0.1
-
-OBJ_SPHERE sphere_3_3.000000
-mat = metal_8
-cen = 2.86283 0.099 2.86248
-rad = 0.1
-
-OBJ_SPHERE sphere_3_3.500000
-mat = diff_45
-cen = 3.3068 0.099 3.06913
-rad = 0.1
-
-OBJ_SPHERE sphere_3_4.000000
-mat = diff_57
-cen = 3.96085 0.099 3.15019
-rad = 0.1
-
-OBJ_SPHERE sphere_3_4.500000
-mat = diff_49
-cen = 4.4209 0.099 3.22111
-rad = 0.1
-
-OBJ_SPHERE sphere_4_-5.000000
-mat = diff_63
-cen = -4.89721 0.099 4.02145
-rad = 0.1
-
-OBJ_SPHERE sphere_4_-4.500000
-mat = diff_57
-cen = -4.72446 0.099 4.20168
-rad = 0.1
-
-OBJ_SPHERE sphere_4_-4.000000
-mat = diff_64
-cen = -4.17885 0.099 3.85785
-rad = 0.1
-
-OBJ_SPHERE sphere_4_-3.500000
-mat = diff_4
-cen = -3.62008 0.099 3.76764
-rad = 0.1
-
-OBJ_SPHERE sphere_4_-3.000000
-mat = diff_14
-cen = -3.05326 0.099 4.19852
-rad = 0.1
-
-OBJ_SPHERE sphere_4_-2.500000
-mat = diff_57
-cen = -2.26919 0.099 3.75318
-rad = 0.1
-
-OBJ_SPHERE sphere_4_-1.500000
-mat = diff_7
-cen = -1.61886 0.099 4.01976
-rad = 0.1
-
-OBJ_SPHERE sphere_4_0.000000
-mat = diff_26
-cen = 0.00366729 0.099 3.96909
-rad = 0.1
-
-OBJ_SPHERE sphere_4_0.500000
-mat = metal_27
-cen = 0.381625 0.099 3.85101
-rad = 0.1
-
-OBJ_SPHERE sphere_4_1.000000
-mat = diff_22
-cen = 0.878305 0.099 4.13906
-rad = 0.1
-
-OBJ_SPHERE sphere_4_1.500000
-mat = metal_28
-cen = 1.70459 0.099 3.77958
-rad = 0.1
-
-OBJ_SPHERE sphere_4_3.000000
-mat = metal_9
-cen = 3.11334 0.099 3.91459
-rad = 0.1
-
-OBJ_SPHERE sphere_4_3.500000
-mat = diff_42
-cen = 3.4053 0.099 4.16785
-rad = 0.1
-
-OBJ_SPHERE sphere_4_4.500000
-mat = diele_4
-cen = 4.46162 0.099 3.96009
-rad = 0.1
+mat = groundMat
+cen = 0 -100 0
+rad = 100
+
+OBJ_SPHERE midSphere
+mat = dielMat
+cen = 0 0.5 0
+rad = 0.5
+
+OBJ_SPHERE leftSphere
+mat = diffMat
+cen = -1 0.5 0
+rad = 0.5
+
+OBJ_SPHERE rightSphere
+mat = metalMat
+cen = 1 0.5 0
+rad = 0.5
+
+OBJ_SPHERE sphere_-3.000000_-4.500000
+mat = mat_sphere_-3.000000_-4.500000
+cen = -4.46992 0.075 -2.96778
+rad = 0.075
+
+OBJ_SPHERE sphere_-3.000000_-4.250000
+mat = mat_sphere_-3.000000_-4.250000
+cen = -4.21488 0.075 -3.04207
+rad = 0.075
+
+OBJ_SPHERE sphere_-3.000000_-4.000000
+mat = mat_sphere_-3.000000_-4.000000
+cen = -4.02652 0.075 -3.04207
+rad = 0.075
+
+OBJ_SPHERE sphere_-3.000000_-3.500000
+mat = mat_sphere_-3.000000_-3.500000
+cen = -3.51458 0.075 -3.02607
+rad = 0.075
+
+OBJ_SPHERE sphere_-3.000000_-3.000000
+mat = mat_sphere_-3.000000_-3.000000
+cen = -3.0213 0.075 -3.01809
+rad = 0.075
+
+OBJ_SPHERE sphere_-3.000000_-1.750000
+mat = mat_sphere_-3.000000_-1.750000
+cen = -1.70507 0.075 -3.01136
+rad = 0.075
+
+OBJ_SPHERE sphere_-3.000000_-1.250000
+mat = mat_sphere_-3.000000_-1.250000
+cen = -1.29772 0.075 -3.01014
+rad = 0.075
+
+OBJ_SPHERE sphere_-3.000000_-0.750000
+mat = mat_sphere_-3.000000_-0.750000
+cen = -0.71864 0.075 -3.00085
+rad = 0.07125
+
+OBJ_SPHERE sphere_-3.000000_-0.750000
+mat = mat_sphere_-3.000000_-0.750000
+cen = -0.71864 0.075 -3.00085
+rad = 0.075
+
+OBJ_SPHERE sphere_-3.000000_1.000000
+mat = mat_sphere_-3.000000_1.000000
+cen = 1.00436 0.075 -3.02714
+rad = 0.075
+
+OBJ_SPHERE sphere_-3.000000_1.750000
+mat = mat_sphere_-3.000000_1.750000
+cen = 1.7647 0.075 -2.95303
+rad = 0.075
+
+OBJ_SPHERE sphere_-3.000000_2.000000
+mat = mat_sphere_-3.000000_2.000000
+cen = 1.96745 0.075 -3.02608
+rad = 0.07125
+
+OBJ_SPHERE sphere_-3.000000_2.000000
+mat = mat_sphere_-3.000000_2.000000
+cen = 1.96745 0.075 -3.02608
+rad = 0.075
+
+OBJ_SPHERE sphere_-3.000000_3.750000
+mat = mat_sphere_-3.000000_3.750000
+cen = 3.77828 0.075 -3.045
+rad = 0.075
+
+OBJ_SPHERE sphere_-3.000000_4.500000
+mat = mat_sphere_-3.000000_4.500000
+cen = 4.51672 0.075 -3.02991
+rad = 0.075
+
+OBJ_SPHERE sphere_-3.000000_4.750000
+mat = mat_sphere_-3.000000_4.750000
+cen = 4.75581 0.075 -2.98336
+rad = 0.075
+
+OBJ_SPHERE sphere_-2.500000_-4.750000
+mat = mat_sphere_-2.500000_-4.750000
+cen = -4.73921 0.075 -2.50687
+rad = 0.075
+
+OBJ_SPHERE sphere_-2.500000_-4.500000
+mat = mat_sphere_-2.500000_-4.500000
+cen = -4.48808 0.075 -2.51592
+rad = 0.075
+
+OBJ_SPHERE sphere_-2.500000_-3.750000
+mat = mat_sphere_-2.500000_-3.750000
+cen = -3.73864 0.075 -2.49753
+rad = 0.075
+
+OBJ_SPHERE sphere_-2.500000_-3.500000
+mat = mat_sphere_-2.500000_-3.500000
+cen = -3.48393 0.075 -2.54602
+rad = 0.075
+
+OBJ_SPHERE sphere_-2.500000_-3.250000
+mat = mat_sphere_-2.500000_-3.250000
+cen = -3.29389 0.075 -2.51704
+rad = 0.075
+
+OBJ_SPHERE sphere_-2.500000_-3.000000
+mat = mat_sphere_-2.500000_-3.000000
+cen = -3.03695 0.075 -2.52445
+rad = 0.075
+
+OBJ_SPHERE sphere_-2.500000_-2.750000
+mat = mat_sphere_-2.500000_-2.750000
+cen = -2.73269 0.075 -2.48003
+rad = 0.075
+
+OBJ_SPHERE sphere_-2.500000_-2.500000
+mat = mat_sphere_-2.500000_-2.500000
+cen = -2.53817 0.075 -2.54797
+rad = 0.07125
+
+OBJ_SPHERE sphere_-2.500000_-2.500000
+mat = mat_sphere_-2.500000_-2.500000
+cen = -2.53817 0.075 -2.54797
+rad = 0.075
+
+OBJ_SPHERE sphere_-2.500000_-2.250000
+mat = mat_sphere_-2.500000_-2.250000
+cen = -2.25279 0.075 -2.5465
+rad = 0.075
+
+OBJ_SPHERE sphere_-2.500000_-2.000000
+mat = mat_sphere_-2.500000_-2.000000
+cen = -2.00022 0.075 -2.51485
+rad = 0.07125
+
+OBJ_SPHERE sphere_-2.500000_-2.000000
+mat = mat_sphere_-2.500000_-2.000000
+cen = -2.00022 0.075 -2.51485
+rad = 0.075
+
+OBJ_SPHERE sphere_-2.500000_-1.250000
+mat = mat_sphere_-2.500000_-1.250000
+cen = -1.21799 0.075 -2.53252
+rad = 0.075
+
+OBJ_SPHERE sphere_-2.500000_-0.750000
+mat = mat_sphere_-2.500000_-0.750000
+cen = -0.754831 0.075 -2.51573
+rad = 0.075
+
+OBJ_SPHERE sphere_-2.500000_0.500000
+mat = mat_sphere_-2.500000_0.500000
+cen = 0.545197 0.075 -2.47869
+rad = 0.075
+
+OBJ_SPHERE sphere_-2.500000_1.000000
+mat = mat_sphere_-2.500000_1.000000
+cen = 1.00375 0.075 -2.52308
+rad = 0.075
+
+OBJ_SPHERE sphere_-2.500000_1.750000
+mat = mat_sphere_-2.500000_1.750000
+cen = 1.76133 0.075 -2.45061
+rad = 0.075
+
+OBJ_SPHERE sphere_-2.500000_2.000000
+mat = mat_sphere_-2.500000_2.000000
+cen = 2.02797 0.075 -2.49779
+rad = 0.075
+
+OBJ_SPHERE sphere_-2.500000_2.250000
+mat = mat_sphere_-2.500000_2.250000
+cen = 2.27093 0.075 -2.52129
+rad = 0.075
+
+OBJ_SPHERE sphere_-2.500000_2.500000
+mat = mat_sphere_-2.500000_2.500000
+cen = 2.46304 0.075 -2.45022
+rad = 0.075
+
+OBJ_SPHERE sphere_-2.500000_2.750000
+mat = mat_sphere_-2.500000_2.750000
+cen = 2.73069 0.075 -2.47798
+rad = 0.075
+
+OBJ_SPHERE sphere_-2.500000_3.000000
+mat = mat_sphere_-2.500000_3.000000
+cen = 2.99841 0.075 -2.54543
+rad = 0.075
+
+OBJ_SPHERE sphere_-2.500000_3.250000
+mat = mat_sphere_-2.500000_3.250000
+cen = 3.25079 0.075 -2.54684
+rad = 0.075
+
+OBJ_SPHERE sphere_-2.500000_4.000000
+mat = mat_sphere_-2.500000_4.000000
+cen = 3.96293 0.075 -2.46018
+rad = 0.075
+
+OBJ_SPHERE sphere_-2.500000_4.250000
+mat = mat_sphere_-2.500000_4.250000
+cen = 4.29435 0.075 -2.47915
+rad = 0.075
+
+OBJ_SPHERE sphere_-2.500000_4.750000
+mat = mat_sphere_-2.500000_4.750000
+cen = 4.73239 0.075 -2.52357
+rad = 0.075
+
+OBJ_SPHERE sphere_-2.000000_-2.250000
+mat = mat_sphere_-2.000000_-2.250000
+cen = -2.21197 0.075 -2.02704
+rad = 0.075
+
+OBJ_SPHERE sphere_-2.000000_-0.750000
+mat = mat_sphere_-2.000000_-0.750000
+cen = -0.795167 0.075 -1.95915
+rad = 0.075
+
+OBJ_SPHERE sphere_-2.000000_0.500000
+mat = mat_sphere_-2.000000_0.500000
+cen = 0.526822 0.075 -1.98416
+rad = 0.075
+
+OBJ_SPHERE sphere_-2.000000_0.750000
+mat = mat_sphere_-2.000000_0.750000
+cen = 0.751576 0.075 -2.02409
+rad = 0.075
+
+OBJ_SPHERE sphere_-2.000000_1.250000
+mat = mat_sphere_-2.000000_1.250000
+cen = 1.24551 0.075 -2.02729
+rad = 0.075
+
+OBJ_SPHERE sphere_-2.000000_1.500000
+mat = mat_sphere_-2.000000_1.500000
+cen = 1.51134 0.075 -2.03846
+rad = 0.075
+
+OBJ_SPHERE sphere_-2.000000_2.000000
+mat = mat_sphere_-2.000000_2.000000
+cen = 1.96365 0.075 -2.02872
+rad = 0.075
+
+OBJ_SPHERE sphere_-2.000000_3.000000
+mat = mat_sphere_-2.000000_3.000000
+cen = 2.96979 0.075 -2.00256
+rad = 0.075
+
+OBJ_SPHERE sphere_-2.000000_3.500000
+mat = mat_sphere_-2.000000_3.500000
+cen = 3.45391 0.075 -1.98397
+rad = 0.075
+
+OBJ_SPHERE sphere_-2.000000_4.000000
+mat = mat_sphere_-2.000000_4.000000
+cen = 4.03999 0.075 -1.96531
+rad = 0.075
+
+OBJ_SPHERE sphere_-2.000000_4.250000
+mat = mat_sphere_-2.000000_4.250000
+cen = 4.28759 0.075 -1.95943
+rad = 0.075
+
+OBJ_SPHERE sphere_-1.500000_-5.000000
+mat = mat_sphere_-1.500000_-5.000000
+cen = -4.96503 0.075 -1.51597
+rad = 0.07125
+
+OBJ_SPHERE sphere_-1.500000_-5.000000
+mat = mat_sphere_-1.500000_-5.000000
+cen = -4.96503 0.075 -1.51597
+rad = 0.075
+
+OBJ_SPHERE sphere_-1.500000_-4.750000
+mat = mat_sphere_-1.500000_-4.750000
+cen = -4.75669 0.075 -1.52073
+rad = 0.075
+
+OBJ_SPHERE sphere_-1.500000_-4.250000
+mat = mat_sphere_-1.500000_-4.250000
+cen = -4.27588 0.075 -1.5178
+rad = 0.075
+
+OBJ_SPHERE sphere_-1.500000_-3.500000
+mat = mat_sphere_-1.500000_-3.500000
+cen = -3.50746 0.075 -1.49291
+rad = 0.075
+
+OBJ_SPHERE sphere_-1.500000_-3.250000
+mat = mat_sphere_-1.500000_-3.250000
+cen = -3.28886 0.075 -1.54018
+rad = 0.075
+
+OBJ_SPHERE sphere_-1.500000_-2.750000
+mat = mat_sphere_-1.500000_-2.750000
+cen = -2.72464 0.075 -1.48429
+rad = 0.075
+
+OBJ_SPHERE sphere_-1.500000_-1.000000
+mat = mat_sphere_-1.500000_-1.000000
+cen = -1.04215 0.075 -1.53346
+rad = 0.075
+
+OBJ_SPHERE sphere_-1.500000_-0.500000
+mat = mat_sphere_-1.500000_-0.500000
+cen = -0.519872 0.075 -1.45723
+rad = 0.075
+
+OBJ_SPHERE sphere_-1.500000_0.500000
+mat = mat_sphere_-1.500000_0.500000
+cen = 0.493567 0.075 -1.52379
+rad = 0.075
+
+OBJ_SPHERE sphere_-1.500000_1.000000
+mat = mat_sphere_-1.500000_1.000000
+cen = 0.989218 0.075 -1.45687
+rad = 0.075
+
+OBJ_SPHERE sphere_-1.500000_1.750000
+mat = mat_sphere_-1.500000_1.750000
+cen = 1.73376 0.075 -1.47405
+rad = 0.075
+
+OBJ_SPHERE sphere_-1.500000_2.250000
+mat = mat_sphere_-1.500000_2.250000
+cen = 2.22734 0.075 -1.45029
+rad = 0.075
+
+OBJ_SPHERE sphere_-1.500000_3.000000
+mat = mat_sphere_-1.500000_3.000000
+cen = 2.96946 0.075 -1.46163
+rad = 0.075
+
+OBJ_SPHERE sphere_-1.500000_3.250000
+mat = mat_sphere_-1.500000_3.250000
+cen = 3.29125 0.075 -1.46682
+rad = 0.075
+
+OBJ_SPHERE sphere_-1.500000_4.500000
+mat = mat_sphere_-1.500000_4.500000
+cen = 4.5248 0.075 -1.50802
+rad = 0.075
+
+OBJ_SPHERE sphere_-1.500000_4.750000
+mat = mat_sphere_-1.500000_4.750000
+cen = 4.74306 0.075 -1.5006
+rad = 0.075
+
+OBJ_SPHERE sphere_-1.000000_-4.250000
+mat = mat_sphere_-1.000000_-4.250000
+cen = -4.20183 0.075 -1.03509
+rad = 0.075
+
+OBJ_SPHERE sphere_-1.000000_-3.250000
+mat = mat_sphere_-1.000000_-3.250000
+cen = -3.26359 0.075 -0.952112
+rad = 0.075
+
+OBJ_SPHERE sphere_-1.000000_-2.750000
+mat = mat_sphere_-1.000000_-2.750000
+cen = -2.70665 0.075 -1.03926
+rad = 0.075
+
+OBJ_SPHERE sphere_-1.000000_-2.500000
+mat = mat_sphere_-1.000000_-2.500000
+cen = -2.53389 0.075 -1.00864
+rad = 0.07125
+
+OBJ_SPHERE sphere_-1.000000_-2.500000
+mat = mat_sphere_-1.000000_-2.500000
+cen = -2.53389 0.075 -1.00864
+rad = 0.075
+
+OBJ_SPHERE sphere_-1.000000_-2.250000
+mat = mat_sphere_-1.000000_-2.250000
+cen = -2.29431 0.075 -0.976357
+rad = 0.075
+
+OBJ_SPHERE sphere_-1.000000_-2.000000
+mat = mat_sphere_-1.000000_-2.000000
+cen = -2.04098 0.075 -1.02995
+rad = 0.075
+
+OBJ_SPHERE sphere_-1.000000_-1.750000
+mat = mat_sphere_-1.000000_-1.750000
+cen = -1.74729 0.075 -0.957644
+rad = 0.075
+
+OBJ_SPHERE sphere_-1.000000_-1.500000
+mat = mat_sphere_-1.000000_-1.500000
+cen = -1.46699 0.075 -0.981185
+rad = 0.075
+
+OBJ_SPHERE sphere_-1.000000_-1.000000
+mat = mat_sphere_-1.000000_-1.000000
+cen = -1.0346 0.075 -1.03936
+rad = 0.075
+
+OBJ_SPHERE sphere_-1.000000_1.000000
+mat = mat_sphere_-1.000000_1.000000
+cen = 0.981289 0.075 -0.985098
+rad = 0.075
+
+OBJ_SPHERE sphere_-1.000000_1.250000
+mat = mat_sphere_-1.000000_1.250000
+cen = 1.22908 0.075 -1.00925
+rad = 0.075
+
+OBJ_SPHERE sphere_-1.000000_1.750000
+mat = mat_sphere_-1.000000_1.750000
+cen = 1.78501 0.075 -1.02425
+rad = 0.075
+
+OBJ_SPHERE sphere_-1.000000_2.250000
+mat = mat_sphere_-1.000000_2.250000
+cen = 2.26504 0.075 -1.02417
+rad = 0.075
+
+OBJ_SPHERE sphere_-1.000000_2.500000
+mat = mat_sphere_-1.000000_2.500000
+cen = 2.49395 0.075 -1.0125
+rad = 0.075
+
+OBJ_SPHERE sphere_-1.000000_3.000000
+mat = mat_sphere_-1.000000_3.000000
+cen = 3.03319 0.075 -0.9616
+rad = 0.075
+
+OBJ_SPHERE sphere_-1.000000_3.500000
+mat = mat_sphere_-1.000000_3.500000
+cen = 3.46489 0.075 -0.970826
+rad = 0.075
+
+OBJ_SPHERE sphere_-1.000000_4.250000
+mat = mat_sphere_-1.000000_4.250000
+cen = 4.23191 0.075 -0.989666
+rad = 0.075
+
+OBJ_SPHERE sphere_-1.000000_4.500000
+mat = mat_sphere_-1.000000_4.500000
+cen = 4.51452 0.075 -0.978075
+rad = 0.075
+
+OBJ_SPHERE sphere_-0.500000_-4.750000
+mat = mat_sphere_-0.500000_-4.750000
+cen = -4.79313 0.075 -0.510669
+rad = 0.075
+
+OBJ_SPHERE sphere_-0.500000_-4.250000
+mat = mat_sphere_-0.500000_-4.250000
+cen = -4.20883 0.075 -0.471725
+rad = 0.075
+
+OBJ_SPHERE sphere_-0.500000_-4.000000
+mat = mat_sphere_-0.500000_-4.000000
+cen = -3.96574 0.075 -0.461336
+rad = 0.075
+
+OBJ_SPHERE sphere_-0.500000_-3.750000
+mat = mat_sphere_-0.500000_-3.750000
+cen = -3.774 0.075 -0.531904
+rad = 0.075
+
+OBJ_SPHERE sphere_-0.500000_-3.500000
+mat = mat_sphere_-0.500000_-3.500000
+cen = -3.47609 0.075 -0.478447
+rad = 0.075
+
+OBJ_SPHERE sphere_-0.500000_-3.250000
+mat = mat_sphere_-0.500000_-3.250000
+cen = -3.2113 0.075 -0.494025
+rad = 0.075
+
+OBJ_SPHERE sphere_-0.500000_-3.000000
+mat = mat_sphere_-0.500000_-3.000000
+cen = -2.96379 0.075 -0.511545
+rad = 0.075
+
+OBJ_SPHERE sphere_-0.500000_-1.500000
+mat = mat_sphere_-0.500000_-1.500000
+cen = -1.46094 0.075 -0.497101
+rad = 0.075
+
+OBJ_SPHERE sphere_-0.500000_-1.000000
+mat = mat_sphere_-0.500000_-1.000000
+cen = -0.996696 0.075 -0.492699
+rad = 0.075
+
+OBJ_SPHERE sphere_-0.500000_-0.750000
+mat = mat_sphere_-0.500000_-0.750000
+cen = -0.750083 0.075 -0.516959
+rad = 0.075
+
+OBJ_SPHERE sphere_-0.500000_0.500000
+mat = mat_sphere_-0.500000_0.500000
+cen = 0.514474 0.075 -0.506383
+rad = 0.075
+
+OBJ_SPHERE sphere_-0.500000_1.000000
+mat = mat_sphere_-0.500000_1.000000
+cen = 1.01276 0.075 -0.49557
+rad = 0.075
+
+OBJ_SPHERE sphere_-0.500000_1.250000
+mat = mat_sphere_-0.500000_1.250000
+cen = 1.26981 0.075 -0.462315
+rad = 0.075
+
+OBJ_SPHERE sphere_-0.500000_1.500000
+mat = mat_sphere_-0.500000_1.500000
+cen = 1.54967 0.075 -0.535058
+rad = 0.075
+
+OBJ_SPHERE sphere_-0.500000_1.750000
+mat = mat_sphere_-0.500000_1.750000
+cen = 1.72651 0.075 -0.486412
+rad = 0.075
+
+OBJ_SPHERE sphere_-0.500000_2.500000
+mat = mat_sphere_-0.500000_2.500000
+cen = 2.5337 0.075 -0.540274
+rad = 0.07125
+
+OBJ_SPHERE sphere_-0.500000_2.500000
+mat = mat_sphere_-0.500000_2.500000
+cen = 2.5337 0.075 -0.540274
+rad = 0.075
+
+OBJ_SPHERE sphere_-0.500000_3.500000
+mat = mat_sphere_-0.500000_3.500000
+cen = 3.46233 0.075 -0.509097
+rad = 0.075
+
+OBJ_SPHERE sphere_-0.500000_3.750000
+mat = mat_sphere_-0.500000_3.750000
+cen = 3.70934 0.075 -0.520108
+rad = 0.075
+
+OBJ_SPHERE sphere_-0.500000_4.000000
+mat = mat_sphere_-0.500000_4.000000
+cen = 3.99505 0.075 -0.49646
+rad = 0.075
+
+OBJ_SPHERE sphere_-0.500000_4.250000
+mat = mat_sphere_-0.500000_4.250000
+cen = 4.27853 0.075 -0.484906
+rad = 0.075
+
+OBJ_SPHERE sphere_-0.500000_4.500000
+mat = mat_sphere_-0.500000_4.500000
+cen = 4.46225 0.075 -0.542332
+rad = 0.075
+
+OBJ_SPHERE sphere_-0.500000_4.750000
+mat = mat_sphere_-0.500000_4.750000
+cen = 4.70968 0.075 -0.52389
+rad = 0.075
+
+OBJ_SPHERE sphere_0.500000_-5.000000
+mat = mat_sphere_0.500000_-5.000000
+cen = -5.02945 0.075 0.476467
+rad = 0.075
+
+OBJ_SPHERE sphere_0.500000_-4.000000
+mat = mat_sphere_0.500000_-4.000000
+cen = -3.97883 0.075 0.510767
+rad = 0.075
+
+OBJ_SPHERE sphere_0.500000_-3.500000
+mat = mat_sphere_0.500000_-3.500000
+cen = -3.48539 0.075 0.469996
+rad = 0.075
+
+OBJ_SPHERE sphere_0.500000_-3.250000
+mat = mat_sphere_0.500000_-3.250000
+cen = -3.29851 0.075 0.466664
+rad = 0.075
+
+OBJ_SPHERE sphere_0.500000_-2.750000
+mat = mat_sphere_0.500000_-2.750000
+cen = -2.79756 0.075 0.531247
+rad = 0.075
+
+OBJ_SPHERE sphere_0.500000_-2.000000
+mat = mat_sphere_0.500000_-2.000000
+cen = -2.04474 0.075 0.501675
+rad = 0.075
+
+OBJ_SPHERE sphere_0.500000_-1.250000
+mat = mat_sphere_0.500000_-1.250000
+cen = -1.2828 0.075 0.456942
+rad = 0.075
+
+OBJ_SPHERE sphere_0.500000_-1.000000
+mat = mat_sphere_0.500000_-1.000000
+cen = -1.04407 0.075 0.512049
+rad = 0.075
+
+OBJ_SPHERE sphere_0.500000_1.000000
+mat = mat_sphere_0.500000_1.000000
+cen = 0.955092 0.075 0.45004
+rad = 0.075
+
+OBJ_SPHERE sphere_0.500000_1.750000
+mat = mat_sphere_0.500000_1.750000
+cen = 1.78179 0.075 0.532833
+rad = 0.075
+
+OBJ_SPHERE sphere_0.500000_2.000000
+mat = mat_sphere_0.500000_2.000000
+cen = 2.04962 0.075 0.458067
+rad = 0.07125
+
+OBJ_SPHERE sphere_0.500000_2.000000
+mat = mat_sphere_0.500000_2.000000
+cen = 2.04962 0.075 0.458067
+rad = 0.075
+
+OBJ_SPHERE sphere_0.500000_2.250000
+mat = mat_sphere_0.500000_2.250000
+cen = 2.21946 0.075 0.465107
+rad = 0.075
+
+OBJ_SPHERE sphere_0.500000_2.750000
+mat = mat_sphere_0.500000_2.750000
+cen = 2.73501 0.075 0.527929
+rad = 0.075
+
+OBJ_SPHERE sphere_0.500000_3.500000
+mat = mat_sphere_0.500000_3.500000
+cen = 3.49003 0.075 0.481459
+rad = 0.075
+
+OBJ_SPHERE sphere_0.500000_3.750000
+mat = mat_sphere_0.500000_3.750000
+cen = 3.72879 0.075 0.530899
+rad = 0.075
+
+OBJ_SPHERE sphere_0.500000_4.500000
+mat = mat_sphere_0.500000_4.500000
+cen = 4.49006 0.075 0.515059
+rad = 0.075
+
+OBJ_SPHERE sphere_1.000000_-4.750000
+mat = mat_sphere_1.000000_-4.750000
+cen = -4.75675 0.075 0.952502
+rad = 0.075
+
+OBJ_SPHERE sphere_1.000000_-4.500000
+mat = mat_sphere_1.000000_-4.500000
+cen = -4.53654 0.075 1.03472
+rad = 0.075
+
+OBJ_SPHERE sphere_1.000000_-4.250000
+mat = mat_sphere_1.000000_-4.250000
+cen = -4.23835 0.075 0.976489
+rad = 0.075
+
+OBJ_SPHERE sphere_1.000000_-3.500000
+mat = mat_sphere_1.000000_-3.500000
+cen = -3.52136 0.075 1.04773
+rad = 0.075
+
+OBJ_SPHERE sphere_1.000000_-3.250000
+mat = mat_sphere_1.000000_-3.250000
+cen = -3.20045 0.075 1.04775
+rad = 0.075
+
+OBJ_SPHERE sphere_1.000000_-2.500000
+mat = mat_sphere_1.000000_-2.500000
+cen = -2.52983 0.075 0.957115
+rad = 0.075
+
+OBJ_SPHERE sphere_1.000000_-2.250000
+mat = mat_sphere_1.000000_-2.250000
+cen = -2.22225 0.075 0.950735
+rad = 0.075
+
+OBJ_SPHERE sphere_1.000000_-1.750000
+mat = mat_sphere_1.000000_-1.750000
+cen = -1.77548 0.075 1.02224
+rad = 0.075
+
+OBJ_SPHERE sphere_1.000000_-1.500000
+mat = mat_sphere_1.000000_-1.500000
+cen = -1.47117 0.075 0.958561
+rad = 0.075
+
+OBJ_SPHERE sphere_1.000000_-1.250000
+mat = mat_sphere_1.000000_-1.250000
+cen = -1.29443 0.075 0.962468
+rad = 0.075
+
+OBJ_SPHERE sphere_1.000000_-0.750000
+mat = mat_sphere_1.000000_-0.750000
+cen = -0.741827 0.075 0.994551
+rad = 0.075
+
+OBJ_SPHERE sphere_1.000000_0.500000
+mat = mat_sphere_1.000000_0.500000
+cen = 0.452506 0.075 1.03043
+rad = 0.075
+
+OBJ_SPHERE sphere_1.000000_0.750000
+mat = mat_sphere_1.000000_0.750000
+cen = 0.71668 0.075 1.00538
+rad = 0.075
+
+OBJ_SPHERE sphere_1.000000_1.250000
+mat = mat_sphere_1.000000_1.250000
+cen = 1.22485 0.075 1.03393
+rad = 0.075
+
+OBJ_SPHERE sphere_1.000000_1.500000
+mat = mat_sphere_1.000000_1.500000
+cen = 1.52163 0.075 0.954829
+rad = 0.075
+
+OBJ_SPHERE sphere_1.000000_1.750000
+mat = mat_sphere_1.000000_1.750000
+cen = 1.7531 0.075 0.985156
+rad = 0.07125
+
+OBJ_SPHERE sphere_1.000000_1.750000
+mat = mat_sphere_1.000000_1.750000
+cen = 1.7531 0.075 0.985156
+rad = 0.075
+
+OBJ_SPHERE sphere_1.000000_2.500000
+mat = mat_sphere_1.000000_2.500000
+cen = 2.4639 0.075 1.01086
+rad = 0.075
+
+OBJ_SPHERE sphere_1.000000_3.000000
+mat = mat_sphere_1.000000_3.000000
+cen = 2.95701 0.075 1.03663
+rad = 0.075
+
+OBJ_SPHERE sphere_1.000000_3.250000
+mat = mat_sphere_1.000000_3.250000
+cen = 3.28001 0.075 1.04569
+rad = 0.075
+
+OBJ_SPHERE sphere_1.000000_3.750000
+mat = mat_sphere_1.000000_3.750000
+cen = 3.70396 0.075 0.986345
+rad = 0.075
+
+OBJ_SPHERE sphere_1.000000_4.000000
+mat = mat_sphere_1.000000_4.000000
+cen = 4.03285 0.075 1.0022
+rad = 0.075
+
+OBJ_SPHERE sphere_1.000000_4.250000
+mat = mat_sphere_1.000000_4.250000
+cen = 4.26034 0.075 1.04189
+rad = 0.075
+
+OBJ_SPHERE sphere_1.000000_4.500000
+mat = mat_sphere_1.000000_4.500000
+cen = 4.49567 0.075 1.02848
+rad = 0.075
+
+OBJ_SPHERE sphere_1.500000_-5.000000
+mat = mat_sphere_1.500000_-5.000000
+cen = -5.02272 0.075 1.46724
+rad = 0.075
+
+OBJ_SPHERE sphere_1.500000_-4.750000
+mat = mat_sphere_1.500000_-4.750000
+cen = -4.71192 0.075 1.45665
+rad = 0.075
+
+OBJ_SPHERE sphere_1.500000_-4.500000
+mat = mat_sphere_1.500000_-4.500000
+cen = -4.49405 0.075 1.54878
+rad = 0.075
+
+OBJ_SPHERE sphere_1.500000_-4.250000
+mat = mat_sphere_1.500000_-4.250000
+cen = -4.21031 0.075 1.48498
+rad = 0.075
+
+OBJ_SPHERE sphere_1.500000_-3.750000
+mat = mat_sphere_1.500000_-3.750000
+cen = -3.76141 0.075 1.53853
+rad = 0.075
+
+OBJ_SPHERE sphere_1.500000_-2.250000
+mat = mat_sphere_1.500000_-2.250000
+cen = -2.28692 0.075 1.46567
+rad = 0.075
+
+OBJ_SPHERE sphere_1.500000_-2.000000
+mat = mat_sphere_1.500000_-2.000000
+cen = -2.01243 0.075 1.46798
+rad = 0.075
+
+OBJ_SPHERE sphere_1.500000_-1.500000
+mat = mat_sphere_1.500000_-1.500000
+cen = -1.54368 0.075 1.45878
+rad = 0.075
+
+OBJ_SPHERE sphere_1.500000_-0.750000
+mat = mat_sphere_1.500000_-0.750000
+cen = -0.728463 0.075 1.52068
+rad = 0.075
+
+OBJ_SPHERE sphere_1.500000_-0.500000
+mat = mat_sphere_1.500000_-0.500000
+cen = -0.505361 0.075 1.50376
+rad = 0.075
+
+OBJ_SPHERE sphere_1.500000_0.750000
+mat = mat_sphere_1.500000_0.750000
+cen = 0.764409 0.075 1.54882
+rad = 0.07125
+
+OBJ_SPHERE sphere_1.500000_0.750000
+mat = mat_sphere_1.500000_0.750000
+cen = 0.764409 0.075 1.54882
+rad = 0.075
+
+OBJ_SPHERE sphere_1.500000_1.250000
+mat = mat_sphere_1.500000_1.250000
+cen = 1.2683 0.075 1.45836
+rad = 0.075
+
+OBJ_SPHERE sphere_1.500000_2.000000
+mat = mat_sphere_1.500000_2.000000
+cen = 1.99232 0.075 1.51223
+rad = 0.075
+
+OBJ_SPHERE sphere_1.500000_2.250000
+mat = mat_sphere_1.500000_2.250000
+cen = 2.28279 0.075 1.53589
+rad = 0.075
+
+OBJ_SPHERE sphere_1.500000_2.500000
+mat = mat_sphere_1.500000_2.500000
+cen = 2.54455 0.075 1.52469
+rad = 0.075
+
+OBJ_SPHERE sphere_1.500000_3.250000
+mat = mat_sphere_1.500000_3.250000
+cen = 3.28628 0.075 1.46389
+rad = 0.075
+
+OBJ_SPHERE sphere_1.500000_3.750000
+mat = mat_sphere_1.500000_3.750000
+cen = 3.70278 0.075 1.54485
+rad = 0.075
+
+OBJ_SPHERE sphere_1.500000_4.000000
+mat = mat_sphere_1.500000_4.000000
+cen = 3.96598 0.075 1.4677
+rad = 0.075
+
+OBJ_SPHERE sphere_1.500000_4.750000
+mat = mat_sphere_1.500000_4.750000
+cen = 4.72225 0.075 1.45959
+rad = 0.075
+
+OBJ_SPHERE sphere_2.000000_-5.000000
+mat = mat_sphere_2.000000_-5.000000
+cen = -4.9858 0.075 2.04781
+rad = 0.075
+
+OBJ_SPHERE sphere_2.000000_-4.750000
+mat = mat_sphere_2.000000_-4.750000
+cen = -4.7647 0.075 2.00989
+rad = 0.075
+
+OBJ_SPHERE sphere_2.000000_-4.500000
+mat = mat_sphere_2.000000_-4.500000
+cen = -4.45105 0.075 1.95118
+rad = 0.075
+
+OBJ_SPHERE sphere_2.000000_-4.000000
+mat = mat_sphere_2.000000_-4.000000
+cen = -4.04373 0.075 2.00543
+rad = 0.075
+
+OBJ_SPHERE sphere_2.000000_-3.250000
+mat = mat_sphere_2.000000_-3.250000
+cen = -3.29844 0.075 2.01643
+rad = 0.075
+
+OBJ_SPHERE sphere_2.000000_-3.000000
+mat = mat_sphere_2.000000_-3.000000
+cen = -2.95282 0.075 2.00061
+rad = 0.075
+
+OBJ_SPHERE sphere_2.000000_-2.750000
+mat = mat_sphere_2.000000_-2.750000
+cen = -2.72041 0.075 2.04975
+rad = 0.075
+
+OBJ_SPHERE sphere_2.000000_-2.250000
+mat = mat_sphere_2.000000_-2.250000
+cen = -2.25528 0.075 2.04156
+rad = 0.075
+
+OBJ_SPHERE sphere_2.000000_-1.750000
+mat = mat_sphere_2.000000_-1.750000
+cen = -1.73707 0.075 1.95189
+rad = 0.075
+
+OBJ_SPHERE sphere_2.000000_-1.500000
+mat = mat_sphere_2.000000_-1.500000
+cen = -1.47416 0.075 1.99091
+rad = 0.075
+
+OBJ_SPHERE sphere_2.000000_-1.250000
+mat = mat_sphere_2.000000_-1.250000
+cen = -1.29259 0.075 2.04571
+rad = 0.07125
+
+OBJ_SPHERE sphere_2.000000_-1.250000
+mat = mat_sphere_2.000000_-1.250000
+cen = -1.29259 0.075 2.04571
+rad = 0.075
+
+OBJ_SPHERE sphere_2.000000_-1.000000
+mat = mat_sphere_2.000000_-1.000000
+cen = -0.996513 0.075 2.00682
+rad = 0.075
+
+OBJ_SPHERE sphere_2.000000_-0.750000
+mat = mat_sphere_2.000000_-0.750000
+cen = -0.757322 0.075 1.95607
+rad = 0.075
+
+OBJ_SPHERE sphere_2.000000_0.750000
+mat = mat_sphere_2.000000_0.750000
+cen = 0.722008 0.075 1.99845
+rad = 0.075
+
+OBJ_SPHERE sphere_2.000000_1.250000
+mat = mat_sphere_2.000000_1.250000
+cen = 1.20731 0.075 2.04454
+rad = 0.075
+
+OBJ_SPHERE sphere_2.000000_1.750000
+mat = mat_sphere_2.000000_1.750000
+cen = 1.71655 0.075 1.97526
+rad = 0.075
+
+OBJ_SPHERE sphere_2.000000_2.000000
+mat = mat_sphere_2.000000_2.000000
+cen = 1.96156 0.075 1.99129
+rad = 0.075
+
+OBJ_SPHERE sphere_2.000000_3.750000
+mat = mat_sphere_2.000000_3.750000
+cen = 3.73667 0.075 1.98908
+rad = 0.075
+
+OBJ_SPHERE sphere_2.000000_4.250000
+mat = mat_sphere_2.000000_4.250000
+cen = 4.20688 0.075 1.97456
+rad = 0.075
+
+OBJ_SPHERE sphere_2.500000_-5.000000
+mat = mat_sphere_2.500000_-5.000000
+cen = -4.98586 0.075 2.47903
+rad = 0.07125
+
+OBJ_SPHERE sphere_2.500000_-5.000000
+mat = mat_sphere_2.500000_-5.000000
+cen = -4.98586 0.075 2.47903
+rad = 0.075
+
+OBJ_SPHERE sphere_2.500000_-4.250000
+mat = mat_sphere_2.500000_-4.250000
+cen = -4.28161 0.075 2.5137
+rad = 0.075
+
+OBJ_SPHERE sphere_2.500000_-4.000000
+mat = mat_sphere_2.500000_-4.000000
+cen = -4.04049 0.075 2.53266
+rad = 0.075
+
+OBJ_SPHERE sphere_2.500000_-3.750000
+mat = mat_sphere_2.500000_-3.750000
+cen = -3.70594 0.075 2.46431
+rad = 0.075
+
+OBJ_SPHERE sphere_2.500000_-3.500000
+mat = mat_sphere_2.500000_-3.500000
+cen = -3.45607 0.075 2.45325
+rad = 0.075
+
+OBJ_SPHERE sphere_2.500000_-3.250000
+mat = mat_sphere_2.500000_-3.250000
+cen = -3.24735 0.075 2.53164
+rad = 0.07125
+
+OBJ_SPHERE sphere_2.500000_-3.250000
+mat = mat_sphere_2.500000_-3.250000
+cen = -3.24735 0.075 2.53164
+rad = 0.075
+
+OBJ_SPHERE sphere_2.500000_-3.000000
+mat = mat_sphere_2.500000_-3.000000
+cen = -3.02975 0.075 2.51713
+rad = 0.075
+
+OBJ_SPHERE sphere_2.500000_-2.750000
+mat = mat_sphere_2.500000_-2.750000
+cen = -2.72628 0.075 2.50188
+rad = 0.075
+
+OBJ_SPHERE sphere_2.500000_-2.500000
+mat = mat_sphere_2.500000_-2.500000
+cen = -2.46281 0.075 2.50349
+rad = 0.075
+
+OBJ_SPHERE sphere_2.500000_-2.250000
+mat = mat_sphere_2.500000_-2.250000
+cen = -2.24556 0.075 2.47356
+rad = 0.075
+
+OBJ_SPHERE sphere_2.500000_-1.750000
+mat = mat_sphere_2.500000_-1.750000
+cen = -1.7682 0.075 2.49743
+rad = 0.075
+
+OBJ_SPHERE sphere_2.500000_-1.250000
+mat = mat_sphere_2.500000_-1.250000
+cen = -1.25583 0.075 2.5408
+rad = 0.075
+
+OBJ_SPHERE sphere_2.500000_-1.000000
+mat = mat_sphere_2.500000_-1.000000
+cen = -1.01966 0.075 2.48995
+rad = 0.07125
+
+OBJ_SPHERE sphere_2.500000_-1.000000
+mat = mat_sphere_2.500000_-1.000000
+cen = -1.01966 0.075 2.48995
+rad = 0.075
+
+OBJ_SPHERE sphere_2.500000_1.500000
+mat = mat_sphere_2.500000_1.500000
+cen = 1.53983 0.075 2.50311
+rad = 0.075
+
+OBJ_SPHERE sphere_2.500000_1.750000
+mat = mat_sphere_2.500000_1.750000
+cen = 1.73113 0.075 2.50126
+rad = 0.075
+
+OBJ_SPHERE sphere_2.500000_2.500000
+mat = mat_sphere_2.500000_2.500000
+cen = 2.50582 0.075 2.53842
+rad = 0.075
+
+OBJ_SPHERE sphere_2.500000_2.750000
+mat = mat_sphere_2.500000_2.750000
+cen = 2.79121 0.075 2.52152
+rad = 0.075
+
+OBJ_SPHERE sphere_2.500000_3.250000
+mat = mat_sphere_2.500000_3.250000
+cen = 3.26157 0.075 2.5069
+rad = 0.075
+
+OBJ_SPHERE sphere_2.500000_4.250000
+mat = mat_sphere_2.500000_4.250000
+cen = 4.28309 0.075 2.52365
+rad = 0.075

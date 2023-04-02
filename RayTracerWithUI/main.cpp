@@ -73,70 +73,93 @@ int main(int argc, char* argv[]) {
 }
 
 std::shared_ptr<rt::Scene> rndScene() {
-    //
     rt::SceneData data{};
-    // Camera
     data.camera = std::make_shared<rt::Camera>(
-        rt::Vec3(0.0f, 0.8f, 4.0f),
+        rt::Vec3(3.0f, 0.6f, 3.0f),
         rt::Vec3(0.0f, 0.0f, 0.0f),
-        1920, 1080,
-        45.0f,
-        2.0f
+        1080, 720,
+        30.0f, 0.01f, 4.0f
     );
-    // Materials
-    std::vector<std::shared_ptr<rt::Material>> materials{};
-    int diffCount = 70, metalCount = 30, dieleCount = 10;
-    for (int i = 0; i < diffCount; ++i) {
-        std::string name = "diff_" + std::to_string(i);
-        std::shared_ptr<rt::Diffusive> mat = std::make_shared<rt::Diffusive>(
-            name,
-            rt::Color::rnd()
-        );
-        materials.push_back(mat);
-        data.materials.insert({ rt::crc32(name), mat });
-    }
-    for (int i = 0; i < metalCount; ++i) {
-        std::string name = "metal_" + std::to_string(i);
-        std::shared_ptr<rt::Metallic> mat = std::make_shared<rt::Metallic>(
-            name,
-            rt::Color::rnd(),
-            rt::rnd_uniform<float>(0.0f, 1.0f)
-        );
-        materials.push_back(mat);
-        data.materials.insert({ rt::crc32(name), mat });
-    }
-    for (int i = 0; i < dieleCount; ++i) {
-        std::string name = "diele_" + std::to_string(i);
-        std::shared_ptr<rt::Dielectric> mat = std::make_shared<rt::Dielectric>(
-            name,
-            rt::rnd_normal<float>(0.5f, 10.0f)
-        );
-        materials.push_back(mat);
-        data.materials.insert({ rt::crc32(name), mat });
-    }
-    // Objects
-    data.objects.push_back({
+    data.materials.insert({
+        rt::crc32("groundMat"),
+        std::make_shared<rt::Diffusive>("groundMat", rt::Color(0.5, 0.5, 0.5))
+    });
+    data.materials.insert({
+        rt::crc32("diffMat"),
+        std::make_shared<rt::Diffusive>("diffMat", rt::Color::rnd())
+    });
+    data.materials.insert({
+        rt::crc32("metalMat"),
+        std::make_shared<rt::Metallic>("metalMat", rt::Color::rnd(), 0.01f)
+    });
+    data.materials.insert({
+        rt::crc32("dielMat"),
+        std::make_shared<rt::Dielectric>("dielMat", 1.5f)
+    });
+    data.objects.push_back(
         std::make_shared<rt::Sphere>(
             "ground",
-            materials[0],
-            rt::Vec3(0.0f, -1000.0f, 0.0f),
-            1000.0f
+            data.materials.at(rt::crc32("groundMat")),
+            rt::Vec3(0.0f, -100.0f, 0.0f),
+            100.0f
         )
-        });
-    for (int z = -15; z < 5; ++z) {
-        for (float x = -5; x < 5; x += 0.5f) {
-            if (rt::rnd_uniform<float>(0.0f, 1.0f) < 0.25f) continue;
-            float offx = rt::rnd_uniform<float>(-0.25f, 0.25f);
-            float offz = rt::rnd_uniform<float>(-0.25f, 0.25f);
-            std::string name = "sphere_" + std::to_string(z) + "_" + std::to_string(x);
-            data.objects.push_back({
-                std::make_shared<rt::Sphere>(
-                    name,
-                    materials[rt::rnd_uniform<int>(0, (int)materials.size() - 1)],
-                    rt::Vec3(x + offx, 0.099f, (float)z + offz),
-                    0.1f
-                )
-                });
+    );
+    data.objects.push_back(
+        std::make_shared<rt::Sphere>(
+            "midSphere",
+            data.materials.at(rt::crc32("dielMat")),
+            rt::Vec3(0.0f, 0.5f, 0.0f),
+            0.5f
+        )
+    );
+    data.objects.push_back(
+        std::make_shared<rt::Sphere>(
+            "leftSphere",
+            data.materials.at(rt::crc32("diffMat")),
+            rt::Vec3(-1.0f, 0.5f, 0.0f),
+            0.5f
+        )
+    );
+    data.objects.push_back(
+        std::make_shared<rt::Sphere>(
+            "rightSphere",
+            data.materials.at(rt::crc32("metalMat")),
+            rt::Vec3(+1.0f, 0.5f, 0.0f),
+            0.5f
+        )
+    );
+    for (float z = -3; z < 3; z += 0.5f) {
+        for (float x = -5; x < 5; x += 0.25f) {
+            if (z >= -0.25f && z <= 0.25f) continue;
+            if (x >= -0.25f && x <= 0.25f) continue;
+            if (rt::rnd_uniform<float>(0.0f, 1.0f) < 0.5f) continue;
+            //
+            float offx = rt::rnd_uniform<float>(-1.0f, 1.0f) * 0.05f;
+            float offz = rt::rnd_uniform<float>(-1.0f, 1.0f) * 0.05f;
+            float objrad = 0.075f;
+            rt::Vec3 objpos = rt::Vec3(x + offx, objrad, (float)z + offz);
+            //
+            std::string objname = "sphere_" + std::to_string(z) + "_" + std::to_string(x);
+            std::string matname = "mat_" + objname;
+            //
+            float matchoice = rt::rnd_uniform<float>(0.0f, 1.0f);
+            std::shared_ptr<rt::Material> objmat(nullptr);
+            if (matchoice < 0.7f) {
+                rt::Color matcol = rt::Color::rnd();
+                objmat = std::make_shared<rt::Diffusive>(matname, matcol);
+            }
+            else if (matchoice < 0.95f) {
+                rt::Color matcol = rt::Color::rnd();
+                float matfuzziness = rt::rnd_uniform<float>(0.0001f, 1.0f);
+                objmat = std::make_shared<rt::Metallic>(matname, matcol, matfuzziness);
+            }
+            else {
+                float refractionRatio = rt::rnd_uniform<float>(1.0f, 20.0f);
+                objmat = std::make_shared<rt::Dielectric>(matname, refractionRatio);
+                data.objects.push_back(std::make_shared<rt::Sphere>(objname, objmat, objpos, objrad*0.95f));
+            }
+            data.materials.insert({ rt::crc32(matname), objmat });
+            data.objects.push_back(std::make_shared<rt::Sphere>(objname, objmat, objpos, objrad));
         }
     }
     //

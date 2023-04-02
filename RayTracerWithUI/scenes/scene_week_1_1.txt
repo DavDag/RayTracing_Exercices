@@ -4,6 +4,7 @@ target = 0 0 -1
 view = 400 225
 fovy = 90
 aperture = 2.0
+distToFocus = 10.0
 
 MAT_DIFF ground_mat
 albedo = 0.8 0.8 0.0

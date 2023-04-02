@@ -36,11 +36,13 @@ namespace rt {
 		f32 fovy = 0.0f;
 		i32 vieww = 0, viewh = 0;
 		f32 aperture = 0.0f;
+		f32 distToFocus = 0.0f;
 		bool bPos = false;
 		bool bTarget = false;
 		bool bFovy = false;
 		bool bView = false;
 		bool bAperture = false;
+		bool bDistToFocus = false;
 		//
 		std::string line{}, prop{}, equal{};
 		while (std::getline(in, line)) {
@@ -69,14 +71,18 @@ namespace rt {
 				bAperture = true;
 				ss >> aperture;
 				break;
+			case crc32("distToFocus"):
+				bDistToFocus = true;
+				ss >> distToFocus;
+				break;
 			default:
 				break;	
 			}
 			//
-			if (bPos && bTarget && bFovy && bView && bAperture) break;
+			if (bPos && bTarget && bFovy && bView && bAperture && bDistToFocus) break;
 		}
 		//
-		data.camera = std::make_shared<Camera>(pos, target, vieww, viewh, fovy, aperture);
+		data.camera = std::make_shared<Camera>(pos, target, vieww, viewh, fovy, aperture, distToFocus);
 	}
 
 	void ReadMatDiffusive(std::ifstream& in, std::string& name, SceneData& data) {

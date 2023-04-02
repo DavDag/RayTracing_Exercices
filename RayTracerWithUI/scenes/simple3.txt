@@ -4,6 +4,7 @@ target = 0 0 0
 view = 1920 1080
 fovy = 30
 aperture = 2.0
+distToFocus = 10.0
 
 MAT_DIFF diff_1
 albedo = 1.0 0.2 0.0

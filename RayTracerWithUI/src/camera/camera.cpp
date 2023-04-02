@@ -5,11 +5,11 @@ namespace rt {
 	Camera::Camera(
 		Vec3 pos, Vec3 target,
 		i32 imgw, i32 imgh,
-		f32 fovy, f32 aperture
+		f32 fovy, f32 aperture, f32 distToFocus
 	):
 		_pos(pos), _target(target), 
 		_imgw(imgw), _imgh(imgh),
-		_fovy(fovy), _aperture(aperture)
+		_fovy(fovy), _aperture(aperture), _distToFocus(distToFocus)
 	{
 		_aspect = imgw / (f32)imgh;
 
@@ -24,10 +24,9 @@ namespace rt {
 		_v = Vec3::cross(_w, _u);
 
 		// Increments per-axis
-		f32 focusDist = (pos - target).length();
-		_xInc = _u * vieww * focusDist;
-		_yInc = _v * viewh * focusDist;
-		_lowLeft = _pos - _xInc / 2.0f - _yInc / 2.0f - _w * focusDist;
+		_xInc = _u * vieww * _distToFocus;
+		_yInc = _v * viewh * _distToFocus;
+		_lowLeft = _pos - _xInc / 2.0f - _yInc / 2.0f - _w * _distToFocus;
 	}
 
 	Ray Camera::getRay(f32 dx, f32 dy) const {
@@ -50,6 +49,7 @@ namespace rt {
 			<< "view = " << _imgw << " " << _imgh << "\n"
 			<< "fovy = " << _fovy << "\n"
 			<< "aperture = " << _aperture << "\n"
+			<< "distToFocus = " << _distToFocus << "\n"
 			<< "#_aspect = " << _aspect << "\n"
 			<< "#_xInc = " << _xInc << "\n"
 			<< "#_yInc = " << _yInc << "\n";

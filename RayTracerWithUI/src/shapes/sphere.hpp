@@ -56,7 +56,7 @@ namespace rt {
 			payload.obj = this;
 			payload.tmax = res;
 			payload.pos = ray(res);
-			Vec3 norm = (payload.pos - cen) / rad;
+			Vec3 norm = Vec3::unit((payload.pos - cen) / rad);
 			payload.frontFace = Vec3::dot(ray.dir, norm) < 0;
 			payload.norm = (payload.frontFace) ? norm : -norm;
 		}
