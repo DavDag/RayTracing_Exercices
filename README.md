@@ -1,6 +1,6 @@
 # RayTracing
 
-Project about raytracing using CPU.<br>
+Project about raytracing in CPU.<br>
 => UI: raytracing towards a texture shown in ImGUI.<br>
 => Console: raytracing offline and print into TGA.<br>
 
