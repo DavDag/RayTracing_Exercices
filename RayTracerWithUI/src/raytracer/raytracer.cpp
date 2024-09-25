@@ -28,54 +28,56 @@ namespace rt {
 		{
 			i32 w = _scene->camera->imgW();
 			i32 h = _scene->camera->imgH();
+			i32 samples = _options->samples;
+			//for (i32 si = 0; si < samples; ++si) {
 #ifdef _PROFILE
-			for (i32 y = 0; y < h; ++y) {
-				profiler::FrameStart();
-#else
-			concurrency::parallel_for(0, h-1, [&](i32 y) {
-#endif // _PROFILE
-				for (i32 x = 0; x < w; ++x) {
-					Color p = pixel(x, y);
-#ifdef _DEBUG
-					if ((p.r > 1.0f || p.g > 1.0f || p.b > 1.0f)
-						|| (p.r < 0.0f || p.g < 0.0f || p.b < 0.0f))
-					{
-						__debugbreak();
-						exit(1);
-					}
-#endif // _DEBUG
-					p = p.gammaCorrected(2.0f);
-					_image.set(x, y, p);
+				// Single threaded
+				for (i32 y = 0; y < h; ++y) {
+					profiler::FrameStart();
+					for (i32 x = 0; x < w; ++x)
+							_process(x, y, si + 1);
+					profiler::FrameEnd();
 				}
-#ifdef _PROFILE
-				profiler::FrameEnd();
-			}
 #else
-			});
+				// Multi threaded
+				concurrency::parallel_for(0, h - 1, [&](i32 y) {
+					for (i32 x = 0; x < w; ++x)
+						_process(x, y, 1);
+				});
 #endif // _PROFILE
+				//_image.updatePercentage((si + 1) / (f32)samples);
+			//}
 		}
 		auto tend = std::chrono::high_resolution_clock::now();
 		auto delta = std::chrono::duration_cast<std::chrono::milliseconds>(tend - tbeg).count();
 		std::cout << "Time: " << delta << " (ms) or " << delta / 1000.0 << " (sec)\n";
 	}
 
-	Color RayTracer::pixel(i32 px, i32 py) {
+	void RayTracer::_process(i32 px, i32 py, i32 sampleIndex) {
+		Color p = _pixel(px, py);
+		//Color f = _image.add(px, py, p);
+		//f /= (f32)sampleIndex;
+		//f = f.gammaCorrected(2.0f);
+		_image.set(px, py, p.gammaCorrected(2.0f));
+	}
+
+	Color RayTracer::_pixel(i32 px, i32 py) {
 		Camera& camera = *_scene->camera;
 		i32 w = camera.imgW(), h = camera.imgH();
-		i32 samples = _options->samples;
 		i32 maxdepth = _options->maxdepth;
-		Color out(0.0f);
+		i32 samples = _options->samples;
+		Color out = BLACK;
 		for (i32 si = 0; si < samples; ++si) {
-			f32 dx = (px + rnd_uniform<f32>(0.0f, 1.0f)) / (w-1);
-			f32 dy = (py + rnd_uniform<f32>(0.0f, 1.0f)) / (h-1);
+			f32 dx = (px + rnd_uniform<f32>(0.0f, 1.0f)) / (w - 1);
+			f32 dy = (py + rnd_uniform<f32>(0.0f, 1.0f)) / (h - 1);
 			Ray ray = camera.getRay(dx, dy);
-			out += trace(ray, maxdepth);
+			out += _trace(ray, maxdepth);
 		}
 		out /= (f32)samples;
 		return out;
 	}
 	
-	Color RayTracer::trace(Ray& ray, i32 depth) {
+	Color RayTracer::_trace(Ray& ray, i32 depth) {
 		if (depth == 0) return BLACK;
 		//
 		RayHit payload{};
@@ -87,7 +89,7 @@ namespace rt {
 			SurfaceInfo surface{};
 			Ray scattered{};
 			if (payload.obj->mat->scatter(ray, payload, surface, scattered)) {
-				Color out = trace(scattered, depth - 1);
+				Color out = _trace(scattered, depth - 1);
 				out *= surface.attenuation;
 				return out;
 			}

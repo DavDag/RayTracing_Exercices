@@ -9,7 +9,8 @@ namespace rt {
 		Camera(
 			Vec3 pos, Vec3 target,
 			i32 imgw, i32 imgh,
-			f32 fovy, f32 aperture, f32 distToFocus
+			f32 fovy, f32 aperture, f32 distToFocus,
+			f32 openTime, f32 closeTime
 		);
 
 		void print(std::ostream& out) const;
@@ -22,6 +23,8 @@ namespace rt {
 		Vec3 _pos, _target;
 		i32 _imgw, _imgh;
 		f32 _fovy, _aperture, _distToFocus;
+		f32 _openTime, _closeTime;
+		//
 		Vec3 _w, _u, _v;
 		Vec3 _lowLeft, _xInc, _yInc;
 		f32 _aspect;

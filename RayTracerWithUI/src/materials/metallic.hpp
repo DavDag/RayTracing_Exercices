@@ -28,7 +28,7 @@ namespace rt {
 			Vec3 reflected = Vec3::reflect(ray.dir, payload.norm);
 			Vec3 scatteredDir = reflected + Vec3::rndInUnitSphere() * _fuzziness;
 			out.attenuation = _albedo;
-			scattered = Ray(payload.pos, Vec3::unit(scatteredDir));
+			scattered = Ray(payload.pos, Vec3::unit(scatteredDir), ray.time);
 			return Vec3::dot(scattered.dir, payload.norm) > 0;
 		}
 

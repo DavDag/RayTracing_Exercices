@@ -5,11 +5,13 @@ namespace rt {
 	Camera::Camera(
 		Vec3 pos, Vec3 target,
 		i32 imgw, i32 imgh,
-		f32 fovy, f32 aperture, f32 distToFocus
+		f32 fovy, f32 aperture, f32 distToFocus,
+		f32 openTime, f32 closeTime
 	):
 		_pos(pos), _target(target), 
 		_imgw(imgw), _imgh(imgh),
-		_fovy(fovy), _aperture(aperture), _distToFocus(distToFocus)
+		_fovy(fovy), _aperture(aperture), _distToFocus(distToFocus),
+		_openTime(openTime), _closeTime(closeTime)
 	{
 		_aspect = imgw / (f32)imgh;
 
@@ -40,7 +42,10 @@ namespace rt {
 		Vec3 rayOrig = _pos + off;
 		Vec3 rayDir = _lowLeft + xinc + yinc - _pos - off;
 
-		return Ray(rayOrig, Vec3::unit(rayDir));
+		// Ray time
+		f32 time = rnd_uniform<f32>(_openTime, _closeTime);
+
+		return Ray(rayOrig, Vec3::unit(rayDir), time);
 	}
 
 	void Camera::print(std::ostream& out) const {
@@ -50,6 +55,7 @@ namespace rt {
 			<< "fovy = " << _fovy << "\n"
 			<< "aperture = " << _aperture << "\n"
 			<< "distToFocus = " << _distToFocus << "\n"
+			<< "time = " << _openTime << " " << _closeTime << "\n"
 			<< "#_aspect = " << _aspect << "\n"
 			<< "#_xInc = " << _xInc << "\n"
 			<< "#_yInc = " << _yInc << "\n";

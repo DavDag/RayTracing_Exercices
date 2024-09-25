@@ -1,0 +1,2049 @@
+CAMERA
+pos = 3 0.6 3
+target = 0 0 0
+view = 1200 800
+fovy = 30
+aperture = 0.05
+distToFocus = 4
+time = 0 1
+
+MAT_DIFF mat_sphere_9
+albedo = 0.354311 0.951711 0.0173336
+
+MAT_METAL mat_sphere_3
+albedo = 0.365492 0.682806 0.748025
+fuzziness = 0.920019
+
+MAT_DIEL dielMat
+refractionRatio = 1.5
+
+MAT_DIFF groundMat
+albedo = 0.5 0.5 0.5
+
+MAT_DIFF mat_sphere_59
+albedo = 0.297519 0.551941 0.723228
+
+MAT_DIEL mat_sphere_52
+refractionRatio = 15.023
+
+MAT_DIFF diffMat
+albedo = 0.579718 0.589519 0.688685
+
+MAT_METAL mat_sphere_6
+albedo = 0.732713 0.782335 0.0814117
+fuzziness = 0.824651
+
+MAT_METAL metalMat
+albedo = 0.519537 0.567503 0.959541
+fuzziness = 0.01
+
+MAT_DIFF mat_sphere_204
+albedo = 0.224092 0.133009 0.485837
+
+MAT_DIFF mat_sphere_26
+albedo = 0.771266 0.761789 0.315943
+
+MAT_METAL mat_sphere_85
+albedo = 0.243965 0.415995 0.471544
+fuzziness = 0.884322
+
+MAT_DIFF mat_sphere_101
+albedo = 0.199073 0.43417 0.817058
+
+MAT_DIFF mat_sphere_1
+albedo = 0.884317 0.877028 0.00130334
+
+MAT_DIFF mat_sphere_98
+albedo = 0.493002 0.704039 0.665325
+
+MAT_DIFF mat_sphere_2
+albedo = 0.118104 0.974635 0.610731
+
+MAT_METAL mat_sphere_56
+albedo = 0.959606 0.153846 0.29752
+fuzziness = 0.59651
+
+MAT_DIFF mat_sphere_40
+albedo = 0.875576 0.953559 0.227676
+
+MAT_DIFF mat_sphere_14
+albedo = 0.977961 0.151612 0.458701
+
+MAT_METAL mat_sphere_4
+albedo = 0.812101 0.927681 0.0855919
+fuzziness = 0.606766
+
+MAT_METAL mat_sphere_5
+albedo = 0.796073 0.244384 0.651554
+fuzziness = 0.168676
+
+MAT_DIFF mat_sphere_7
+albedo = 0.831824 0.000306341 0.787425
+
+MAT_DIFF mat_sphere_8
+albedo = 0.253949 0.359801 0.955517
+
+MAT_DIEL mat_sphere_31
+refractionRatio = 6.04391
+
+MAT_DIFF mat_sphere_10
+albedo = 0.00144624 0.811322 0.314609
+
+MAT_METAL mat_sphere_11
+albedo = 0.788053 0.0994517 0.634215
+fuzziness = 0.199579
+
+MAT_DIFF mat_sphere_209
+albedo = 0.652884 0.373625 0.271445
+
+MAT_DIFF mat_sphere_12
+albedo = 0.0418397 0.646012 0.65054
+
+MAT_DIFF mat_sphere_13
+albedo = 0.895555 0.359153 0.683381
+
+MAT_METAL mat_sphere_15
+albedo = 0.533567 0.821849 0.458765
+fuzziness = 0.0442571
+
+MAT_DIFF mat_sphere_16
+albedo = 0.627411 0.739782 0.0272991
+
+MAT_METAL mat_sphere_212
+albedo = 0.450549 0.441503 0.790378
+fuzziness = 0.330976
+
+MAT_METAL mat_sphere_17
+albedo = 0.963302 0.537712 0.90243
+fuzziness = 0.210128
+
+MAT_DIFF mat_sphere_18
+albedo = 0.0079864 0.511708 0.644617
+
+MAT_DIFF mat_sphere_90
+albedo = 0.287384 0.329599 0.0519622
+
+MAT_DIFF mat_sphere_51
+albedo = 0.511254 0.722358 0.928176
+
+MAT_DIFF mat_sphere_47
+albedo = 0.518339 0.720378 0.356443
+
+MAT_DIFF mat_sphere_135
+albedo = 0.302075 0.448981 0.741546
+
+MAT_DIFF mat_sphere_19
+albedo = 0.426008 0.852634 0.513147
+
+MAT_DIFF mat_sphere_48
+albedo = 0.0649375 0.598055 0.720064
+
+MAT_DIFF mat_sphere_20
+albedo = 0.999002 0.847631 0.97725
+
+MAT_METAL mat_sphere_37
+albedo = 0.3438 0.57639 0.905432
+fuzziness = 0.100262
+
+MAT_METAL mat_sphere_178
+albedo = 0.530728 0.751889 0.454602
+fuzziness = 0.0867846
+
+MAT_DIFF mat_sphere_21
+albedo = 0.230518 0.333224 0.0557987
+
+MAT_DIFF mat_sphere_22
+albedo = 0.209771 0.842721 0.00432903
+
+MAT_METAL mat_sphere_35
+albedo = 0.532408 0.854485 0.864292
+fuzziness = 0.219312
+
+MAT_DIFF mat_sphere_23
+albedo = 0.489703 0.440624 0.382695
+
+MAT_DIFF mat_sphere_28
+albedo = 0.623115 0.373158 0.687885
+
+MAT_METAL mat_sphere_32
+albedo = 0.0651011 0.492981 0.667177
+fuzziness = 0.288582
+
+MAT_DIFF mat_sphere_24
+albedo = 0.6403 0.93231 0.549296
+
+MAT_DIFF mat_sphere_25
+albedo = 0.0141169 0.435601 0.895284
+
+MAT_DIFF mat_sphere_27
+albedo = 0.412536 0.547019 0.162104
+
+MAT_METAL mat_sphere_29
+albedo = 0.068788 0.464017 0.566126
+fuzziness = 0.460195
+
+MAT_DIFF mat_sphere_53
+albedo = 0.346221 0.422568 0.769549
+
+MAT_DIFF mat_sphere_30
+albedo = 0.193067 0.53796 0.867953
+
+MAT_DIFF mat_sphere_92
+albedo = 0.0781018 0.0517113 0.155823
+
+MAT_DIFF mat_sphere_39
+albedo = 0.141474 0.0927695 0.0768224
+
+MAT_DIFF mat_sphere_33
+albedo = 0.763302 0.353366 0.319028
+
+MAT_METAL mat_sphere_60
+albedo = 0.0847953 0.155453 0.858313
+fuzziness = 0.613251
+
+MAT_DIFF mat_sphere_34
+albedo = 0.443251 0.178754 0.61395
+
+MAT_DIEL mat_sphere_55
+refractionRatio = 10.6071
+
+MAT_DIFF mat_sphere_172
+albedo = 0.732589 0.788863 0.199237
+
+MAT_DIFF mat_sphere_36
+albedo = 0.565698 0.808829 0.993229
+
+MAT_METAL mat_sphere_38
+albedo = 0.359893 0.41714 0.762568
+fuzziness = 0.937428
+
+MAT_DIFF mat_sphere_70
+albedo = 0.969143 0.524813 0.248947
+
+MAT_DIFF mat_sphere_41
+albedo = 0.245026 0.641412 0.620546
+
+MAT_DIFF mat_sphere_54
+albedo = 0.0804823 0.960449 0.818051
+
+MAT_DIFF mat_sphere_43
+albedo = 0.683172 0.411097 0.0784185
+
+MAT_DIFF mat_sphere_82
+albedo = 0.521644 0.269847 0.762021
+
+MAT_DIFF mat_sphere_42
+albedo = 0.608314 0.933922 0.368562
+
+MAT_DIFF mat_sphere_88
+albedo = 0.736934 0.56274 0.0037594
+
+MAT_METAL mat_sphere_94
+albedo = 0.814885 0.309346 0.463935
+fuzziness = 0.596698
+
+MAT_METAL mat_sphere_58
+albedo = 0.328753 0.253901 0.0764473
+fuzziness = 0.189349
+
+MAT_METAL mat_sphere_188
+albedo = 0.252185 0.208075 0.970503
+fuzziness = 0.168696
+
+MAT_DIFF mat_sphere_44
+albedo = 0.0917911 0.850342 0.84458
+
+MAT_DIFF mat_sphere_203
+albedo = 0.692407 0.176396 0.815106
+
+MAT_DIFF mat_sphere_45
+albedo = 0.746257 0.582437 0.832096
+
+MAT_DIFF mat_sphere_46
+albedo = 0.243941 0.284253 0.172762
+
+MAT_DIFF mat_sphere_102
+albedo = 0.530858 0.0557367 0.464834
+
+MAT_DIFF mat_sphere_177
+albedo = 0.859737 0.368993 0.653565
+
+MAT_DIFF mat_sphere_49
+albedo = 0.00877997 0.817887 0.223409
+
+MAT_DIFF mat_sphere_50
+albedo = 0.869558 0.435991 0.726579
+
+MAT_METAL mat_sphere_86
+albedo = 0.0393141 0.731149 0.30927
+fuzziness = 0.793533
+
+MAT_DIFF mat_sphere_57
+albedo = 0.255337 0.364753 0.96885
+
+MAT_DIFF mat_sphere_61
+albedo = 0.895729 0.738276 0.31448
+
+MAT_DIFF mat_sphere_62
+albedo = 0.28075 0.0919288 0.496933
+
+MAT_DIFF mat_sphere_63
+albedo = 0.484463 0.521901 0.65928
+
+MAT_DIFF mat_sphere_64
+albedo = 0.55116 0.0494202 0.563501
+
+MAT_DIEL mat_sphere_65
+refractionRatio = 14.7714
+
+MAT_DIFF mat_sphere_66
+albedo = 0.26185 0.748314 0.84289
+
+MAT_METAL mat_sphere_109
+albedo = 0.196266 0.970709 0.0820347
+fuzziness = 0.898346
+
+MAT_DIFF mat_sphere_176
+albedo = 0.220497 0.634273 0.983099
+
+MAT_DIFF mat_sphere_67
+albedo = 0.911603 0.995312 0.72797
+
+MAT_METAL mat_sphere_68
+albedo = 0.796851 0.794068 0.46327
+fuzziness = 0.513408
+
+MAT_DIFF mat_sphere_69
+albedo = 0.0554101 0.700024 0.851367
+
+MAT_METAL mat_sphere_71
+albedo = 0.913281 0.983024 0.536812
+fuzziness = 0.463176
+
+MAT_DIFF mat_sphere_72
+albedo = 0.420718 0.482332 0.640635
+
+MAT_DIFF mat_sphere_73
+albedo = 0.876986 0.978559 0.0135515
+
+MAT_METAL mat_sphere_74
+albedo = 0.749938 0.241862 0.926203
+fuzziness = 0.735929
+
+MAT_DIFF mat_sphere_75
+albedo = 0.367356 0.633392 0.480671
+
+MAT_DIEL mat_sphere_76
+refractionRatio = 12.3478
+
+MAT_DIEL mat_sphere_125
+refractionRatio = 3.43073
+
+MAT_METAL mat_sphere_77
+albedo = 0.7804 0.670954 0.642318
+fuzziness = 0.313406
+
+MAT_METAL mat_sphere_118
+albedo = 0.762163 0.377909 0.0364702
+fuzziness = 0.454897
+
+MAT_METAL mat_sphere_78
+albedo = 0.279388 0.359701 0.105902
+fuzziness = 0.00596703
+
+MAT_DIFF mat_sphere_208
+albedo = 0.602232 0.345779 0.0947828
+
+MAT_DIFF mat_sphere_79
+albedo = 0.895196 0.011896 0.230884
+
+MAT_METAL mat_sphere_116
+albedo = 0.601911 0.82609 0.205564
+fuzziness = 0.766619
+
+MAT_METAL mat_sphere_174
+albedo = 0.115809 0.202602 0.810249
+fuzziness = 0.526975
+
+MAT_DIFF mat_sphere_80
+albedo = 0.336046 0.292344 0.714065
+
+MAT_METAL mat_sphere_81
+albedo = 0.81805 0.0866851 0.378267
+fuzziness = 0.342614
+
+MAT_DIFF mat_sphere_83
+albedo = 0.207952 0.0362159 0.176877
+
+MAT_DIFF mat_sphere_84
+albedo = 0.788986 0.123612 0.861083
+
+MAT_DIFF mat_sphere_87
+albedo = 0.304089 0.664818 0.407307
+
+MAT_METAL mat_sphere_89
+albedo = 0.622785 0.438234 0.994233
+fuzziness = 0.626467
+
+MAT_DIFF mat_sphere_91
+albedo = 0.0580247 0.91051 0.233797
+
+MAT_DIFF mat_sphere_93
+albedo = 0.243968 0.570283 0.134275
+
+MAT_DIFF mat_sphere_95
+albedo = 0.736212 0.694066 0.26735
+
+MAT_DIFF mat_sphere_185
+albedo = 0.224284 0.430895 0.733263
+
+MAT_DIFF mat_sphere_96
+albedo = 0.540556 0.165835 0.00346898
+
+MAT_DIFF mat_sphere_97
+albedo = 0.431687 0.97738 0.12457
+
+MAT_METAL mat_sphere_99
+albedo = 0.422822 0.0199791 0.41036
+fuzziness = 0.482635
+
+MAT_METAL mat_sphere_100
+albedo = 0.0794104 0.217971 0.667621
+fuzziness = 0.727094
+
+MAT_DIFF mat_sphere_103
+albedo = 0.789728 0.939213 0.759477
+
+MAT_METAL mat_sphere_104
+albedo = 0.648419 0.825054 0.205575
+fuzziness = 0.33169
+
+MAT_DIFF mat_sphere_206
+albedo = 0.301996 0.638746 0.891092
+
+MAT_METAL mat_sphere_105
+albedo = 0.774009 0.164879 0.883015
+fuzziness = 0.0218707
+
+MAT_METAL mat_sphere_106
+albedo = 0.574578 0.476893 0.0933519
+fuzziness = 0.191789
+
+MAT_DIFF mat_sphere_107
+albedo = 0.149163 0.244268 0.0610442
+
+MAT_DIFF mat_sphere_110
+albedo = 0.029948 0.621183 0.143423
+
+MAT_DIFF mat_sphere_108
+albedo = 0.692738 0.155826 0.873007
+
+MAT_DIFF mat_sphere_201
+albedo = 0.774311 0.786462 0.300729
+
+MAT_METAL mat_sphere_111
+albedo = 0.350662 0.784776 0.907785
+fuzziness = 0.69879
+
+MAT_DIFF mat_sphere_184
+albedo = 0.76026 0.49159 0.564401
+
+MAT_METAL mat_sphere_112
+albedo = 0.365336 0.142538 0.442895
+fuzziness = 0.985854
+
+MAT_DIFF mat_sphere_113
+albedo = 0.322318 0.615277 0.0335972
+
+MAT_DIFF mat_sphere_114
+albedo = 0.495304 0.81196 0.105695
+
+MAT_METAL mat_sphere_115
+albedo = 0.988721 0.546672 0.397295
+fuzziness = 0.829557
+
+MAT_DIFF mat_sphere_117
+albedo = 0.108591 0.811722 0.643251
+
+MAT_DIFF mat_sphere_119
+albedo = 0.175006 0.728897 0.56958
+
+MAT_DIFF mat_sphere_120
+albedo = 0.590698 0.570743 0.339463
+
+MAT_DIFF mat_sphere_136
+albedo = 0.944223 0.599163 0.220744
+
+MAT_DIFF mat_sphere_148
+albedo = 0.702224 0.0418796 0.572214
+
+MAT_DIFF mat_sphere_121
+albedo = 0.506383 0.62086 0.515705
+
+MAT_DIFF mat_sphere_189
+albedo = 0.847918 0.866637 0.411489
+
+MAT_DIEL mat_sphere_122
+refractionRatio = 14.0383
+
+MAT_METAL mat_sphere_123
+albedo = 0.901525 0.496824 0.203859
+fuzziness = 0.494276
+
+MAT_DIFF mat_sphere_128
+albedo = 0.341401 0.743832 0.494576
+
+MAT_DIFF mat_sphere_196
+albedo = 0.410751 0.362566 0.446247
+
+MAT_DIFF mat_sphere_124
+albedo = 0.187763 0.527576 0.611418
+
+MAT_DIFF mat_sphere_126
+albedo = 0.0129659 0.877516 0.571645
+
+MAT_DIFF mat_sphere_153
+albedo = 0.0215127 0.441285 0.258611
+
+MAT_DIFF mat_sphere_127
+albedo = 0.676367 0.929173 0.086984
+
+MAT_METAL mat_sphere_129
+albedo = 0.790142 0.965571 0.0595222
+fuzziness = 0.198171
+
+MAT_DIFF mat_sphere_130
+albedo = 0.0888122 0.0553886 0.662218
+
+MAT_METAL mat_sphere_131
+albedo = 0.33601 0.548618 0.321823
+fuzziness = 0.703998
+
+MAT_METAL mat_sphere_132
+albedo = 0.909743 0.209422 0.0280789
+fuzziness = 0.395775
+
+MAT_DIFF mat_sphere_133
+albedo = 0.704017 0.5907 0.664072
+
+MAT_DIFF mat_sphere_134
+albedo = 0.245366 0.0385498 0.83645
+
+MAT_DIFF mat_sphere_137
+albedo = 0.400933 0.416387 0.422647
+
+MAT_DIEL mat_sphere_138
+refractionRatio = 1.37721
+
+MAT_DIFF mat_sphere_211
+albedo = 0.827008 0.50272 0.78896
+
+MAT_METAL mat_sphere_139
+albedo = 0.0370677 0.297294 0.66918
+fuzziness = 0.00797675
+
+MAT_DIFF mat_sphere_140
+albedo = 0.489344 0.121802 0.496246
+
+MAT_METAL mat_sphere_141
+albedo = 0.139952 0.632312 0.339322
+fuzziness = 0.4274
+
+MAT_DIFF mat_sphere_142
+albedo = 0.783373 0.212986 0.0395626
+
+MAT_METAL mat_sphere_182
+albedo = 0.20785 0.123573 0.994987
+fuzziness = 0.0105521
+
+MAT_DIFF mat_sphere_143
+albedo = 0.647435 0.339988 0.541143
+
+MAT_DIFF mat_sphere_144
+albedo = 0.482738 0.228133 0.201416
+
+MAT_DIFF mat_sphere_145
+albedo = 0.921576 0.374136 0.921334
+
+MAT_DIFF mat_sphere_146
+albedo = 0.74874 0.434905 0.276092
+
+MAT_DIFF mat_sphere_147
+albedo = 0.38091 0.884335 0.727188
+
+MAT_DIFF mat_sphere_149
+albedo = 0.0833319 0.512582 0.85328
+
+MAT_DIFF mat_sphere_150
+albedo = 0.724266 0.0426681 0.633519
+
+MAT_METAL mat_sphere_151
+albedo = 0.386183 0.422729 0.548758
+fuzziness = 0.0957965
+
+MAT_DIFF mat_sphere_152
+albedo = 0.33737 0.203364 0.606001
+
+MAT_DIFF mat_sphere_154
+albedo = 0.160789 0.445389 0.38586
+
+MAT_DIFF mat_sphere_155
+albedo = 0.262078 0.770617 0.439684
+
+MAT_DIFF mat_sphere_156
+albedo = 0.360951 0.463027 0.757399
+
+MAT_DIFF mat_sphere_157
+albedo = 0.380882 0.571871 0.767515
+
+MAT_DIFF mat_sphere_158
+albedo = 0.792948 0.386324 0.232892
+
+MAT_METAL mat_sphere_159
+albedo = 0.728644 0.39789 0.555871
+fuzziness = 0.429894
+
+MAT_METAL mat_sphere_160
+albedo = 0.99523 0.765762 0.0889043
+fuzziness = 0.500675
+
+MAT_DIEL mat_sphere_161
+refractionRatio = 6.75588
+
+MAT_DIEL mat_sphere_162
+refractionRatio = 14.2635
+
+MAT_DIFF mat_sphere_169
+albedo = 0.600368 0.381526 0.662408
+
+MAT_DIFF mat_sphere_163
+albedo = 0.248172 0.510935 0.329355
+
+MAT_METAL mat_sphere_164
+albedo = 0.301424 0.032963 0.15939
+fuzziness = 0.932353
+
+MAT_DIFF mat_sphere_165
+albedo = 0.253881 0.102636 0.328474
+
+MAT_DIFF mat_sphere_166
+albedo = 0.845836 0.360479 0.695822
+
+MAT_DIFF mat_sphere_167
+albedo = 0.985568 0.359424 0.754817
+
+MAT_DIFF mat_sphere_168
+albedo = 0.783895 0.417136 0.564268
+
+MAT_DIFF mat_sphere_170
+albedo = 0.198792 0.892202 0.507876
+
+MAT_DIFF mat_sphere_171
+albedo = 0.141405 0.758235 0.768089
+
+MAT_METAL mat_sphere_173
+albedo = 0.857579 0.218443 0.456854
+fuzziness = 0.79062
+
+MAT_DIEL mat_sphere_175
+refractionRatio = 5.74366
+
+MAT_METAL mat_sphere_179
+albedo = 0.986389 0.00578273 0.138292
+fuzziness = 0.504027
+
+MAT_DIFF mat_sphere_180
+albedo = 0.217288 0.696153 0.984463
+
+MAT_METAL mat_sphere_181
+albedo = 0.759169 0.864156 0.686449
+fuzziness = 0.568641
+
+MAT_METAL mat_sphere_183
+albedo = 0.663219 0.232506 0.289015
+fuzziness = 0.0576522
+
+MAT_DIFF mat_sphere_186
+albedo = 0.411075 0.0109413 0.146237
+
+MAT_METAL mat_sphere_187
+albedo = 0.756405 0.41546 0.66494
+fuzziness = 0.319972
+
+MAT_DIFF mat_sphere_190
+albedo = 0.974679 0.717184 0.172795
+
+MAT_DIFF mat_sphere_191
+albedo = 0.626455 0.591905 0.858234
+
+MAT_DIFF mat_sphere_192
+albedo = 0.628773 0.508717 0.276319
+
+MAT_DIFF mat_sphere_193
+albedo = 0.613426 0.688859 0.918935
+
+MAT_DIFF mat_sphere_194
+albedo = 0.462711 0.517808 0.113603
+
+MAT_DIEL mat_sphere_195
+refractionRatio = 12.4744
+
+MAT_DIFF mat_sphere_197
+albedo = 0.355587 0.517811 0.239142
+
+MAT_DIFF mat_sphere_198
+albedo = 0.492029 0.72821 0.411028
+
+MAT_METAL mat_sphere_199
+albedo = 0.7627 0.282831 0.53281
+fuzziness = 0.278439
+
+MAT_DIFF mat_sphere_200
+albedo = 0.367583 0.608334 0.914095
+
+MAT_DIFF mat_sphere_202
+albedo = 0.588066 0.512816 0.148668
+
+MAT_METAL mat_sphere_205
+albedo = 0.828511 0.0483477 0.790812
+fuzziness = 0.309973
+
+MAT_DIFF mat_sphere_207
+albedo = 0.247475 0.843707 0.577352
+
+MAT_DIFF mat_sphere_210
+albedo = 0.269376 0.0555069 0.373074
+
+OBJ_SPHERE ground
+mat = groundMat
+cen = 0 -100 0
+rad = 100
+
+OBJ_SPHERE midSphere
+mat = dielMat
+cen = 0 0.5 0
+rad = 0.5
+
+OBJ_SPHERE leftSphere
+mat = diffMat
+cen = -1 0.5 0
+rad = 0.5
+
+OBJ_SPHERE rightSphere
+mat = metalMat
+cen = 1 0.5 0
+rad = 0.5
+
+OBJ_MOV_SPHERE sphere_1
+mat = mat_sphere_1
+cen = -4.98468 0.075 -2.95367 -4.98468 0.101468 -2.95367
+time = 0.321504 0.749318
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_2
+mat = mat_sphere_2
+cen = -4.77876 0.075 -3.04139 -4.77876 0.102739 -3.04139
+time = 0.461124 0.894166
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_3
+mat = mat_sphere_3
+cen = -4.01893 0.075 -3.03785 -4.01893 0.0851181 -3.03785
+time = 0.410285 0.927108
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_4
+mat = mat_sphere_4
+cen = -3.78047 0.075 -2.95352 -3.78047 0.141153 -2.95352
+time = 0.369803 0.947098
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_5
+mat = mat_sphere_5
+cen = -2.95854 0.075 -2.97128 -2.95854 0.147949 -2.97128
+time = 0.0261246 0.0593689
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_6
+mat = mat_sphere_6
+cen = -2.75411 0.075 -2.97501 -2.75411 0.106494 -2.97501
+time = 0.360107 0.676542
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_7
+mat = mat_sphere_7
+cen = -1.74434 0.075 -2.97789 -1.74434 0.140951 -2.97789
+time = 0.107286 0.779634
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_8
+mat = mat_sphere_8
+cen = -1.27901 0.075 -3.04444 -1.27901 0.080404 -3.04444
+time = 0.390286 0.501628
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_9
+mat = mat_sphere_9
+cen = -0.519898 0.075 -2.96823 -0.519898 0.116713 -2.96823
+time = 0.501629 0.920128
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_10
+mat = mat_sphere_10
+cen = 0.48933 0.075 -2.95427 0.48933 0.0913918 -2.95427
+time = 0.579302 0.741099
+rad = 0.075
+
+OBJ_SPHERE sphere_11
+mat = mat_sphere_11
+cen = 1.04923 0.075 -2.95902
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_12
+mat = mat_sphere_12
+cen = 1.48433 0.075 -2.97329 1.48433 0.115456 -2.97329
+time = 0.304797 0.840474
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_13
+mat = mat_sphere_13
+cen = 1.78871 0.075 -3.03923 1.78871 0.0908109 -3.03923
+time = 0.453259 0.971877
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_14
+mat = mat_sphere_14
+cen = 2.20984 0.075 -3.03645 2.20984 0.140395 -3.03645
+time = 0.135225 0.821738
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_15
+mat = mat_sphere_15
+cen = 2.78734 0.075 -3.01768 2.78734 0.133304 -3.01768
+time = 0.248303 0.840025
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_16
+mat = mat_sphere_16
+cen = 3.46774 0.075 -2.95079 3.46774 0.109852 -2.95079
+time = 0.279664 0.805334
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_17
+mat = mat_sphere_17
+cen = 3.98507 0.075 -3.02899 3.98507 0.108926 -3.02899
+time = 0.244491 0.81332
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_18
+mat = mat_sphere_18
+cen = 4.72139 0.075 -2.99383 4.72139 0.0783227 -2.99383
+time = 0.282184 0.323207
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_19
+mat = mat_sphere_19
+cen = -4.9745 0.075 -2.50518 -4.9745 0.079376 -2.50518
+time = 0.319041 0.410416
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_20
+mat = mat_sphere_20
+cen = -4.78495 0.075 -2.48067 -4.78495 0.113826 -2.48067
+time = 0.252189 0.437912
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_21
+mat = mat_sphere_21
+cen = -4.50125 0.075 -2.48004 -4.50125 0.107449 -2.48004
+time = 0.0427759 0.834935
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_22
+mat = mat_sphere_22
+cen = -3.7089 0.075 -2.51614 -3.7089 0.139963 -2.51614
+time = 0.360872 0.629164
+rad = 0.075
+
+OBJ_SPHERE sphere_23
+mat = mat_sphere_23
+cen = -2.53613 0.075 -2.54973
+rad = 0.075
+
+OBJ_SPHERE sphere_24
+mat = mat_sphere_24
+cen = -2.26282 0.075 -2.48322
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_25
+mat = mat_sphere_25
+cen = -2.04179 0.075 -2.45632 -2.04179 0.13049 -2.45632
+time = 0.0255491 0.106317
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_26
+mat = mat_sphere_26
+cen = -1.48513 0.075 -2.47158 -1.48513 0.143729 -2.47158
+time = 0.320011 0.899781
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_27
+mat = mat_sphere_27
+cen = -1.01415 0.075 -2.52397 -1.01415 0.0754292 -2.52397
+time = 0.119254 0.506196
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_28
+mat = mat_sphere_28
+cen = -0.732614 0.075 -2.50095 -0.732614 0.127497 -2.50095
+time = 0.458882 0.704443
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_29
+mat = mat_sphere_29
+cen = 0.786765 0.075 -2.52828 0.786765 0.0831155 -2.52828
+time = 0.0540859 0.910216
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_30
+mat = mat_sphere_30
+cen = 1.27759 0.075 -2.5106 1.27759 0.137824 -2.5106
+time = 0.362317 0.397264
+rad = 0.075
+
+OBJ_SPHERE sphere_31
+mat = mat_sphere_31
+cen = 2.26895 0.075 -2.49396
+rad = 0.07125
+
+OBJ_MOV_SPHERE sphere_31
+mat = mat_sphere_31
+cen = 2.26895 0.075 -2.49396 2.26895 0.0797646 -2.49396
+time = 0.0609198 0.660604
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_32
+mat = mat_sphere_32
+cen = 2.76514 0.075 -2.53532 2.76514 0.146493 -2.53532
+time = 0.267219 0.908801
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_33
+mat = mat_sphere_33
+cen = 2.98413 0.075 -2.51006 2.98413 0.102767 -2.51006
+time = 0.0982381 0.693317
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_34
+mat = mat_sphere_34
+cen = 3.20131 0.075 -2.53841 3.20131 0.138238 -2.53841
+time = 0.386939 0.932157
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_35
+mat = mat_sphere_35
+cen = 4.02415 0.075 -2.52935 4.02415 0.141665 -2.52935
+time = 0.020837 0.950281
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_36
+mat = mat_sphere_36
+cen = 4.54177 0.075 -2.48385 4.54177 0.0788854 -2.48385
+time = 0.209331 0.604578
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_37
+mat = mat_sphere_37
+cen = 4.70582 0.075 -2.54498 4.70582 0.136932 -2.54498
+time = 0.329779 0.775537
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_38
+mat = mat_sphere_38
+cen = -4.54003 0.075 -1.9833 -4.54003 0.10798 -1.9833
+time = 0.40175 0.851296
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_39
+mat = mat_sphere_39
+cen = -3.99075 0.075 -1.9598 -3.99075 0.0828493 -1.9598
+time = 0.395654 0.544621
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_40
+mat = mat_sphere_40
+cen = -3.74446 0.075 -2.00361 -3.74446 0.149866 -2.00361
+time = 0.121541 0.908939
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_41
+mat = mat_sphere_41
+cen = -3.48367 0.075 -1.9535 -3.48367 0.145253 -1.9535
+time = 0.678305 0.732151
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_42
+mat = mat_sphere_42
+cen = -2.97752 0.075 -2.00168 -2.97752 0.082816 -2.00168
+time = 0.569384 0.721041
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_43
+mat = mat_sphere_43
+cen = -2.782 0.075 -2.00721 -2.782 0.10881 -2.00721
+time = 0.343884 0.607695
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_44
+mat = mat_sphere_44
+cen = -2.2654 0.075 -2.01535 -2.2654 0.143068 -2.01535
+time = 0.890371 0.98299
+rad = 0.075
+
+OBJ_SPHERE sphere_45
+mat = mat_sphere_45
+cen = -1.9951 0.075 -2.03097
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_46
+mat = mat_sphere_46
+cen = -1.28293 0.075 -2.00287 -1.28293 0.144901 -2.00287
+time = 0.461923 0.81582
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_47
+mat = mat_sphere_47
+cen = -1.00518 0.075 -1.96188 -1.00518 0.0914787 -1.96188
+time = 0.388291 0.882816
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_48
+mat = mat_sphere_48
+cen = -0.742181 0.075 -1.9639 -0.742181 0.0755778 -1.9639
+time = 0.461051 0.948447
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_49
+mat = mat_sphere_49
+cen = 0.510277 0.075 -1.95867 0.510277 0.105863 -1.95867
+time = 0.160826 0.219887
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_50
+mat = mat_sphere_50
+cen = 0.788772 0.075 -1.97315 0.788772 0.0973065 -1.97315
+time = 0.47792 0.684579
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_51
+mat = mat_sphere_51
+cen = 1.54371 0.075 -1.99089 1.54371 0.0787858 -1.99089
+time = 0.185723 0.692428
+rad = 0.075
+
+OBJ_SPHERE sphere_52
+mat = mat_sphere_52
+cen = 2.22122 0.075 -2.0178
+rad = 0.07125
+
+OBJ_MOV_SPHERE sphere_52
+mat = mat_sphere_52
+cen = 2.22122 0.075 -2.0178 2.22122 0.0890695 -2.0178
+time = 0.345793 0.793375
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_53
+mat = mat_sphere_53
+cen = 2.4689 0.075 -2.0442 2.4689 0.0758205 -2.0442
+time = 0.189397 0.384199
+rad = 0.075
+
+OBJ_SPHERE sphere_54
+mat = mat_sphere_54
+cen = 2.74383 0.075 -1.98345
+rad = 0.075
+
+OBJ_SPHERE sphere_55
+mat = mat_sphere_55
+cen = 2.96688 0.075 -2.00054
+rad = 0.07125
+
+OBJ_MOV_SPHERE sphere_55
+mat = mat_sphere_55
+cen = 2.96688 0.075 -2.00054 2.96688 0.132119 -2.00054
+time = 0.579184 0.784467
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_56
+mat = mat_sphere_56
+cen = 3.23584 0.075 -1.98476 3.23584 0.143715 -1.98476
+time = 0.215985 0.957122
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_57
+mat = mat_sphere_57
+cen = 4.2809 0.075 -2.01988 4.2809 0.146094 -2.01988
+time = 0.478927 0.630036
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_58
+mat = mat_sphere_58
+cen = 4.52459 0.075 -1.99502 4.52459 0.0832232 -1.99502
+time = 0.118691 0.327315
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_59
+mat = mat_sphere_59
+cen = -4.79732 0.075 -1.52164 -4.79732 0.080106 -1.52164
+time = 0.0600903 0.438277
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_60
+mat = mat_sphere_60
+cen = -4.47852 0.075 -1.48581 -4.47852 0.0883646 -1.48581
+time = 0.484136 0.493308
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_61
+mat = mat_sphere_61
+cen = -4.27719 0.075 -1.50158 -4.27719 0.111254 -1.50158
+time = 0.558996 0.692663
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_62
+mat = mat_sphere_62
+cen = -4.00165 0.075 -1.45751 -4.00165 0.145823 -1.45751
+time = 0.120354 0.615939
+rad = 0.075
+
+OBJ_SPHERE sphere_63
+mat = mat_sphere_63
+cen = -3.52576 0.075 -1.50483
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_64
+mat = mat_sphere_64
+cen = -3.01276 0.075 -1.51155 -3.01276 0.127579 -1.51155
+time = 0.188998 0.651617
+rad = 0.075
+
+OBJ_SPHERE sphere_65
+mat = mat_sphere_65
+cen = -2.45549 0.075 -1.50048
+rad = 0.07125
+
+OBJ_MOV_SPHERE sphere_65
+mat = mat_sphere_65
+cen = -2.45549 0.075 -1.50048 -2.45549 0.149089 -1.50048
+time = 0.193096 0.796859
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_66
+mat = mat_sphere_66
+cen = -1.00909 0.075 -1.5065 -1.00909 0.0812436 -1.5065
+time = 0.127252 0.796941
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_67
+mat = mat_sphere_67
+cen = -0.799647 0.075 -1.53111 -0.799647 0.118481 -1.53111
+time = 0.00253903 0.561463
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_68
+mat = mat_sphere_68
+cen = -0.460922 0.075 -1.47573 -0.460922 0.143547 -1.47573
+time = 0.273746 0.973106
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_69
+mat = mat_sphere_69
+cen = 0.722887 0.075 -1.46563 0.722887 0.145238 -1.46563
+time = 0.43124 0.576048
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_70
+mat = mat_sphere_70
+cen = 0.9602 0.075 -1.50915 0.9602 0.106782 -1.50915
+time = 0.325461 0.843163
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_71
+mat = mat_sphere_71
+cen = 3.02181 0.075 -1.46339 3.02181 0.0870474 -1.46339
+time = 0.345071 0.379365
+rad = 0.075
+
+OBJ_SPHERE sphere_72
+mat = mat_sphere_72
+cen = 3.26959 0.075 -1.51777
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_73
+mat = mat_sphere_73
+cen = 3.47414 0.075 -1.51267 3.47414 0.143915 -1.51267
+time = 0.0185695 0.36985
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_74
+mat = mat_sphere_74
+cen = 3.79721 0.075 -1.46833 3.79721 0.0962159 -1.46833
+time = 0.869713 0.91533
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_75
+mat = mat_sphere_75
+cen = 4.02792 0.075 -1.47201 4.02792 0.109996 -1.47201
+time = 0.503776 0.766784
+rad = 0.075
+
+OBJ_SPHERE sphere_76
+mat = mat_sphere_76
+cen = 4.21223 0.075 -1.54431
+rad = 0.07125
+
+OBJ_MOV_SPHERE sphere_76
+mat = mat_sphere_76
+cen = 4.21223 0.075 -1.54431 4.21223 0.0799891 -1.54431
+time = 0.276085 0.910753
+rad = 0.075
+
+OBJ_SPHERE sphere_77
+mat = mat_sphere_77
+cen = 4.52972 0.075 -1.49141
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_78
+mat = mat_sphere_78
+cen = -4.9738 0.075 -0.989002 -4.9738 0.120016 -0.989002
+time = 0.458408 0.828692
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_79
+mat = mat_sphere_79
+cen = -4.24779 0.075 -0.958507 -4.24779 0.113096 -0.958507
+time = 0.217092 0.690212
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_80
+mat = mat_sphere_80
+cen = -3.97727 0.075 -1.01605 -3.97727 0.13318 -1.01605
+time = 0.0401768 0.753932
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_81
+mat = mat_sphere_81
+cen = -3.77227 0.075 -1.01461 -3.77227 0.137905 -1.01461
+time = 0.77653 0.870248
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_82
+mat = mat_sphere_82
+cen = -2.73278 0.075 -1.02841 -2.73278 0.141178 -1.02841
+time = 0.452082 0.472338
+rad = 0.075
+
+OBJ_SPHERE sphere_83
+mat = mat_sphere_83
+cen = -2.28868 0.075 -0.99078
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_84
+mat = mat_sphere_84
+cen = -2.03822 0.075 -0.984072 -2.03822 0.0972426 -0.984072
+time = 0.0125902 0.742587
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_85
+mat = mat_sphere_85
+cen = -1.25118 0.075 -0.969312 -1.25118 0.109895 -0.969312
+time = 0.425946 0.998683
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_86
+mat = mat_sphere_86
+cen = -0.7601 0.075 -1.00492 -0.7601 0.0905364 -1.00492
+time = 0.158994 0.325002
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_87
+mat = mat_sphere_87
+cen = 0.487657 0.075 -1.02019 0.487657 0.0892792 -1.02019
+time = 0.407254 0.552952
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_88
+mat = mat_sphere_88
+cen = 0.708966 0.075 -0.982449 0.708966 0.0869834 -0.982449
+time = 0.310706 0.351667
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_89
+mat = mat_sphere_89
+cen = 0.981276 0.075 -0.993681 0.981276 0.104474 -0.993681
+time = 0.482605 0.812258
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_90
+mat = mat_sphere_90
+cen = 1.47962 0.075 -1.01442 1.47962 0.104228 -1.01442
+time = 0.386495 0.524153
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_91
+mat = mat_sphere_91
+cen = 1.96373 0.075 -0.965587 1.96373 0.108613 -0.965587
+time = 0.856839 0.997635
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_92
+mat = mat_sphere_92
+cen = 2.46257 0.075 -0.988033 2.46257 0.0809642 -0.988033
+time = 0.373003 0.900507
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_93
+mat = mat_sphere_93
+cen = 3.02491 0.075 -0.98658 3.02491 0.0797352 -0.98658
+time = 0.589065 0.780452
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_94
+mat = mat_sphere_94
+cen = 3.20977 0.075 -1.03069 3.20977 0.145547 -1.03069
+time = 0.0387354 0.136729
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_95
+mat = mat_sphere_95
+cen = 3.76332 0.075 -1.0303 3.76332 0.127529 -1.0303
+time = 0.500709 0.710935
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_96
+mat = mat_sphere_96
+cen = 4.02096 0.075 -1.00343 4.02096 0.07735 -1.00343
+time = 0.280167 0.922512
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_97
+mat = mat_sphere_97
+cen = -4.78549 0.075 -0.519927 -4.78549 0.114187 -0.519927
+time = 0.542651 0.719201
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_98
+mat = mat_sphere_98
+cen = -4.24121 0.075 -0.511352 -4.24121 0.118294 -0.511352
+time = 0.00221045 0.700694
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_99
+mat = mat_sphere_99
+cen = -4.0298 0.075 -0.529574 -4.0298 0.103502 -0.529574
+time = 0.0242471 0.433838
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_100
+mat = mat_sphere_100
+cen = -2.71205 0.075 -0.52918 -2.71205 0.0986869 -0.52918
+time = 0.139213 0.963761
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_101
+mat = mat_sphere_101
+cen = -2.4987 0.075 -0.458378 -2.4987 0.135041 -0.458378
+time = 0.0353748 0.578555
+rad = 0.075
+
+OBJ_SPHERE sphere_102
+mat = mat_sphere_102
+cen = -1.75337 0.075 -0.486443
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_103
+mat = mat_sphere_103
+cen = -1.4754 0.075 -0.491353 -1.4754 0.147131 -0.491353
+time = 0.434184 0.642838
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_104
+mat = mat_sphere_104
+cen = -0.952474 0.075 -0.460328 -0.952474 0.147915 -0.460328
+time = 0.203039 0.815007
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_105
+mat = mat_sphere_105
+cen = -0.477801 0.075 -0.526179 -0.477801 0.0784947 -0.526179
+time = 0.26098 0.77979
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_106
+mat = mat_sphere_106
+cen = 0.965369 0.075 -0.547684 0.965369 0.116562 -0.547684
+time = 0.0175615 0.709906
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_107
+mat = mat_sphere_107
+cen = 1.24337 0.075 -0.543234 1.24337 0.129544 -0.543234
+time = 0.0379658 0.64669
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_108
+mat = mat_sphere_108
+cen = 2.51123 0.075 -0.450745 2.51123 0.127859 -0.450745
+time = 0.217369 0.642874
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_109
+mat = mat_sphere_109
+cen = 2.77141 0.075 -0.523557 2.77141 0.125841 -0.523557
+time = 0.137284 0.193742
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_110
+mat = mat_sphere_110
+cen = 3.03801 0.075 -0.501013 3.03801 0.115659 -0.501013
+time = 0.52623 0.660073
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_111
+mat = mat_sphere_111
+cen = 3.71372 0.075 -0.536073 3.71372 0.110595 -0.536073
+time = 0.487617 0.71342
+rad = 0.075
+
+OBJ_SPHERE sphere_112
+mat = mat_sphere_112
+cen = 4.79904 0.075 -0.465161
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_113
+mat = mat_sphere_113
+cen = -3.98691 0.075 0.538987 -3.98691 0.135118 0.538987
+time = 0.332628 0.812317
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_114
+mat = mat_sphere_114
+cen = -3.01695 0.075 0.509153 -3.01695 0.098672 0.509153
+time = 0.0826862 0.961594
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_115
+mat = mat_sphere_115
+cen = -2.70262 0.075 0.535868 -2.70262 0.116947 0.535868
+time = 0.332862 0.562817
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_116
+mat = mat_sphere_116
+cen = -2.50731 0.075 0.548004 -2.50731 0.105692 0.548004
+time = 0.516248 0.810067
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_117
+mat = mat_sphere_117
+cen = -2.2502 0.075 0.53148 -2.2502 0.091463 0.53148
+time = 0.0429365 0.290921
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_118
+mat = mat_sphere_118
+cen = -1.9564 0.075 0.457706 -1.9564 0.0969543 0.457706
+time = 0.369328 0.531134
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_119
+mat = mat_sphere_119
+cen = -1.4536 0.075 0.515219 -1.4536 0.118164 0.515219
+time = 0.0784075 0.806476
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_120
+mat = mat_sphere_120
+cen = -1.22817 0.075 0.503227 -1.22817 0.0816026 0.503227
+time = 0.357203 0.358856
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_121
+mat = mat_sphere_121
+cen = -0.753189 0.075 0.474425 -0.753189 0.0951895 0.474425
+time = 0.856508 0.99314
+rad = 0.075
+
+OBJ_SPHERE sphere_122
+mat = mat_sphere_122
+cen = -0.520422 0.075 0.539238
+rad = 0.07125
+
+OBJ_MOV_SPHERE sphere_122
+mat = mat_sphere_122
+cen = -0.520422 0.075 0.539238 -0.520422 0.109462 0.539238
+time = 0.00140852 0.0777693
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_123
+mat = mat_sphere_123
+cen = 0.543417 0.075 0.462082 0.543417 0.100245 0.462082
+time = 0.230344 0.938643
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_124
+mat = mat_sphere_124
+cen = 0.72899 0.075 0.538304 0.72899 0.135334 0.538304
+time = 0.0190068 0.192828
+rad = 0.075
+
+OBJ_SPHERE sphere_125
+mat = mat_sphere_125
+cen = 1.22216 0.075 0.526906
+rad = 0.07125
+
+OBJ_MOV_SPHERE sphere_125
+mat = mat_sphere_125
+cen = 1.22216 0.075 0.526906 1.22216 0.0857654 0.526906
+time = 0.479499 0.896853
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_126
+mat = mat_sphere_126
+cen = 2.00864 0.075 0.454271 2.00864 0.110594 0.454271
+time = 0.0768241 0.414018
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_127
+mat = mat_sphere_127
+cen = 2.5251 0.075 0.509537 2.5251 0.119333 0.509537
+time = 0.0920099 0.411915
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_128
+mat = mat_sphere_128
+cen = 2.71285 0.075 0.529675 2.71285 0.130783 0.529675
+time = 0.0195073 0.635715
+rad = 0.075
+
+OBJ_SPHERE sphere_129
+mat = mat_sphere_129
+cen = 3.01822 0.075 0.499994
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_130
+mat = mat_sphere_130
+cen = 3.20424 0.075 0.460205 3.20424 0.108234 0.460205
+time = 0.72553 0.856616
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_131
+mat = mat_sphere_131
+cen = 3.45506 0.075 0.4947 3.45506 0.119043 0.4947
+time = 0.79588 0.97466
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_132
+mat = mat_sphere_132
+cen = 3.96043 0.075 0.542446 3.96043 0.0956862 0.542446
+time = 0.149817 0.743431
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_133
+mat = mat_sphere_133
+cen = 4.28997 0.075 0.466996 4.28997 0.134679 0.466996
+time = 0.322925 0.918773
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_134
+mat = mat_sphere_134
+cen = -5.044 0.075 1.02751 -5.044 0.108661 1.02751
+time = 0.579539 0.920206
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_135
+mat = mat_sphere_135
+cen = -3.45464 0.075 0.967205 -3.45464 0.105048 0.967205
+time = 0.104527 0.622071
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_136
+mat = mat_sphere_136
+cen = -3.01704 0.075 1.04632 -3.01704 0.116974 1.04632
+time = 0.604972 0.625128
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_137
+mat = mat_sphere_137
+cen = -2.70184 0.075 0.95044 -2.70184 0.121738 0.95044
+time = 0.50135 0.641901
+rad = 0.075
+
+OBJ_SPHERE sphere_138
+mat = mat_sphere_138
+cen = -2.47657 0.075 0.996625
+rad = 0.07125
+
+OBJ_MOV_SPHERE sphere_138
+mat = mat_sphere_138
+cen = -2.47657 0.075 0.996625 -2.47657 0.106984 0.996625
+time = 0.294556 0.526879
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_139
+mat = mat_sphere_139
+cen = -2.00782 0.075 0.983804 -2.00782 0.100162 0.983804
+time = 0.477837 0.662422
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_140
+mat = mat_sphere_140
+cen = -0.996186 0.075 1.04479 -0.996186 0.125656 1.04479
+time = 0.263464 0.690489
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_141
+mat = mat_sphere_141
+cen = -0.459856 0.075 1.00343 -0.459856 0.118488 1.00343
+time = 0.390575 0.44577
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_142
+mat = mat_sphere_142
+cen = 0.469925 0.075 0.983599 0.469925 0.132248 0.983599
+time = 0.588945 0.946439
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_143
+mat = mat_sphere_143
+cen = 0.740864 0.075 1.04973 0.740864 0.0917119 1.04973
+time = 0.195181 0.550397
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_144
+mat = mat_sphere_144
+cen = 1.50089 0.075 1.04685 1.50089 0.132329 1.04685
+time = 0.599198 0.896137
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_145
+mat = mat_sphere_145
+cen = 2.21015 0.075 0.958595 2.21015 0.139455 0.958595
+time = 0.0623729 0.80053
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_146
+mat = mat_sphere_146
+cen = 2.70368 0.075 1.01819 2.70368 0.129557 1.01819
+time = 0.193516 0.208331
+rad = 0.075
+
+OBJ_SPHERE sphere_147
+mat = mat_sphere_147
+cen = 3.27992 0.075 1.01479
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_148
+mat = mat_sphere_148
+cen = 4.25017 0.075 1.00312 4.25017 0.145079 1.00312
+time = 0.397671 0.993848
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_149
+mat = mat_sphere_149
+cen = 4.48985 0.075 0.979643 4.48985 0.143633 0.979643
+time = 0.504685 0.931025
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_150
+mat = mat_sphere_150
+cen = 4.73621 0.075 0.998735 4.73621 0.138923 0.998735
+time = 0.397602 0.652097
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_151
+mat = mat_sphere_151
+cen = -4.99079 0.075 1.45551 -4.99079 0.0853805 1.45551
+time = 0.104716 0.760184
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_152
+mat = mat_sphere_152
+cen = -4.25551 0.075 1.50383 -4.25551 0.138395 1.50383
+time = 0.356732 0.831673
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_153
+mat = mat_sphere_153
+cen = -4.00703 0.075 1.52852 -4.00703 0.119534 1.52852
+time = 0.186537 0.270477
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_154
+mat = mat_sphere_154
+cen = -3.74594 0.075 1.48539 -3.74594 0.0983686 1.48539
+time = 0.495108 0.621543
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_155
+mat = mat_sphere_155
+cen = -3.27125 0.075 1.50135 -3.27125 0.128999 1.50135
+time = 0.433095 0.921572
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_156
+mat = mat_sphere_156
+cen = -2.7954 0.075 1.52938 -2.7954 0.0936755 1.52938
+time = 0.491659 0.893946
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_157
+mat = mat_sphere_157
+cen = -2.45092 0.075 1.46858 -2.45092 0.104756 1.46858
+time = 0.189027 0.487667
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_158
+mat = mat_sphere_158
+cen = -2.27817 0.075 1.5393 -2.27817 0.107768 1.5393
+time = 0.106287 0.189909
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_159
+mat = mat_sphere_159
+cen = -1.45868 0.075 1.49442 -1.45868 0.121619 1.49442
+time = 0.249254 0.789113
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_160
+mat = mat_sphere_160
+cen = -1.25307 0.075 1.5305 -1.25307 0.114371 1.5305
+time = 0.171994 0.315757
+rad = 0.075
+
+OBJ_SPHERE sphere_161
+mat = mat_sphere_161
+cen = -0.702976 0.075 1.4566
+rad = 0.07125
+
+OBJ_MOV_SPHERE sphere_161
+mat = mat_sphere_161
+cen = -0.702976 0.075 1.4566 -0.702976 0.122738 1.4566
+time = 0.113507 0.11916
+rad = 0.075
+
+OBJ_SPHERE sphere_162
+mat = mat_sphere_162
+cen = 0.709433 0.075 1.52751
+rad = 0.07125
+
+OBJ_MOV_SPHERE sphere_162
+mat = mat_sphere_162
+cen = 0.709433 0.075 1.52751 0.709433 0.104112 1.52751
+time = 0.0244849 0.90833
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_163
+mat = mat_sphere_163
+cen = 1.00012 0.075 1.51299 1.00012 0.145344 1.51299
+time = 0.0253387 0.815749
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_164
+mat = mat_sphere_164
+cen = 1.21397 0.075 1.49931 1.21397 0.0963599 1.49931
+time = 0.0533212 0.192953
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_165
+mat = mat_sphere_165
+cen = 1.77787 0.075 1.54577 1.77787 0.0986679 1.54577
+time = 0.192511 0.369398
+rad = 0.075
+
+OBJ_SPHERE sphere_166
+mat = mat_sphere_166
+cen = 2.28889 0.075 1.46507
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_167
+mat = mat_sphere_167
+cen = 3.00072 0.075 1.46295 3.00072 0.085334 1.46295
+time = 0.684133 0.793442
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_168
+mat = mat_sphere_168
+cen = 3.78371 0.075 1.53537 3.78371 0.106626 1.53537
+time = 0.0604517 0.117277
+rad = 0.075
+
+OBJ_SPHERE sphere_169
+mat = mat_sphere_169
+cen = 4.23289 0.075 1.54879
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_170
+mat = mat_sphere_170
+cen = -5.01377 0.075 2.01761 -5.01377 0.136801 2.01761
+time = 0.778055 0.872279
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_171
+mat = mat_sphere_171
+cen = -4.54337 0.075 2.01838 -4.54337 0.0893358 2.01838
+time = 0.238753 0.859816
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_172
+mat = mat_sphere_172
+cen = -4.27691 0.075 1.98453 -4.27691 0.081722 1.98453
+time = 0.568013 0.771179
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_173
+mat = mat_sphere_173
+cen = -3.70728 0.075 1.99 -3.70728 0.0868183 1.99
+time = 0.206291 0.782441
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_174
+mat = mat_sphere_174
+cen = -3.50666 0.075 2.01406 -3.50666 0.118951 2.01406
+time = 0.44173 0.731491
+rad = 0.075
+
+OBJ_SPHERE sphere_175
+mat = mat_sphere_175
+cen = -3.27876 0.075 1.97656
+rad = 0.07125
+
+OBJ_MOV_SPHERE sphere_175
+mat = mat_sphere_175
+cen = -3.27876 0.075 1.97656 -3.27876 0.145505 1.97656
+time = 0.286548 0.59931
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_176
+mat = mat_sphere_176
+cen = -2.98097 0.075 1.95618 -2.98097 0.138453 1.95618
+time = 0.190678 0.202007
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_177
+mat = mat_sphere_177
+cen = -2.78029 0.075 1.96517 -2.78029 0.080516 1.96517
+time = 0.469565 0.828188
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_178
+mat = mat_sphere_178
+cen = -2.55 0.075 2.04233 -2.55 0.13759 2.04233
+time = 0.392883 0.854379
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_179
+mat = mat_sphere_179
+cen = -1.72176 0.075 1.992 -1.72176 0.108878 1.992
+time = 0.475914 0.825377
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_180
+mat = mat_sphere_180
+cen = -1.49753 0.075 2.01367 -1.49753 0.0784518 2.01367
+time = 0.119222 0.944159
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_181
+mat = mat_sphere_181
+cen = -0.767677 0.075 1.95875 -0.767677 0.120395 1.95875
+time = 0.217247 0.861163
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_182
+mat = mat_sphere_182
+cen = -0.45159 0.075 2.02227 -0.45159 0.0992797 2.02227
+time = 0.633464 0.922807
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_183
+mat = mat_sphere_183
+cen = 0.533818 0.075 2.01873 0.533818 0.122475 2.01873
+time = 0.548503 0.791733
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_184
+mat = mat_sphere_184
+cen = 0.777989 0.075 1.95271 0.777989 0.148947 1.95271
+time = 0.0984093 0.313377
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_185
+mat = mat_sphere_185
+cen = 1.2319 0.075 2.04759 1.2319 0.121202 2.04759
+time = 0.420986 0.998289
+rad = 0.075
+
+OBJ_SPHERE sphere_186
+mat = mat_sphere_186
+cen = 1.48456 0.075 1.95823
+rad = 0.075
+
+OBJ_SPHERE sphere_187
+mat = mat_sphere_187
+cen = 2.21446 0.075 1.99766
+rad = 0.075
+
+OBJ_SPHERE sphere_188
+mat = mat_sphere_188
+cen = 2.502 0.075 2.01731
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_189
+mat = mat_sphere_189
+cen = 2.72629 0.075 2.03517 2.72629 0.100858 2.03517
+time = 0.217113 0.284797
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_190
+mat = mat_sphere_190
+cen = 3.03764 0.075 2.02842 3.03764 0.0964427 2.02842
+time = 0.039765 0.994097
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_191
+mat = mat_sphere_191
+cen = 3.50186 0.075 1.97835 3.50186 0.116201 1.97835
+time = 0.389684 0.449143
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_192
+mat = mat_sphere_192
+cen = 4.00584 0.075 1.95489 4.00584 0.122704 1.95489
+time = 0.444957 0.999636
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_193
+mat = mat_sphere_193
+cen = 4.72105 0.075 1.95699 4.72105 0.0815522 1.95699
+time = 0.43116 0.539482
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_194
+mat = mat_sphere_194
+cen = -4.5201 0.075 2.52378 -4.5201 0.114335 2.52378
+time = 0.257066 0.846481
+rad = 0.075
+
+OBJ_SPHERE sphere_195
+mat = mat_sphere_195
+cen = -4.01857 0.075 2.4962
+rad = 0.07125
+
+OBJ_MOV_SPHERE sphere_195
+mat = mat_sphere_195
+cen = -4.01857 0.075 2.4962 -4.01857 0.0883799 2.4962
+time = 0.384658 0.808995
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_196
+mat = mat_sphere_196
+cen = -3.70186 0.075 2.50604 -3.70186 0.0839876 2.50604
+time = 0.64011 0.768123
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_197
+mat = mat_sphere_197
+cen = -3.52195 0.075 2.4985 -3.52195 0.147796 2.4985
+time = 0.142997 0.657064
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_198
+mat = mat_sphere_198
+cen = -3.25611 0.075 2.50958 -3.25611 0.10102 2.50958
+time = 0.261506 0.601982
+rad = 0.075
+
+OBJ_SPHERE sphere_199
+mat = mat_sphere_199
+cen = -3.00732 0.075 2.52685
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_200
+mat = mat_sphere_200
+cen = -2.74212 0.075 2.48226 -2.74212 0.0751714 2.48226
+time = 0.438297 0.491629
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_201
+mat = mat_sphere_201
+cen = -2.0437 0.075 2.53977 -2.0437 0.109774 2.53977
+time = 0.653985 0.893946
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_202
+mat = mat_sphere_202
+cen = -1.71561 0.075 2.50354 -1.71561 0.117327 2.50354
+time = 0.0380836 0.334103
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_203
+mat = mat_sphere_203
+cen = -1.27279 0.075 2.46535 -1.27279 0.112094 2.46535
+time = 0.59275 0.626467
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_204
+mat = mat_sphere_204
+cen = -0.968671 0.075 2.45409 -0.968671 0.101793 2.45409
+time = 0.418631 0.721702
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_205
+mat = mat_sphere_205
+cen = 0.792545 0.075 2.4904 0.792545 0.0980968 2.4904
+time = 0.423888 0.519043
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_206
+mat = mat_sphere_206
+cen = 1.00193 0.075 2.51736 1.00193 0.134712 2.51736
+time = 0.0981182 0.210625
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_207
+mat = mat_sphere_207
+cen = 1.45163 0.075 2.50613 1.45163 0.0755773 2.50613
+time = 0.380867 0.829469
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_208
+mat = mat_sphere_208
+cen = 2.03415 0.075 2.47092 2.03415 0.139003 2.47092
+time = 0.350553 0.827771
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_209
+mat = mat_sphere_209
+cen = 2.96244 0.075 2.50235 2.96244 0.111503 2.50235
+time = 0.0403408 0.291087
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_210
+mat = mat_sphere_210
+cen = 3.79917 0.075 2.53468 3.79917 0.135283 2.53468
+time = 0.270625 0.471738
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_211
+mat = mat_sphere_211
+cen = 3.97697 0.075 2.54789 3.97697 0.0939492 2.54789
+time = 0.307427 0.797025
+rad = 0.075
+
+OBJ_MOV_SPHERE sphere_212
+mat = mat_sphere_212
+cen = 4.29601 0.075 2.45966 4.29601 0.14283 2.45966
+time = 0.431479 0.908659
+rad = 0.075
+#_timeDelta = 0.47718

@@ -28,7 +28,7 @@ namespace rt {
 			if (scatteredDir.isZero())
 				scatteredDir = payload.norm;
 			out.attenuation = albedo;
-			scattered = Ray(payload.pos, Vec3::unit(scatteredDir));
+			scattered = Ray(payload.pos, Vec3::unit(scatteredDir), ray.time);
 			return true;
 		}
 

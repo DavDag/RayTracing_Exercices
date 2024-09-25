@@ -40,7 +40,7 @@ namespace rt {
 			}
 
 			out.attenuation = Color(1.0f);
-			scattered = Ray(payload.pos, Vec3::unit(scatteredDir));
+			scattered = Ray(payload.pos, Vec3::unit(scatteredDir), ray.time);
 			return true;
 		}
 

@@ -5,6 +5,7 @@
 #include "./src/materials/metallic.hpp"
 #include "./src/materials/dielectric.hpp"
 #include "./src/shapes/sphere.hpp"
+#include "./src/shapes/movingsphere.hpp"
 
 #include <cstdlib>
 #include <thread>
@@ -41,7 +42,7 @@ int main(int argc, char* argv[]) {
     raytracer.build();
 
     // Launch Viewer in another thread
-    rt::Viewer viewer(preview, image, 32, 4.0f);
+    rt::Viewer viewer(preview, image, 64, 4.0f);
     std::thread tviewer([&viewer]() {
         viewer.init();
         viewer.start();
@@ -77,7 +78,8 @@ std::shared_ptr<rt::Scene> rndScene() {
         rt::Vec3(3.0f, 0.6f, 3.0f),
         rt::Vec3(0.0f, 0.0f, 0.0f),
         1080, 720,
-        30.0f, 0.01f, 4.0f
+        30.0f, 0.01f, 4.0f,
+        0.0f, 1.0f
     );
     data.materials.insert({
         rt::crc32("groundMat"),
@@ -127,6 +129,7 @@ std::shared_ptr<rt::Scene> rndScene() {
             0.5f
         )
     );
+    int index = 0;
     for (float z = -3; z < 3; z += 0.5f) {
         for (float x = -5; x < 5; x += 0.25f) {
             if (z >= -0.25f && z <= 0.25f) continue;
@@ -134,11 +137,17 @@ std::shared_ptr<rt::Scene> rndScene() {
             if (rt::rnd_uniform<float>(0.0f, 1.0f) < 0.5f) continue;
             //
             float offx = rt::rnd_uniform<float>(-1.0f, 1.0f) * 0.05f;
+            float offy = rt::rnd_uniform<float>(0.0f, 1.0f);
             float offz = rt::rnd_uniform<float>(-1.0f, 1.0f) * 0.05f;
             float objrad = 0.075f;
-            rt::Vec3 objpos = rt::Vec3(x + offx, objrad, (float)z + offz);
+            rt::Vec3 objpos0 = rt::Vec3(x + offx, objrad, (float)z + offz);
+            rt::Vec3 objpos1 = objpos0 + rt::Vec3(0.0f, offy * objrad, 0.0f);
+            float sample0 = rt::rnd_uniform<float>(0.0f, 1.0f);
+            float sample1 = rt::rnd_uniform<float>(0.0f, 1.0f);
+            float time0 = std::min<float>(sample0, sample1);
+            float time1 = std::max<float>(sample0, sample1);
             //
-            std::string objname = "sphere_" + std::to_string(z) + "_" + std::to_string(x);
+            std::string objname = "sphere_" + std::to_string(++index);
             std::string matname = "mat_" + objname;
             //
             float matchoice = rt::rnd_uniform<float>(0.0f, 1.0f);
@@ -155,10 +164,26 @@ std::shared_ptr<rt::Scene> rndScene() {
             else {
                 float refractionRatio = rt::rnd_uniform<float>(1.0f, 20.0f);
                 objmat = std::make_shared<rt::Dielectric>(matname, refractionRatio);
-                data.objects.push_back(std::make_shared<rt::Sphere>(objname, objmat, objpos, objrad*0.95f));
+                data.objects.push_back(std::make_shared<rt::Sphere>(
+                    objname, objmat,
+                    objpos0, objrad * 0.95f
+                ));
             }
             data.materials.insert({ rt::crc32(matname), objmat });
-            data.objects.push_back(std::make_shared<rt::Sphere>(objname, objmat, objpos, objrad));
+            if (matchoice < 0.95f && (rt::rnd_uniform<float>(0.0f, 1.0f) < 0.125f)) {
+                data.objects.push_back(std::make_shared<rt::Sphere>(
+                    objname, objmat,
+                    objpos0, objrad
+                ));
+            }
+            else {
+                data.objects.push_back(std::make_shared<rt::MovingSphere>(
+                    objname, objmat,
+                    objpos0, objpos1,
+                    time0, time1,
+                    objrad
+                ));
+            }
         }
     }
     //

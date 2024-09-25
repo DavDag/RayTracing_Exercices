@@ -15,8 +15,9 @@ namespace rt {
 		void process();
 
 	private:
-		Color pixel(i32 x, i32 y);
-		Color trace(Ray& ray, i32 depth);
+		void _process(i32 x, i32 y, i32 sampleIndex);
+		Color _pixel(i32 x, i32 y);
+		Color _trace(Ray& ray, i32 depth);
 
 	private:
 		std::shared_ptr<Scene> _scene;

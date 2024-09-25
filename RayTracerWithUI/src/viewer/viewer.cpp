@@ -95,7 +95,8 @@ namespace rt {
         if (!_enabled) return;
         if (!_valid) return;
         //
-        glfwSwapInterval(1);
+        int toWait = floorf(60.0f / _updatePerSec);
+        glfwSwapInterval(toWait);
         f64 lastFrameTimeSec = glfwGetTime();
         while (!glfwWindowShouldClose((GLFWwindow*)_window)) {
             glfwPollEvents();
@@ -136,6 +137,12 @@ namespace rt {
             | ImGuiWindowFlags_NoInputs
             | ImGuiWindowFlags_NoSavedSettings
             ;
+        float progressBarHeight = ImGui::GetFontSize() + ImGui::GetStyle().FramePadding.y * 2.0f;
+        ImGui::SetNextWindowPos(ImVec2((float)_pd, (float)_pd - progressBarHeight));
+        ImGui::SetNextWindowContentSize(ImVec2((float)_image.width(), (float)_pd));
+        ImGui::Begin("progress", nullptr, flags);
+        ImGui::ProgressBar(_image.percentage());
+        ImGui::End();
         ImGui::SetNextWindowPos(ImVec2((float)_pd, (float)_pd));
         ImGui::SetNextWindowContentSize(ImVec2((float)_image.width(), (float)_image.height()));
         ImGui::Begin("Preview", nullptr, flags);
