@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/acf108cf-5829-4505-ada2-a7ef95a6dab3)# RayTracing
+# RayTracing
 
 Project about raytracing using CPU.<br>
 => UI: raytracing towards a texture shown in ImGUI.<br>
